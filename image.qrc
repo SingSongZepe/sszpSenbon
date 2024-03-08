@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/:">
+        <file>res/image/download.png</file>
+        <file>res/image/search.png</file>
+        <file>res/image/setting.png</file>
+        <file>res/image/todo.png</file>
+        <file>res/image/search_gray.png</file>
+        <file>res/tmp/cover.jpg</file>
+        <file>res/image/authors.png</file>
+        <file>res/image/publisher.png</file>
+        <file>res/image/rating.png</file>
+        <file>res/image/title_slim.png</file>
+        <file>res/image/file_info.png</file>
+        <file>res/image/language.png</file>
+    </qresource>
+</RCC>
