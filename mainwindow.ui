@@ -465,6 +465,29 @@
      </widget>
     </widget>
    </widget>
+   <widget class="QWidget" name="wgt_main_singlebookview" native="true">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>30</y>
+      <width>751</width>
+      <height>471</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="lb_return_to_search">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Return</string>
+     </property>
+    </widget>
+   </widget>
   </widget>
  </widget>
  <resources>

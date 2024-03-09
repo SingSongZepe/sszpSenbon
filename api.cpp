@@ -1,7 +1,10 @@
 #include "mainwindow.h"
+#include "ui_mainwindow.h"
+#include "ui_bookinfoitem.h"
 
 #include "sslog.h"
 #include "singsongzepe.h"
+#include "bookinfoitem.h"
 
 // network
 #include <QNetworkAccessManager>
@@ -17,36 +20,33 @@
 
 void MainWindow::search_books(const GeneralSearch* search) {
     SSLog::ln("-----Search Info-----");
-    SSLog::ln("key word: " + *search->key_word);
-    SSLog::ln("search type: " + *search->search_type);
+    SSLog::ln("key word: " + search->key_word);
+    SSLog::ln("search type: " + search->search_type);
 
     QString url = MainWindow::make_url(search);
 
-    SSLog::ln(url);
+    SSLog::ln("request url: " + url);
 
     QNetworkAccessManager manager;
     QNetworkRequest request{QUrl(url)};
 
     QNetworkReply* reply = manager.get(request);
+    reply->deleteLater();
 
+    QEventLoop loop;
     QTimer timer;
     timer.setSingleShot(true);
     QObject::connect(&timer, &QTimer::timeout, [&](){
-        SSLog::le("error while request, timeout!");
+        SSLog::le(QString("error while request, timeout!").arg(url));
+        loop.quit();
     });
+    timer.start(SingSongZepe::TIME_REQUEST_TIMER_OUT);
 
     // start the request loop
-    QEventLoop loop;
     QObject::connect(reply, &QNetworkReply::finished, &loop, [&]() {
         timer.stop();
         if (reply->error() == QNetworkReply::NoError) {
             QByteArray data = reply->readAll();
-
-            // python
-            Py_Initialize();
-            if (!Py_IsInitialized()) {
-                SSLog::le("error while initilize python");
-            }
 
             PyRun_SimpleString("import os");
             PyRun_SimpleString("import sys");
@@ -75,34 +75,59 @@ void MainWindow::search_books(const GeneralSearch* search) {
             PyObject* py_json_str = PyObject_Str(rep);
             QString json_str = QString::fromUtf8(PyUnicode_AsUTF8(py_json_str));
 
-            SSLog::ln("Result: " + json_str);
+            // SSLog::ln("Result: " + json_str);
 
             QList<BookInfo> book_infos = MainWindow::json_str2book_infos(&json_str);
-            qDebug() << book_infos[0].title;
+            if (this->book_infos != nullptr) {
+                delete this->book_infos;
+            }
+            this->book_infos = new QList<BookInfo>(book_infos); // pass the value to this
 
             // call show_books
-
-
-            // PyObject* callable = PyObject_GetAttrString(pymodule, "add");
-
-            // PyObject* tuple = PyTuple_New(2);
-
-            // PyObject* arg1 = PyLong_FromLong(1);
-            // PyTuple_SET_ITEM(tuple, 0, arg1);
-            // PyObject* arg2 = PyLong_FromLong(2);
-            // PyTuple_SET_ITEM(tuple, 1, arg2);
-
-            // PyObject* rep = PyObject_CallObject(callable, tuple);
-
-            // long result = PyLong_AsLong(rep);
-            // qDebug() << result;
-
-            Py_Finalize();
+            MainWindow::show_books();
+            loop.quit();
         } else {
             qDebug() << "Error:" << reply->errorString();
         }
 
-        reply->deleteLater();
     });
     loop.exec();
 }
+
+bool MainWindow::show_books() {
+    // create object
+    if (this->book_infos == nullptr) {
+        SSLog::lw("can't call show_books when book_infos is nullptr");
+        return false;
+    }
+    if (this->wgt_book_items != nullptr) {
+        delete this->wgt_book_items;
+    }
+    this->wgt_book_items = new QWidget(this->ui->sa_books);
+    int height = MainWindow::get_book_items_height();
+    this->wgt_book_items->setGeometry(SingSongZepe::WGT_BOOK_ITEMS_X, SingSongZepe::WGT_BOOK_ITEMS_Y, height, SingSongZepe::SINGLE_BOOK_ITEM_WIDTH_DEFULT);
+    this->wgt_book_items->setFixedHeight(height);
+    this->wgt_book_items->setStyleSheet("background-color: #ADD8E6"); // color skyblue
+
+    int idx = 0;
+    for (const auto& book_info : *book_infos) {
+        // BookInfoItem* book_info_item = new BookInfoItem();
+        BookInfoItem* book_info_item = new BookInfoItem(this->wgt_book_items);
+        book_info_item->set_book_info(book_info);
+        book_info_item->setGeometry(0, MainWindow::get_book_items_pos_y_by_index(idx), SingSongZepe::SINGLE_BOOK_ITEM_WIDTH_DEFULT, SingSongZepe::SINGLE_BOOK_ITEM_HEIGHT);
+        // set main info title publisher authors
+        // book_info_item->ui->tb_book_title->setText(book_info.title);
+        // book_info_item->ui->tb_book_publisher->setText(book_info.publisher);
+        // book_info_item->ui->tb_book_authors->setText(book_info.authors);
+        // book_info_item->ui->lb_book_ratiing->setText(book_info.rating);
+        // // set sub info file_info language
+        // book_info_item->ui->lb_book_file_info->setText(book_info.file_info);
+        // book_info_item->ui->lb_book_language->setText(book_info.language);
+        idx++;
+    }
+
+    this->ui->sa_books->setWidget(this->wgt_book_items);
+
+    return true;
+}
+

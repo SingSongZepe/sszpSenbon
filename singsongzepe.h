@@ -5,6 +5,15 @@
 
 class SingSongZepe
 {
+// enum
+public:
+    enum ToggleViewKind {
+        Search,
+        SingleBookView,
+        History,
+        Setting,
+        Todo,
+    };
 public:
     SingSongZepe();
     ~SingSongZepe();
@@ -32,6 +41,19 @@ public:
     static const QString FILE_INFO_;
     static const QString LANGUAGE_;
     static const QString RATING_;
+
+    // for wgt_book_items size
+    static const int WGT_BOOK_ITEMS_X;
+    static const int WGT_BOOK_ITEMS_Y;
+    static const int SINGLE_BOOK_ITEM_WIDTH_DEFULT;
+    static const int SINGLE_BOOK_ITEM_HEIGHT;
+    static const int BOOK_ITEM_MARGIN;
+
+    // for sa_books scrollbar
+    static const QString STYLE_SCROLLBAR_SLIM_TRANSPARENT;
+
+    // for request time out
+    static const int TIME_REQUEST_TIMER_OUT;
 
 };
 

@@ -11,27 +11,38 @@ CONFIG += c++17
 
 SOURCES += \
     api.cpp \
-    book_info_item.cpp \
     event.cpp \
     main.cpp \
     mainwindow.cpp \
+    object/helloworld.cpp \
+    object/sfunctor.cpp \
     search.cpp \
+    singlebookinfo.cpp \
     singsongzepe.cpp \
     sslog.cpp \
     sszpsenbon.cpp \
-    utils.cpp
+    utils.cpp \
+    bookinfoitem.cpp \
+    object/book_info.cpp \
+    worker.cpp
 
 HEADERS += \
-    book_info_item.h \
     mainwindow.h \
+    object/helloworld.h \
+    object/sfunctor.h \
     search.h \
+    singlebookinfo.h \
     singsongzepe.h \
     sslog.h \
-    object/book_info.h
+    object/book_info.h \
+    bookinfoitem.h \
+    worker.h
 
 FORMS += \
-    book_info_item.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    bookinfoitem.ui \
+    object/helloworld.ui \
+    singlebookinfo.ui
 
 TRANSLATIONS += \
     sszpSenbon_en_GB.ts
@@ -48,7 +59,8 @@ RESOURCES += \
 
 DISTFILES += \
     book_result_parse.py \
-    book_info.py
+    book_info.py \
+    README.md
 
 
 

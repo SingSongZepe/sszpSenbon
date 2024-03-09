@@ -1,17 +1,34 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include "singsongzepe.h"
+
 #include <QPushButton>
-#include <QLabel>
 // #include <QEvent>
 // #include <QMouseEvent>
 #include <QDebug>
+#include <QList>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    // append views to the main_views
+    this->main_views.append(ui->wgt_main_search);
+    this->main_views.append(ui->wgt_main_singlebookview);
+    this->current_view_idx = 1;
+
+
+    // init sa_books
+    this->sb_sa_books = new QScrollBar(ui->sa_books);
+    this->sb_sa_books->setStyleSheet(SingSongZepe::STYLE_SCROLLBAR_SLIM_TRANSPARENT);
+    ui->sa_books->setVerticalScrollBar(this->sb_sa_books);
+
+    MainWindow::initializa_python();
+    // book_infos
+    // this->show_books(); there be nullptr
 
     // lb_bar
         // lb_bar_search click
@@ -35,5 +52,10 @@ void MainWindow::print_hello(bool checked) {
 
 MainWindow::~MainWindow()
 {
+    MainWindow::finalize_python();
     delete ui;
+    // release object
+    delete book_infos;
+    delete wgt_book_items;
+    delete sb_sa_books;
 }

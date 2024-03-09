@@ -7,7 +7,8 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
         QMouseEvent *mouseEvent = static_cast<QMouseEvent*>(event);
         if (mouseEvent) {
             if (mouseEvent->button() == Qt::LeftButton) {
-                this->print_hello(false);
+                // toggle view
+                this->toggle_view(SingSongZepe::Search);
                 return true;
             }
         }

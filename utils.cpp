@@ -7,12 +7,22 @@
 #include <QJsonDocument>
 #include <QJsonArray>
 #include <QJsonObject>
+#include <QNetworkAccessManager>
+#include <QNetworkRequest>
+#include <QNetworkReply>
+#include <QUrl>
+#include <QTimer>
+#include <QEventLoop>
+
+#undef slots
+#include "Python.h"
+#define slots Q_SLOTS
 
 
 // utils
 QString MainWindow::make_url(const GeneralSearch* search) {
     QString url = SingSongZepe::zlibrary_url + SingSongZepe::subfix_general;
-    url += "q=" + *search->key_word + "&e=" + (search->exact_matching ? "1" : "0");
+    url += "q=" + search->key_word + "&e=" + (search->exact_matching ? "1" : "0");
     return url;
 }
 
@@ -46,5 +56,81 @@ QList<BookInfo> MainWindow::json_str2book_infos(const QString* json_str) {
     return book_infos;
 }
 
+// for python
+bool MainWindow::initializa_python() {
+    // python
+    if (!Py_IsInitialized()) {
+        Py_Initialize();
+        return true;
+        if (!Py_IsInitialized()) {
+            return false;
+        }
+    }
+    return true;
+}
+
+bool MainWindow::finalize_python() {
+    if (Py_IsInitialized()) {
+        Py_Finalize();
+        if (!Py_IsInitialized())
+            return true;
+        return false;
+    }
+    return true;
+}
+
+// for wgt_book_items
+// 10(n+1)+161*n
+int MainWindow::get_book_items_height() {
+    if (this->book_infos != nullptr) {
+        return (SingSongZepe::SINGLE_BOOK_ITEM_HEIGHT + SingSongZepe::BOOK_ITEM_MARGIN) * this->book_infos->count() + SingSongZepe::BOOK_ITEM_MARGIN;
+    }
+    SSLog::lw("can't call get_book_items_height, when there book_infos is nullptr");
+    return 0;
+}
+
+int MainWindow::get_book_items_pos_y_by_index(int index) {
+    return (SingSongZepe::SINGLE_BOOK_ITEM_HEIGHT + SingSongZepe::BOOK_ITEM_MARGIN) * index;
+}
+
+// for loading picture (for QLabel?)
+QByteArray MainWindow::request_url(const QString& url) {
+    QNetworkAccessManager manager;
+    QNetworkRequest request = QNetworkRequest(QUrl(url));
+    QNetworkReply* reply = manager.get(request);
+
+    QEventLoop loop;
+    QTimer timer;
+    timer.start(SingSongZepe::TIME_REQUEST_TIMER_OUT);
+    QObject::connect(&timer, &QTimer::timeout, [&](){
+        SSLog::le(QString("error while request url: %1").arg(url));
+        reply->abort();
+        loop.quit();
+    });
+
+    QByteArray data;
+    QObject::connect(reply, &QNetworkReply::finished, [&](){
+        if (reply->error() == QNetworkReply::NoError) {
+            data = reply->readAll();
+        }
+        reply->deleteLater();
+        loop.quit();
+    });
+
+    loop.exec();
+    return data;
+}
+
+QPixmap MainWindow::load_picture(const QString& url) {
+    QByteArray data = MainWindow::request_url(url);
+    QPixmap pixmap;
+    pixmap.loadFromData(data);
+    return pixmap;
+}
+
+bool MainWindow::set_label_pixmap(QLabel* lb, const QPixmap& pixmap) {
+    lb->setPixmap(pixmap.scaled(lb->size(), Qt::KeepAspectRatio));
+    return true;
+}
 
 

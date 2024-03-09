@@ -7,35 +7,35 @@
 class GeneralSearch
 {
 public:
-    GeneralSearch(QString* search_type,
-                  QString* key_word,
+    GeneralSearch(const QString& search_type,
+                  const QString& key_word,
                   bool exact_matching=false,
                   int year_from=NULL,
                   int year_to=NULL,
-                  QList<QString>* languages=nullptr,
-                  QList<QString>* extensions=nullptr);
+                  const QList<QString>& languages=QList<QString>(),
+                  const QList<QString>& extensions=QList<QString>());
     ~GeneralSearch();
 
 public:
-    QString* search_type;
-    QString* key_word;
+    const QString& search_type;
+    const QString& key_word;
     bool exact_matching;
     int year_from;
     int year_to;
-    QList<QString>* languages;
-    QList<QString>* extensions;
+    const QList<QString>& languages;
+    const QList<QString>& extensions;
 };
 
 class FulltextSearch : public GeneralSearch
 {
 public:
-    FulltextSearch(QString* search_type,
-                   QString* key_word,
+    FulltextSearch(const QString& search_type,
+                   const QString& key_word,
                    bool exact_matching=false,
                    int year_from=NULL,
                    int year_to=NULL,
-                   QList<QString>* languages=nullptr,
-                   QList<QString>* extensions=nullptr,
+                   const QList<QString>& languages=QList<QString>(),
+                   const QList<QString>& extensions=QList<QString>(),
                    bool match_a_phrase=true);
     ~FulltextSearch();
 public:
@@ -47,8 +47,8 @@ public:
 class SearchConstants
 {
 public:
-    static const QString GENERAL_SEARCH_;
-    static const QString FULLTEXT_SEARCH_;
+    static const QString GENERAL_SEARCH;
+    static const QString FULLTEXT_SEARCH;
 };
 
 #endif // SEARCH_H
