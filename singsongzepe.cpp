@@ -87,6 +87,6 @@ const QString SingSongZepe::STYLE_SCROLLBAR_SLIM_TRANSPARENT = "QScrollBar:verti
 const int SingSongZepe::TIME_REQUEST_TIMER_OUT = 10000;
 
 // for python script
-const QString SingSongZepe::PYTHON_SEARCH_SINGLE_BOOK_PARSE = "search_single_book_parse.py";
+const QString SingSongZepe::PYTHON_SEARCH_SINGLE_BOOK_PARSE = "search_single_book_parse";
 const QString SingSongZepe::FUNCTION_SEARCH_SINGLE_BOOK_PARSE = "search_single_book_parse";
 

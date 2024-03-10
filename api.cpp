@@ -51,6 +51,7 @@ void MainWindow::search_books(const GeneralSearch* search) {
             PyObject* pymodule = PyImport_ImportModule("book_result_parse");
             if (!pymodule) {
                 SSLog::le("can't open the module file");
+                return;
             }
 
             PyObject* callable = PyObject_GetAttrString(pymodule, "book_result_parse");
@@ -98,6 +99,7 @@ bool MainWindow::show_books() {
     this->wgt_book_items->setGeometry(SingSongZepe::WGT_BOOK_ITEMS_X, SingSongZepe::WGT_BOOK_ITEMS_Y, height, SingSongZepe::SINGLE_BOOK_ITEM_WIDTH_DEFULT);
     this->wgt_book_items->setFixedHeight(height);
     this->wgt_book_items->setStyleSheet("background-color: #ADD8E6"); // color skyblue
+    this->wgt_book_items->installEventFilter(this);
 
     int idx = 0;
     for (const auto& book_info : *book_infos) {
@@ -105,7 +107,7 @@ bool MainWindow::show_books() {
         BookInfoItem* book_info_item = new BookInfoItem(this->wgt_book_items, this);
         book_info_item->set_book_info(book_info);
         book_info_item->setGeometry(0, MainWindow::get_book_items_pos_y_by_index(idx), SingSongZepe::SINGLE_BOOK_ITEM_WIDTH_DEFULT, SingSongZepe::SINGLE_BOOK_ITEM_HEIGHT);
-        book_info_item->install_event_filter();
+        // book_info_item->install_event_filter();
         // set main info title publisher authors
         // book_info_item->ui->tb_book_title->setText(book_info.title);
         // book_info_item->ui->tb_book_publisher->setText(book_info.publisher);
@@ -133,24 +135,26 @@ void MainWindow::search_singlebook(const SingleBookSearch* search) {
 
     // get html data
     QByteArray data = MainWindow::request_url(search->url);
+
     // pass data to python for processing
     PyObject* pymodule = PyImport_ImportModule(SingSongZepe::PYTHON_SEARCH_SINGLE_BOOK_PARSE.toStdString().c_str());
     if (!pymodule) {
         SSLog::le("can't open the module file");
+        return;
     }
 
     PyObject* callable = PyObject_GetAttrString(pymodule, SingSongZepe::FUNCTION_SEARCH_SINGLE_BOOK_PARSE.toStdString().c_str());
 
-    // // arguments
+    // arguments
     PyObject* tuple = PyTuple_New(1);
     std::string stri = data.toStdString();
     PyObject* d = PyUnicode_FromString(stri.c_str());
     PyTuple_SET_ITEM(tuple, 0, d);
 
+    //
     PyObject* rep = PyObject_CallObject(callable, tuple);
     PyObject* py_json_str = PyObject_Str(rep);
     QString json_str = QString::fromUtf8(PyUnicode_AsUTF8(py_json_str));
-    qDebug() << data.toStdString();
 }
 
 bool MainWindow::show_singlebook() {

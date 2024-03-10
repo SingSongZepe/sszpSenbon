@@ -143,4 +143,24 @@ bool MainWindow::set_label_pixmap(QLabel* lb, const QPixmap& pixmap) {
     return true;
 }
 
+const BookInfo* MainWindow::get_bookinfo_of_pos(const QPoint& pos) {
+    if (this->book_infos == nullptr) {
+        return nullptr;
+    }
+    int x = pos.x();
+    int y = pos.y();
+
+    if (x >= 5 && x <= 105) {
+        int n = (y - 10) / 170;
+        if (n >= this->book_infos->length()) {
+            return nullptr;
+        }
+        if (y >= 170 * n + 10 && y <= 170 * n + 150 && n >= 0 && n <= 49) {
+            return &this->book_infos->at(n);
+        }
+    }
+    return nullptr;
+}
+
+
 

@@ -10,12 +10,6 @@ from book_info import BookInfo
 print("Hello World!")
 print('SingSongZepe Book Result Parse!')
 
-def print_hello():
-    print('Hello, World!')
-
-def add(a, b):
-    return a + b
-
 def book_result_parse(data):
     soup = bs(data, 'html.parser')
     

@@ -13,6 +13,7 @@
 #include <QScrollBar>
 #include <QLabel>
 #include <QThread>
+#include <QPoint>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -53,6 +54,7 @@ public slots:
     static QByteArray request_url(const QString& url);
     static QPixmap load_picture(const QString& url);
     static bool set_label_pixmap(QLabel* lb, const QPixmap& pixmap);
+    const BookInfo* get_bookinfo_of_pos(const QPoint& pos);
 
 public:
     bool eventFilter(QObject* obj, QEvent* event);
