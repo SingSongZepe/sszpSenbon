@@ -11,14 +11,13 @@ GeneralSearch::GeneralSearch(const QString& search_type,
                              int year_to,
                              const QList<QString>& languages,
                              const QList<QString>& extensions)
-    :
-    search_type(search_type),
-    key_word(key_word),
-    exact_matching(exact_matching),
-    year_from(year_from),
-    year_to(year_to),
-    languages(languages),
-    extensions(extensions)
+    : search_type(search_type)
+    , key_word(key_word)
+    , exact_matching(exact_matching)
+    , year_from(year_from)
+    , year_to(year_to)
+    , languages(languages)
+    , extensions(extensions)
 {
 
 }
@@ -35,13 +34,23 @@ FulltextSearch::FulltextSearch(const QString& search_type,
                                const QList<QString>& languages,
                                const QList<QString>& extensions,
                                bool match_a_phrase)
-    :
-    GeneralSearch(search_type, key_word, exact_matching, year_from, year_to, languages, extensions),
-    match_a_phrase(match_a_phrase)
+    : GeneralSearch(search_type, key_word, exact_matching, year_from, year_to, languages, extensions)
+    , match_a_phrase(match_a_phrase)
 {
 
 }
 
 FulltextSearch::~FulltextSearch() {
     // data will be released in disconstructing function of Class GS
+}
+
+SingleBookSearch::SingleBookSearch(const QString& url)
+    : url(url)
+{
+
+}
+
+SingleBookSearch::~SingleBookSearch()
+{
+
 }

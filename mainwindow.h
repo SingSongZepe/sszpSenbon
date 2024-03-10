@@ -3,7 +3,8 @@
 
 #include "search.h"
 #include "object/book_info.h"
-#include "worker.h"
+#include "object/bookfullinfo.h"
+// #include "worker.h"
 #include "singsongzepe.h"
 #include "sslog.h"
 
@@ -35,10 +36,14 @@ public slots:
 
     // sszpSenbon for searching
     void search_books_launch();
+    void search_singlebook_launch(const QString& href);
 
     // api
     void search_books(const GeneralSearch* search); // general_search or fulltext_search
     bool show_books();
+
+    void search_singlebook(const SingleBookSearch* search);
+    bool show_singlebook();
 
     // utils
     QString make_url(const GeneralSearch* search);
@@ -57,9 +62,11 @@ private:
 
     // there store book_infos
     QList<BookInfo>* book_infos = nullptr;
+    BookFullInfo* book_full_info = nullptr;
     // for showing of books
     QWidget* wgt_book_items = nullptr;
     QScrollBar* sb_sa_books = nullptr;
+    QScrollBar* sb_sa_singlebookview = nullptr;
     // for wgt_book_items
     int get_book_items_height();
     int get_book_items_pos_y_by_index(int index);

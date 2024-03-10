@@ -39,7 +39,7 @@ QList<BookInfo> MainWindow::json_str2book_infos(const QString* json_str) {
         if (value.isObject()) {
             QJsonObject jsonObject = value.toObject();
             BookInfo book_info;
-            book_info.url = jsonObject["url"].toString();
+            book_info.href = jsonObject["url"].toString();
             book_info.cover = jsonObject["cover"].toString();
             book_info.title = jsonObject["title"].toString();
             book_info.publisher = jsonObject["publisher"].toString();
@@ -60,7 +60,17 @@ QList<BookInfo> MainWindow::json_str2book_infos(const QString* json_str) {
 bool MainWindow::initializa_python() {
     // python
     if (!Py_IsInitialized()) {
+        Py_SetPythonHome((const wchar_t *)(L"C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python311"));
         Py_Initialize();
+        PyRun_SimpleString("import os");
+        PyRun_SimpleString("import sys");
+
+        QString str;
+        str += "sys.path.append(os.path.dirname(os.getcwd())+'/";
+        str += SingSongZepe::SSZPSENBON_;
+        str += "')";
+        PyRun_SimpleString(str.toStdString().c_str());
+        PyRun_SimpleString("print(sys.path)");
         return true;
         if (!Py_IsInitialized()) {
             return false;

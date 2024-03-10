@@ -424,6 +424,7 @@
 	background-color: #ADD8E6;
     border-top-left-radius: 15px; 
     border-top-right-radius: 15px; 
+	margin: 2px;
 }</string>
      </property>
      <widget class="QScrollArea" name="sa_books">
@@ -436,16 +437,19 @@
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">#sa_books {
-	background-color: #ADD8E6;
-    border-top-left-radius: 15px; 
-    border-top-right-radius: 15px; 
-}</string>
+       <string notr="true">background-color: #ADD8E6;
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
       </property>
       <property name="widgetResizable">
        <bool>true</bool>
       </property>
-      <widget class="QWidget" name="scwc_books">
+      <widget class="QWidget" name="sawc_books">
        <property name="geometry">
         <rect>
          <x>0</x>
@@ -474,20 +478,35 @@
       <height>471</height>
      </rect>
     </property>
-    <widget class="QLabel" name="lb_return_to_search">
+    <widget class="QScrollArea" name="sa_singlebookview">
      <property name="geometry">
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>71</width>
-       <height>21</height>
+       <width>751</width>
+       <height>471</height>
       </rect>
      </property>
-     <property name="text">
-      <string>Return</string>
+     <property name="widgetResizable">
+      <bool>true</bool>
      </property>
+     <widget class="QWidget" name="sawc_singlebookview">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>749</width>
+        <height>469</height>
+       </rect>
+      </property>
+     </widget>
     </widget>
    </widget>
+   <zorder>wgt_main_singlebookview</zorder>
+   <zorder>wgt_head</zorder>
+   <zorder>wgt_navi_search</zorder>
+   <zorder>wgt_bar</zorder>
+   <zorder>wgt_main_search</zorder>
   </widget>
  </widget>
  <resources>

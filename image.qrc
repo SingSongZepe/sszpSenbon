@@ -12,5 +12,8 @@
         <file>res/image/title_slim.png</file>
         <file>res/image/file_info.png</file>
         <file>res/image/language.png</file>
+        <file>res/image/like.png</file>
+        <file>res/image/bookmark.png</file>
+        <file>res/image/return.png</file>
     </qresource>
 </RCC>

@@ -14,13 +14,19 @@ class BookInfoItem : public QWidget
     Q_OBJECT
 
 public:
-    explicit BookInfoItem(QWidget *parent = nullptr);
+    explicit BookInfoItem(QWidget *parent = nullptr, MainWindow* context = nullptr);
     ~BookInfoItem();
 
     bool set_book_info(const BookInfo& book_info);
 
 public:
-    Ui::BookInfoItem *ui;   
+    bool eventFilter(QObject* obj, QEvent* event);
+    void install_event_filter();
+
+public:
+    Ui::BookInfoItem *ui;
+    MainWindow* context;
+    QString href;
 };
 
 #endif // BOOKINFOITEM_H

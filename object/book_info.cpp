@@ -2,7 +2,7 @@
 
 #include <QString>
 
-BookInfo::BookInfo(QString url,
+BookInfo::BookInfo(QString href,
                    QString cover,
                    QString title,
                    QString publisher,
@@ -10,7 +10,14 @@ BookInfo::BookInfo(QString url,
                    QString file_info,
                    QString language,
                    QString rating)
-    : url(url), cover(cover), title(title), publisher(publisher), authors(authors), file_info(file_info), language(language), rating(rating)
+    : href(href)
+    , cover(cover)
+    , title(title)
+    , publisher(publisher)
+    , authors(authors)
+    , file_info(file_info)
+    , language(language)
+    , rating(rating)
 {
 
 }

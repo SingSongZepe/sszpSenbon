@@ -2,7 +2,7 @@
 
 class BookInfo {
 public:
-    QString url;
+    QString href;
     QString cover;
     QString title;
     QString publisher;
@@ -12,8 +12,8 @@ public:
     QString rating;
 
 public:
-    BookInfo(QString url = "url",
-             QString  = "cover",
+    BookInfo(QString href = "href",
+             QString cover = "cover",
              QString title = "title",
              QString publisher = "publisher",
              QString authors = "authors",

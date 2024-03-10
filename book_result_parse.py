@@ -65,7 +65,7 @@ def book_result_parse(data):
     for idx in range(len(imgs_with_cover)):
         cover = imgs_with_cover[idx]['data-src']
         # print(cover)
-        url = as_with_href[idx]['href']
+        href = as_with_href[idx]['href']
         # print(url)
         title = as_with_title[idx].text
         # print(title)
@@ -80,7 +80,7 @@ def book_result_parse(data):
         rating = div_with_rating[idx].select_one('span.book-rating-interest-score').text.replace(' ', '').replace('\n', '') + '/' + div_with_rating[idx].select_one('span.book-rating-quality-score').text.replace(' ', '').replace('\n', '')
         # print(rating)
 
-        book_info = BookInfo(url, cover, title, publisher, authors, file_info, language, rating)
+        book_info = BookInfo(href, cover, title, publisher, authors, file_info, language, rating)
         book_infos.append(asdict(book_info))
 
     return json.dumps(book_infos)

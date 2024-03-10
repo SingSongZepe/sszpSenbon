@@ -18,6 +18,9 @@ public:
     SingSongZepe();
     ~SingSongZepe();
 
+    static int transfrom_viewkind2idx(SingSongZepe::ToggleViewKind tvk);
+    static SingSongZepe::ToggleViewKind transfrom_idx2viewkind(int tvk);
+
     static const QString sslog;
     static const QString SINGSONGZEPE_;
 
@@ -54,6 +57,10 @@ public:
 
     // for request time out
     static const int TIME_REQUEST_TIMER_OUT;
+
+    // python
+    static const QString PYTHON_SEARCH_SINGLE_BOOK_PARSE;
+    static const QString FUNCTION_SEARCH_SINGLE_BOOK_PARSE;
 
 };
 

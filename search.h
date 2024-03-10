@@ -51,4 +51,13 @@ public:
     static const QString FULLTEXT_SEARCH;
 };
 
+class SingleBookSearch
+{
+public:
+    const QString& url;
+public:
+    explicit SingleBookSearch(const QString& url);
+    ~SingleBookSearch();
+};
+
 #endif // SEARCH_H

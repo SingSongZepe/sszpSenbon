@@ -48,16 +48,6 @@ void MainWindow::search_books(const GeneralSearch* search) {
         if (reply->error() == QNetworkReply::NoError) {
             QByteArray data = reply->readAll();
 
-            PyRun_SimpleString("import os");
-            PyRun_SimpleString("import sys");
-
-            QString str;
-            str += "sys.path.append(os.path.dirname(os.getcwd())+'/";
-            str += SingSongZepe::SSZPSENBON_;
-            str += "')";
-            PyRun_SimpleString(str.toStdString().c_str());
-            PyRun_SimpleString("print(sys.path)");
-
             PyObject* pymodule = PyImport_ImportModule("book_result_parse");
             if (!pymodule) {
                 SSLog::le("can't open the module file");
@@ -112,9 +102,10 @@ bool MainWindow::show_books() {
     int idx = 0;
     for (const auto& book_info : *book_infos) {
         // BookInfoItem* book_info_item = new BookInfoItem();
-        BookInfoItem* book_info_item = new BookInfoItem(this->wgt_book_items);
+        BookInfoItem* book_info_item = new BookInfoItem(this->wgt_book_items, this);
         book_info_item->set_book_info(book_info);
         book_info_item->setGeometry(0, MainWindow::get_book_items_pos_y_by_index(idx), SingSongZepe::SINGLE_BOOK_ITEM_WIDTH_DEFULT, SingSongZepe::SINGLE_BOOK_ITEM_HEIGHT);
+        book_info_item->install_event_filter();
         // set main info title publisher authors
         // book_info_item->ui->tb_book_title->setText(book_info.title);
         // book_info_item->ui->tb_book_publisher->setText(book_info.publisher);
@@ -126,8 +117,42 @@ bool MainWindow::show_books() {
         idx++;
     }
 
-    this->ui->sa_books->setWidget(this->wgt_book_items);
+    ui->sa_books->setWidget(this->wgt_book_items);
+
+    // show wgt_books
+    if (ui->wgt_books->isHidden()) {
+        ui->wgt_books->setHidden(false);
+    }
 
     return true;
 }
 
+void MainWindow::search_singlebook(const SingleBookSearch* search) {
+    SSLog::ln("-----Single Book Search Info-----");
+    SSLog::ln("search url: " + search->url);
+
+    // get html data
+    QByteArray data = MainWindow::request_url(search->url);
+    // pass data to python for processing
+    PyObject* pymodule = PyImport_ImportModule(SingSongZepe::PYTHON_SEARCH_SINGLE_BOOK_PARSE.toStdString().c_str());
+    if (!pymodule) {
+        SSLog::le("can't open the module file");
+    }
+
+    PyObject* callable = PyObject_GetAttrString(pymodule, SingSongZepe::FUNCTION_SEARCH_SINGLE_BOOK_PARSE.toStdString().c_str());
+
+    // // arguments
+    PyObject* tuple = PyTuple_New(1);
+    std::string stri = data.toStdString();
+    PyObject* d = PyUnicode_FromString(stri.c_str());
+    PyTuple_SET_ITEM(tuple, 0, d);
+
+    PyObject* rep = PyObject_CallObject(callable, tuple);
+    PyObject* py_json_str = PyObject_Str(rep);
+    QString json_str = QString::fromUtf8(PyUnicode_AsUTF8(py_json_str));
+    qDebug() << data.toStdString();
+}
+
+bool MainWindow::show_singlebook() {
+    return true;
+}

@@ -10,6 +10,40 @@ SingSongZepe::~SingSongZepe()
 
 }
 
+int SingSongZepe::transfrom_viewkind2idx(SingSongZepe::ToggleViewKind tvk) {
+    switch (tvk) {
+    case SingSongZepe::Search:
+        return 0;
+    case SingSongZepe::SingleBookView:
+        return 1;
+    case SingSongZepe::History:
+        return 2;
+    case SingSongZepe::Setting:
+        return 3;
+    case SingSongZepe::Todo:
+        return 4;
+    default:
+        return 0;
+    }
+}
+
+SingSongZepe::ToggleViewKind SingSongZepe::transfrom_idx2viewkind(int idx) {
+    switch (idx) {
+    case 0:
+        return SingSongZepe::Search;
+    case 1:
+        return SingSongZepe::SingleBookView;
+    case 2:
+        return SingSongZepe::History;
+    case 3:
+        return SingSongZepe::Setting;
+    case 4:
+        return SingSongZepe::Todo;
+    default:
+        return SingSongZepe::Search;
+    }
+}
+
 const QString SingSongZepe::sslog = "SingSongLog: ";
 const QString SingSongZepe::SINGSONGZEPE_ = "SingSongZepe";
 
@@ -51,3 +85,8 @@ const QString SingSongZepe::STYLE_SCROLLBAR_SLIM_TRANSPARENT = "QScrollBar:verti
 
 // for request time out
 const int SingSongZepe::TIME_REQUEST_TIMER_OUT = 10000;
+
+// for python script
+const QString SingSongZepe::PYTHON_SEARCH_SINGLE_BOOK_PARSE = "search_single_book_parse.py";
+const QString SingSongZepe::FUNCTION_SEARCH_SINGLE_BOOK_PARSE = "search_single_book_parse";
+

@@ -14,6 +14,7 @@ SOURCES += \
     event.cpp \
     main.cpp \
     mainwindow.cpp \
+    object/bookfullinfo.cpp \
     object/helloworld.cpp \
     object/sfunctor.cpp \
     search.cpp \
@@ -28,6 +29,7 @@ SOURCES += \
 
 HEADERS += \
     mainwindow.h \
+    object/bookfullinfo.h \
     object/helloworld.h \
     object/sfunctor.h \
     search.h \
@@ -60,13 +62,16 @@ RESOURCES += \
 DISTFILES += \
     book_result_parse.py \
     book_info.py \
-    README.md
+    README.md \
+    search_single_book_parse.py
 
 
 
-win32:CONFIG(release, debug|release): LIBS += -LC:/Users/Lenovo/AppData/Local/Programs/Python/Python311 -lpython311
-else:win32:CONFIG(debug, debug|release): LIBS += -LC:/Users/Lenovo/AppData/Local/Programs/Python/Python311 -lpython311
-else:unix: LIBS += -LC:/Users/Lenovo/AppData/Local/Programs/Python/Python311/ -lpython311
+
+win32:CONFIG(release, debug|release): LIBS += -LC:/Users/Lenovo/AppData/Local/Programs/Python/Python311/libs/ -lpython311
+else:win32:CONFIG(debug, debug|release): LIBS += -LC:/Users/Lenovo/AppData/Local/Programs/Python/Python311/libs/ -lpython311_d
+else:unix: LIBS += -LC:/Users/Lenovo/AppData/Local/Programs/Python/Python311/libs/ -lpython311
 
 INCLUDEPATH += C:/Users/Lenovo/AppData/Local/Programs/Python/Python311/include
 DEPENDPATH += C:/Users/Lenovo/AppData/Local/Programs/Python/Python311/include
+
