@@ -502,11 +502,56 @@
      </widget>
     </widget>
    </widget>
+   <widget class="QWidget" name="wgt_navi_singlebookview" native="true">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>0</y>
+      <width>751</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>750</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#wgt_navi_search {
+	background-color: #f0f0f0;
+}</string>
+    </property>
+    <widget class="QWidget" name="wgt_singsongzepe_2" native="true">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>5</y>
+       <width>261</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <widget class="QLabel" name="lb_singsongzepe_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>261</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+   </widget>
    <zorder>wgt_main_singlebookview</zorder>
    <zorder>wgt_head</zorder>
    <zorder>wgt_navi_search</zorder>
    <zorder>wgt_bar</zorder>
    <zorder>wgt_main_search</zorder>
+   <zorder>wgt_navi_singlebookview</zorder>
   </widget>
  </widget>
  <resources>

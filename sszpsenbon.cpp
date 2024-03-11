@@ -7,19 +7,19 @@ void MainWindow::toggle_view(SingSongZepe::ToggleViewKind tvk) {
     QWidget* show_view;
     switch (tvk) {
     case SingSongZepe::Search:
-        show_view = this->ui->wgt_main_search;
+        show_view = ui->wgt_main_search; // ?
         break;
     case SingSongZepe::SingleBookView:
-        show_view = this->ui->wgt_main_singlebookview;
+        show_view = ui->wgt_main_singlebookview;
         break;
     case SingSongZepe::History:
-        show_view = this->ui->wgt_main_search;
+        show_view = ui->wgt_main_search;
         break;
     case SingSongZepe::Setting:
-        show_view = this->ui->wgt_main_search;
+        show_view = ui->wgt_main_search;
         break;
     case SingSongZepe::Todo:
-        show_view = this->ui->wgt_main_search;
+        show_view = ui->wgt_main_search;
         break;
     default:
         break;
@@ -28,23 +28,23 @@ void MainWindow::toggle_view(SingSongZepe::ToggleViewKind tvk) {
         SSLog::ln("this view is already current view");
         return;
     }
-    int current_view_idx = 0;
-    for (QWidget* view : this->main_views) {
-        if (view == show_view) {
-            view->setHidden(false);
-            this->current_view_idx = current_view_idx;
+    for (int idx = 0; idx != this->main_views.length(); idx++) {
+        if (this->main_views[idx] == show_view) {
+            this->main_views[idx]->setHidden(false);
+            this->navi_views[idx]->setHidden(false);
+            this->current_view_idx = idx;
             qDebug() << this->current_view_idx << "set visible";
         } else {
-            view->setHidden(true);
+            this->main_views[idx]->setHidden(true);
+            this->navi_views[idx]->setHidden(true);
         }
-        current_view_idx++;
     }
 }
 
 void MainWindow::search_books_launch() {
     // collect info and make up a search object
-    QString search_type = this->ui->comb_search_kind->currentText();
-    QString key_word = this->ui->le_search->text();
+    QString search_type = ui->comb_search_kind->currentText();
+    QString key_word = ui->le_search->text();
     if (search_type == SearchConstants::GENERAL_SEARCH) {
         GeneralSearch gs = GeneralSearch(search_type, key_word);
         // call
@@ -58,6 +58,7 @@ void MainWindow::search_books_launch() {
 
 void MainWindow::search_singlebook_launch(const QString& href) {
     QString url = QUrl(SingSongZepe::zlibrary_url).resolved(QUrl(href)).toString();
+    // qDebug() << url;
     SingleBookSearch search = SingleBookSearch(url);
     MainWindow::search_singlebook(&search);
 }

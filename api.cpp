@@ -5,6 +5,8 @@
 #include "sslog.h"
 #include "singsongzepe.h"
 #include "bookinfoitem.h"
+#include "singlebookinfo.h"
+#include "function/savefile.h"
 
 // network
 #include <QNetworkAccessManager>
@@ -69,10 +71,11 @@ void MainWindow::search_books(const GeneralSearch* search) {
             // SSLog::ln("Result: " + json_str);
 
             QList<BookInfo> book_infos = MainWindow::json_str2book_infos(&json_str);
+            qDebug() << json_str;
             if (this->book_infos != nullptr) {
                 delete this->book_infos;
             }
-            this->book_infos = new QList<BookInfo>(book_infos); // pass the value to this
+            this->book_infos = new QList<BookInfo>(std::move(book_infos)); // pass the value to this
 
             // call show_books
             MainWindow::show_books();
@@ -99,12 +102,12 @@ bool MainWindow::show_books() {
     this->wgt_book_items->setGeometry(SingSongZepe::WGT_BOOK_ITEMS_X, SingSongZepe::WGT_BOOK_ITEMS_Y, height, SingSongZepe::SINGLE_BOOK_ITEM_WIDTH_DEFULT);
     this->wgt_book_items->setFixedHeight(height);
     this->wgt_book_items->setStyleSheet("background-color: #ADD8E6"); // color skyblue
-    this->wgt_book_items->installEventFilter(this);
+    this->wgt_book_items->installEventFilter(this); // for which book user clicks
 
     int idx = 0;
     for (const auto& book_info : *book_infos) {
         // BookInfoItem* book_info_item = new BookInfoItem();
-        BookInfoItem* book_info_item = new BookInfoItem(this->wgt_book_items, this);
+        BookInfoItem* book_info_item = new BookInfoItem(this->wgt_book_items, this); // pass context to BookInfoItem
         book_info_item->set_book_info(book_info);
         book_info_item->setGeometry(0, MainWindow::get_book_items_pos_y_by_index(idx), SingSongZepe::SINGLE_BOOK_ITEM_WIDTH_DEFULT, SingSongZepe::SINGLE_BOOK_ITEM_HEIGHT);
         // book_info_item->install_event_filter();
@@ -137,13 +140,15 @@ void MainWindow::search_singlebook(const SingleBookSearch* search) {
     QByteArray data = MainWindow::request_url(search->url);
 
     // pass data to python for processing
-    PyObject* pymodule = PyImport_ImportModule(SingSongZepe::PYTHON_SEARCH_SINGLE_BOOK_PARSE.toStdString().c_str());
+    PyObject* pymodule = PyImport_ImportModule("search_single_book_parse");
     if (!pymodule) {
         SSLog::le("can't open the module file");
         return;
     }
+    // qDebug() << data;
+    SaveFile::save_file(data, "default.html");
 
-    PyObject* callable = PyObject_GetAttrString(pymodule, SingSongZepe::FUNCTION_SEARCH_SINGLE_BOOK_PARSE.toStdString().c_str());
+    PyObject* callable = PyObject_GetAttrString(pymodule, "search_single_book_parse");
 
     // arguments
     PyObject* tuple = PyTuple_New(1);
@@ -151,12 +156,32 @@ void MainWindow::search_singlebook(const SingleBookSearch* search) {
     PyObject* d = PyUnicode_FromString(stri.c_str());
     PyTuple_SET_ITEM(tuple, 0, d);
 
-    //
     PyObject* rep = PyObject_CallObject(callable, tuple);
     PyObject* py_json_str = PyObject_Str(rep);
     QString json_str = QString::fromUtf8(PyUnicode_AsUTF8(py_json_str));
+
+    BookFullInfo book_full_info = MainWindow::json_str2book_full_info(&json_str);
+    if (this->book_full_info != nullptr) {
+        delete this->book_full_info;
+    }
+    this->book_full_info = new BookFullInfo(std::move(book_full_info));
+    MainWindow::show_singlebook();
 }
 
 bool MainWindow::show_singlebook() {
+    if (this->book_full_info == nullptr) {
+        SSLog::lw("can't call show_singlebook when book_full_info is nullptr");
+        return false;
+    }
+    if (this->single_book_info != nullptr) {
+        delete this->single_book_info;
+    }
+    this->single_book_info = new SingleBookInfo(this->sb_sa_singlebookview);
+
+
+    ui->sa_singlebookview->setWidget(this->single_book_info);
+    MainWindow::toggle_view(SingSongZepe::SingleBookView);
+    // qDebug() << this->book_full_info->title;
+
     return true;
 }

@@ -4,6 +4,7 @@
 #include "search.h"
 #include "object/book_info.h"
 #include "object/bookfullinfo.h"
+// #include "singlebookinfo.h"
 // #include "worker.h"
 #include "singsongzepe.h"
 #include "sslog.h"
@@ -49,6 +50,7 @@ public slots:
     // utils
     QString make_url(const GeneralSearch* search);
     QList<BookInfo> json_str2book_infos(const QString* json_str);
+    BookFullInfo json_str2book_full_info(const QString* json_str);
     bool initializa_python();
     bool finalize_python();
     static QByteArray request_url(const QString& url);
@@ -68,6 +70,8 @@ private:
     // for showing of books
     QWidget* wgt_book_items = nullptr;
     QScrollBar* sb_sa_books = nullptr;
+    // for showing of single book
+    QWidget* single_book_info = nullptr; // SingleBookInfo but occurs recusive
     QScrollBar* sb_sa_singlebookview = nullptr;
     // for wgt_book_items
     int get_book_items_height();
@@ -75,6 +79,7 @@ private:
     // for toggle_view (main view)
     // wgt_main_search
     QList<QWidget*> main_views;
+    QList<QWidget*> navi_views;
     int current_view_idx;
 };
 #endif // MAINWINDOW_H

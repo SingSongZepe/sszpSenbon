@@ -10,8 +10,8 @@ public:
     GeneralSearch(const QString& search_type,
                   const QString& key_word,
                   bool exact_matching=false,
-                  int year_from=NULL,
-                  int year_to=NULL,
+                  int year_from=-1,
+                  int year_to=-1,
                   const QList<QString>& languages=QList<QString>(),
                   const QList<QString>& extensions=QList<QString>());
     ~GeneralSearch();
@@ -32,8 +32,8 @@ public:
     FulltextSearch(const QString& search_type,
                    const QString& key_word,
                    bool exact_matching=false,
-                   int year_from=NULL,
-                   int year_to=NULL,
+                   int year_from=-1,
+                   int year_to=-1,
                    const QList<QString>& languages=QList<QString>(),
                    const QList<QString>& extensions=QList<QString>(),
                    bool match_a_phrase=true);

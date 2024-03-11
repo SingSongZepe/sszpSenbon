@@ -18,6 +18,8 @@ MainWindow::MainWindow(QWidget *parent)
     // append views to the main_views
     this->main_views.append(ui->wgt_main_search);
     this->main_views.append(ui->wgt_main_singlebookview);
+    this->navi_views.append(ui->wgt_navi_search);
+    this->navi_views.append(ui->wgt_navi_singlebookview);
     this->current_view_idx = 0;
 
     MainWindow::toggle_view(SingSongZepe::transfrom_idx2viewkind(this->current_view_idx));
@@ -65,9 +67,14 @@ MainWindow::~MainWindow()
     MainWindow::finalize_python();
     delete ui;
     // release object
-    delete book_infos;
-    delete book_full_info;
-    delete wgt_book_items;
-    delete sb_sa_books;
-    delete sb_sa_singlebookview;
+    if (book_infos != nullptr) // when user even does't click pb_search
+        delete book_infos;
+    if (book_full_info != nullptr) // when user does't click single book(after searching)
+        delete book_full_info;
+    if (wgt_book_items != nullptr)
+        delete wgt_book_items;
+    delete sb_sa_books; // new when mainwindow init
+    if (single_book_info != nullptr)
+        delete single_book_info;
+    delete sb_sa_singlebookview; // new when mainwindow init
 }

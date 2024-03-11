@@ -37,6 +37,7 @@ public:
 
     // utils for constructing of book_infos
     static const QString URL_;
+    static const QString HREF_;
     static const QString COVER_;
     static const QString TITLE_;
     static const QString PUBLISHER_;
@@ -44,6 +45,19 @@ public:
     static const QString FILE_INFO_;
     static const QString LANGUAGE_;
     static const QString RATING_;
+
+    static const QString DESCRIPTION_;
+    static const QString CATEGORIES_;
+    static const QString EDITION_;
+    static const QString ISBN_;
+    static const QString ISBN10_;
+    static const QString ISBN13_;
+    static const QString FILE_;
+    static const QString VOLUME_;
+    static const QString YEAR_;
+    static const QString PAGES_;
+    static const QString SERIES_;
+    static const QString IPFS_;
 
     // for wgt_book_items size
     static const int WGT_BOOK_ITEMS_X;
@@ -62,6 +76,8 @@ public:
     static const QString PYTHON_SEARCH_SINGLE_BOOK_PARSE;
     static const QString FUNCTION_SEARCH_SINGLE_BOOK_PARSE;
 
+    // store as file
+    static const QString PATH_STORE_FILE_DEFULT;
 };
 
 #endif // SINGSONGZEPE_H

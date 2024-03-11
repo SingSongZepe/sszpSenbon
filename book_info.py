@@ -2,7 +2,7 @@ from dataclasses import dataclass
 
 @dataclass
 class BookInfo:
-    url: str
+    href: str
     cover: str
     title: str
     publisher: str

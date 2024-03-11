@@ -12,6 +12,7 @@ CONFIG += c++17
 SOURCES += \
     api.cpp \
     event.cpp \
+    function/savefile.cpp \
     main.cpp \
     mainwindow.cpp \
     object/bookfullinfo.cpp \
@@ -28,6 +29,7 @@ SOURCES += \
     worker.cpp
 
 HEADERS += \
+    function/savefile.h \
     mainwindow.h \
     object/bookfullinfo.h \
     object/helloworld.h \

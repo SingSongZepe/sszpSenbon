@@ -1,5 +1,7 @@
 #include "singsongzepe.h"
 
+#include <QCoreApplication>
+
 SingSongZepe::SingSongZepe()
 {
 
@@ -60,8 +62,9 @@ const QString SingSongZepe::subfix_fulltext = "fulltext/?";
 // book parse
 const QString SingSongZepe::BOOK_RESULT_PARSE_FILE = "book_result_parse.py";
 
-// utils for constructing of book_infos
+// utils for constructing of book_infos and book_full_info
 const QString SingSongZepe::URL_ = "url";
+const QString SingSongZepe::HREF_ = "href";
 const QString SingSongZepe::COVER_ = "cover";
 const QString SingSongZepe::TITLE_ = "title";
 const QString SingSongZepe::PUBLISHER_ = "publisher";
@@ -69,6 +72,19 @@ const QString SingSongZepe::AUTHORS_ = "authors";
 const QString SingSongZepe::FILE_INFO_ = "file_info";
 const QString SingSongZepe::LANGUAGE_ = "language";
 const QString SingSongZepe::RATING_ = "rating";
+
+const QString SingSongZepe::DESCRIPTION_ = "description";
+const QString SingSongZepe::CATEGORIES_ = "categories";
+const QString SingSongZepe::EDITION_ = "edition";
+const QString SingSongZepe::ISBN_ = "isbn";
+const QString SingSongZepe::ISBN10_ = "isbn10";
+const QString SingSongZepe::ISBN13_ = "isbn13";
+const QString SingSongZepe::FILE_ = "file";
+const QString SingSongZepe::VOLUME_ = "volume";
+const QString SingSongZepe::YEAR_ = "year";
+const QString SingSongZepe::PAGES_ = "pages";
+const QString SingSongZepe::SERIES_ = "series";
+const QString SingSongZepe::IPFS_ = "ipfs";
 
 // for wgt_book_items size
 const int SingSongZepe::WGT_BOOK_ITEMS_X = 10;
@@ -90,3 +106,5 @@ const int SingSongZepe::TIME_REQUEST_TIMER_OUT = 10000;
 const QString SingSongZepe::PYTHON_SEARCH_SINGLE_BOOK_PARSE = "search_single_book_parse";
 const QString SingSongZepe::FUNCTION_SEARCH_SINGLE_BOOK_PARSE = "search_single_book_parse";
 
+// for store file
+const QString SingSongZepe::PATH_STORE_FILE_DEFULT = "F:/QTProjects/sszpSenbon";

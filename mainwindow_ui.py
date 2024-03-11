@@ -15,16 +15,17 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QHBoxLayout,
-    QLabel, QLineEdit, QMainWindow, QPushButton,
-    QSizePolicy, QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QFrame,
+    QHBoxLayout, QLabel, QLineEdit, QMainWindow,
+    QPushButton, QScrollArea, QSizePolicy, QVBoxLayout,
+    QWidget)
 import image_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(800, 500)
+        MainWindow.resize(801, 501)
         MainWindow.setStyleSheet(u"")
         self.cw = QWidget(MainWindow)
         self.cw.setObjectName(u"cw")
@@ -168,7 +169,63 @@ class Ui_MainWindow(object):
 
         self.hl_search.addWidget(self.pb_search)
 
+        self.wgt_books = QWidget(self.wgt_main_search)
+        self.wgt_books.setObjectName(u"wgt_books")
+        self.wgt_books.setGeometry(QRect(0, 170, 751, 301))
+        self.wgt_books.setStyleSheet(u"#wgt_books {\n"
+"	background-color: #ADD8E6;\n"
+"    border-top-left-radius: 15px; \n"
+"    border-top-right-radius: 15px; \n"
+"	margin: 2px;\n"
+"}")
+        self.sa_books = QScrollArea(self.wgt_books)
+        self.sa_books.setObjectName(u"sa_books")
+        self.sa_books.setGeometry(QRect(10, 10, 731, 291))
+        self.sa_books.setStyleSheet(u"background-color: #ADD8E6;\n"
+"")
+        self.sa_books.setFrameShape(QFrame.Box)
+        self.sa_books.setLineWidth(0)
+        self.sa_books.setWidgetResizable(True)
+        self.sawc_books = QWidget()
+        self.sawc_books.setObjectName(u"sawc_books")
+        self.sawc_books.setGeometry(QRect(0, 0, 731, 291))
+        self.sawc_books.setStyleSheet(u"#scwc_books {\n"
+"	background-color: #ADD8E6;\n"
+"    border-top-left-radius: 15px; \n"
+"    border-top-right-radius: 15px; \n"
+"}")
+        self.sa_books.setWidget(self.sawc_books)
+        self.wgt_main_singlebookview = QWidget(self.cw)
+        self.wgt_main_singlebookview.setObjectName(u"wgt_main_singlebookview")
+        self.wgt_main_singlebookview.setGeometry(QRect(50, 30, 751, 471))
+        self.sa_singlebookview = QScrollArea(self.wgt_main_singlebookview)
+        self.sa_singlebookview.setObjectName(u"sa_singlebookview")
+        self.sa_singlebookview.setGeometry(QRect(0, 0, 751, 471))
+        self.sa_singlebookview.setWidgetResizable(True)
+        self.sawc_singlebookview = QWidget()
+        self.sawc_singlebookview.setObjectName(u"sawc_singlebookview")
+        self.sawc_singlebookview.setGeometry(QRect(0, 0, 749, 469))
+        self.sa_singlebookview.setWidget(self.sawc_singlebookview)
+        self.wgt_navi_singlebookview = QWidget(self.cw)
+        self.wgt_navi_singlebookview.setObjectName(u"wgt_navi_singlebookview")
+        self.wgt_navi_singlebookview.setGeometry(QRect(50, 0, 751, 30))
+        self.wgt_navi_singlebookview.setMinimumSize(QSize(750, 30))
+        self.wgt_navi_singlebookview.setStyleSheet(u"#wgt_navi_search {\n"
+"	background-color: #f0f0f0;\n"
+"}")
+        self.wgt_singsongzepe_2 = QWidget(self.wgt_navi_singlebookview)
+        self.wgt_singsongzepe_2.setObjectName(u"wgt_singsongzepe_2")
+        self.wgt_singsongzepe_2.setGeometry(QRect(490, 5, 261, 25))
+        self.lb_singsongzepe_2 = QLabel(self.wgt_singsongzepe_2)
+        self.lb_singsongzepe_2.setObjectName(u"lb_singsongzepe_2")
+        self.lb_singsongzepe_2.setGeometry(QRect(0, 0, 261, 25))
         MainWindow.setCentralWidget(self.cw)
+        self.wgt_main_singlebookview.raise_()
+        self.wgt_head.raise_()
+        self.wgt_navi_search.raise_()
+        self.wgt_bar.raise_()
+        self.wgt_main_search.raise_()
+        self.wgt_navi_singlebookview.raise_()
 
         self.retranslateUi(MainWindow)
 
@@ -190,5 +247,6 @@ class Ui_MainWindow(object):
         self.le_search.setText(QCoreApplication.translate("MainWindow", u"Hello", None))
         self.le_search.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Search books", None))
         self.pb_search.setText("")
+        self.lb_singsongzepe_2.setText("")
     # retranslateUi
 

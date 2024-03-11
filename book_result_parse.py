@@ -10,7 +10,7 @@ from book_info import BookInfo
 print("Hello World!")
 print('SingSongZepe Book Result Parse!')
 
-def book_result_parse(data):
+def book_result_parse(data) -> str:
     soup = bs(data, 'html.parser')
     
     # cover
