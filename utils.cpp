@@ -13,6 +13,9 @@
 #include <QUrl>
 #include <QTimer>
 #include <QEventLoop>
+#include <QVariant>
+#include <QNetworkCookie>
+#include <QNetworkCookieJar>
 
 #undef slots
 #include "Python.h"
@@ -160,6 +163,37 @@ QByteArray MainWindow::request_url(const QString& url) {
     loop.exec();
     return data;
 }
+
+QByteArray MainWindow::request_url_with_cookie(const QString& url, const QString& cookie) {
+    QNetworkAccessManager manager;
+    QNetworkRequest request = QNetworkRequest(QUrl(url));
+
+    request.setRawHeader("Cookie", cookie.toUtf8());
+
+    QNetworkReply* reply = manager.get(request);
+
+    QEventLoop loop;
+    QTimer timer;
+    timer.start(SingSongZepe::TIME_REQUEST_TIMER_OUT);
+    QObject::connect(&timer, &QTimer::timeout, [&](){
+        SSLog::le(QString("error while request url: %1").arg(url));
+        reply->abort();
+        loop.quit();
+    });
+
+    QByteArray data;
+    QObject::connect(reply, &QNetworkReply::finished, [&](){
+        if (reply->error() == QNetworkReply::NoError) {
+            data = reply->readAll();
+        }
+        reply->deleteLater();
+        loop.quit();
+    });
+
+    loop.exec();
+    return data;
+}
+
 
 QPixmap MainWindow::load_picture(const QString& url) {
     QByteArray data = MainWindow::request_url(url);

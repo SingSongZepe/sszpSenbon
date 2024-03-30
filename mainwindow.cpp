@@ -38,7 +38,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->sa_singlebookview->setVerticalScrollBar(this->sb_sa_singlebookview);
 
     // init cookiemanger
-
+    lcm = new LocalCookieManger();
 
     MainWindow::initializa_python();
 
@@ -79,5 +79,7 @@ MainWindow::~MainWindow()
     delete sb_sa_books; // new when mainwindow init
     if (single_book_info != nullptr)
         delete single_book_info;
+    // cookie manger
+    delete lcm;
     delete sb_sa_singlebookview; // new when mainwindow init
 }

@@ -11,6 +11,7 @@ CONFIG += c++17
 
 SOURCES += \
     api.cpp \
+    object/cookie.cpp \
     cookiemanger/localcookiemanger.cpp \
     event.cpp \
     function/savefile.cpp \
@@ -30,6 +31,7 @@ SOURCES += \
     worker.cpp
 
 HEADERS += \
+    object/cookie.h \
     cookiemanger/localcookiemanger.h \
     function/savefile.h \
     mainwindow.h \
@@ -61,6 +63,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
+    file.qrc \
     image.qrc
 
 DISTFILES += \

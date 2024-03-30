@@ -1,4 +1,4 @@
-
+from urllib.parse import urljoin as uj
 from bs4 import BeautifulSoup as bs
 from book_full_info import BookFullInfo
 
@@ -26,9 +26,17 @@ PAGES_ = 'pages'
 SERIES_ = 'series'
 IPFS_ = 'ipfs'
 
+zlibrary_root_url = 'https://zh.z-library.se/'
 
 def search_single_book_parse(data) -> str:
     soup = bs(data, 'html.parser')
+
+    # url for downloading
+    # but real download url
+    # https://dlz1.fcdn.sk/books-files/_collection/foreignfiction/f8f1378bd35eb1c02158bd8af978c3b4146633947cb5270ca5af0b14d962bc40/redirection?filename=Boy%20Meets%20Girl%20-%20Say%20Hello%20to%20Courtship%20%28Harris%20Joshua%29%20%28Z-Library%29.epub&md5=BJFK5H3MPwpChnzhXl-_GQ&expires=1711840674
+    a_with_href = soup.select_one('a.addDownloadedBook')
+    href = a_with_href['href']
+    print(uj(zlibrary_root_url, href))
 
     # cover
     img_with_cover = soup.select_one('z-cover img')
@@ -37,7 +45,7 @@ def search_single_book_parse(data) -> str:
 
     # authors and title
     z_cover_with_authors_title = soup.select_one('z-cover')
-    authors = z_cover_with_authors_title['author'] if z_cover_with_authors_title and z_cover_with_authors_title.has_attr('authors') else SECTION_VALUE_DEFAULT
+    authors = z_cover_with_authors_title['author'] if z_cover_with_authors_title and z_cover_with_authors_title.has_attr('author') else SECTION_VALUE_DEFAULT
 
     title = z_cover_with_authors_title['title'] if z_cover_with_authors_title and z_cover_with_authors_title.has_attr('title') else SECTION_VALUE_DEFAULT
     # print(TITLE_, title)
@@ -999,5 +1007,223 @@ and Android tablets using the free Cambridge Bookshelf app. The ebook
 has the same content as the printed book, plus features such as audio so
 that you can listen to the words as well as reading them. </div>
 '''
-    json_str = search_single_book_parse(data_business_vocabulary_loginned)
+    
+    data_with_cookie = '''
+<div itemscope="" itemtype="http://schema.org/Book">
+    <div class="row cardBooks" data-spelling-suggest="true" data-book_id="1768626">
+        <div class="col-sm-3 details-book-cover-container">
+            <z-cover naturalratio="" volume="" markbutton="" id="1768626" isbn="9781590521670,1590521676" author="Harris Joshua" title="Boy Meets Girl - Say Hello to Courtship">
+                <img data-src="https://s3proxy.cdn-zlib.se/covers300/collections/foreignfiction/c3b136c262335a42a5e6f2adc6fbcb0342c78234e847aa3c3499f507fd0264b9.jpg">
+            </z-cover>
+        </div>
+
+        <div class="col-sm-9">
+            <h1 itemprop="name" style="color: #000; line-height: 140%;">
+                Boy Meets Girl - Say Hello to Courtship            </h1>
+
+            <i><a itemprop="author" class="color1" title="Find all the author's book" href="/author/Harris Joshua">Harris Joshua</a></i>
+
+            
+    <div class="book-rating-detail">
+        <div class="book-rating  cursor-pointer">
+            <span class="book-rating-interest-score none">
+                0            </span> /
+            <span class="book-rating-quality-score ">
+                1.0            </span>
+        </div>
+        <a href="#post" class="book-comments-info js-anchor">
+            0 comments        </a>
+        <div class="bookmarks" style="display: none" data-book_id="1768626">
+            
+        <i class="icon-heart btn-save-for-later" title="Mark the book you like best or plan to download later"></i>
+        <i class="icon-bookmark btn-booklists" title="Add the book to your personal themed book collection and share it with your community"></i>
+                                <i class="icon-gratitude js-gratitude-icon" data-html="true" title="<span>Say “Thank you!”<br /> to our contributors for the book</span>" style="width: 20px; height: 20px; top: -3px; position: relative;">
+                    <div id="gratitudes_form"></div><script src="resources/build/bundles/gratitudes_form.04bb5f5f77fc9bac3a26.js" charset="UTF-8"></script>                </i>
+                    </div>
+    </div>
+
+<div class="book-choice-rating" data-visible="0" data-init="0">
+    <div class="overlay-post-score"><div id="bookChoiceRatingtFloatingSpinner"></div></div>
+    <div class="overlay"><div id="bookChoiceRatingSpinner"></div></div>
+    <div class="book-choice-interest-title">How much do you like this book?</div>
+    <div class="book-choice-interest-stars stars-list cursor-pointer" data-disabled="0" data-id="1768626" data-type="interest">
+        <i class="book-rating-star"></i>
+        <i class="book-rating-star"></i>
+        <i class="book-rating-star"></i>
+        <i class="book-rating-star"></i>
+        <i class="book-rating-star"></i>
+    </div>
+
+    <div class="book-choice-quality-stub">
+        <div class="book-choice-quality-title">What’s the quality of the file?</div>
+        <div class="book-choice-quality-dmsg">Download the book for quality assessment</div>
+    </div>
+
+    <div class="book-choice-quality-title">
+        <div>What’s the quality of the downloaded files?</div>
+    </div>
+    <div class="book-quality-rating-template">
+        <div class="book-format-quality-rating">
+            <div class="format-info">
+                <span class="download-date"></span>
+                <span class="extension book-property__extension"></span>
+                <span class="size"></span>
+            </div>
+            <div class="book-choice-quality-stars stars-list cursor-pointer" data-disabled="0" data-id="" data-type="quality">
+                <i class="book-rating-star _tooltip" data-toggle="tooltip" title="Text is unreadable"></i>
+                <i class="book-rating-star _tooltip" data-toggle="tooltip" title="Barely readable"></i>
+                <i class="book-rating-star _tooltip" data-toggle="tooltip" title="Readable"></i>
+                <i class="book-rating-star _tooltip" data-toggle="tooltip" title="Good"></i>
+                <i class="book-rating-star _tooltip" data-toggle="tooltip" title="Perfect"></i>
+            </div>
+        </div>
+    </div>
+</div>
+                            <div style="padding:10px 0; font-size:10pt" id="bookDescriptionBox" itemprop="reviewBody">
+                    Purpose Driven Romance The last thing singles want is more rules. But if you're looking for an intentional, God-pleasing game plan for finding a future spouse, Joshua Harris delivers an appealing one. A compelling new foreword, an all-new "8 Great Courtship Conversations" section, and updated material throughout makes this five-year revision of the original Boy Meets Girl a must-have! Harris illustrates how biblical courtship - a healthy, joyous alternative to recreational dating - worked for him and his wife. Boy Meets Girl presents an inspiring, practical example for readers wanting to pursue the possibility of marriage with someone they may be serious about.                </div>
+                        <div style="zoom: 1; margin-top: 30px;">
+
+<div class="bookDetailsBox">
+                <div class="bookProperty property_categories">
+                    <div class="property_label">Categories:</div>
+            <div class="property_value "><a href="/category/604/Self-Help-Relationships--Lifestyle-Relationships">Self-Help, Relationships &amp; Lifestyle - Relationships</a></div></div>
+                <div class="bookProperty property_year">
+                    <div class="property_label">Year:</div>
+            <div class="property_value ">2000</div></div>
+                <div class="bookProperty property_publisher">
+                    <div class="property_label">Publisher:</div>
+            <div class="property_value ">Multnomah</div></div>
+                <div class="bookProperty property_language">
+                    <div class="property_label">Language:</div>
+            <div class="property_value text-capitalize">english</div></div>
+                <div class="bookProperty property_isbn 10">
+                    <div class="property_label">ISBN 10:</div>
+            <div class="property_value ">1590521676</div></div>
+                <div class="bookProperty property_isbn 13">
+                    <div class="property_label">ISBN 13:</div>
+            <div class="property_value ">9781590521670</div></div>
+                <div class="bookProperty property__file">
+                    <div class="property_label">File:</div>
+            <div class="property_value ">EPUB, 162 KB</div></div>
+                <div style="display: none;" class="bookProperty property_user_tags">
+                    <div class="property_label">Your tags:</div>
+            <div class="property_value "></div></div>
+                    <div class="bookProperty property_ipfs_cid">
+                        <div class="property_label">IPFS:</div>
+                        <div class="property_value"><span class="z-copy-icon tooltip-init" data-placement="bottom" title="Copy" data-copy="QmbCpWw9ysMbUs6eepqPwUiEjMJCLwJNSSE7zkurXB3dsX" data-notif="CID copied to clipboard">CID</span> , <span class="z-copy-icon tooltip-init" data-placement="bottom" title="Copy" data-copy="bafk2bzaceab6zqon35s5e4ly4a4ghz7jgzlvxmgnsnlppiavxmqqaqczcsl5q" data-notif="CID copied to clipboard">CID Blake2b</span></div>
+                    </div>          
+                <div class="bookProperty property_language_year">english, 2000</div></div>            </div>
+        </div>
+    </div>
+
+    <section class="book-actions-container">
+    <div class="details-buttons-container">
+            <div class="book-actions-buttons">        <div class="book-details-button read-online ">
+                                                                    <div class="btn-group">
+                                                    <a class="btn btn-primary addDownloadedBook" href="/dl/1768626/7158f8" target="" data-book_id="1768626" data-isbn="9781590521670" rel="nofollow">
+                                <i class="zlibicon-download"></i>Download (<span class="book-property__extension">epub</span>, 162 KB)
+                            </a>
+                                                <button id="btnCheckOtherFormats" type="button" class="btn btn-primary dropdown-toggle dlDropdownBtn" data-check-formats="1" data-convertation-available="1">
+                            <span class="zlibicon-menu-dots"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                                                            <li class="disabled"><i class="zlibicon-play"></i>Read Online</li>
+                                <li><div class="premium-only"><a href="/how-to-donate" target="_blank">Become Premium</a> to access online reading</div></li>
+                                <!-- <li role="separator" class="divider"></li> -->
+                                                                                        <li role="separator" class="divider other-formats-divider"><div class="divider-text">Download</div></li>
+                                                        <li id="bookOtherFormatsContainer">
+                                <span class="dropdown-menu-muted" style="padding: 5px 19px 0; white-space: nowrap;">
+                                    Checking other formats...
+                                    <span id="bookOtherFormatsSpinnerContainer"></span>
+                                </span>
+                            </li>
+                                                            <li role="separator" class="divider"><div class="divider-text">Convert to</div></li>
+                                <ul class="convert-to-list"><li class="convert-to-button"><a href="javascript:void(0);" class="converterLink no-js__unavailable" data-book-id="1768626" data-convert_to="fb2">FB2</a></li> , <li class="convert-to-button"><a href="javascript:void(0);" class="converterLink no-js__unavailable" data-book-id="1768626" data-convert_to="pdf">PDF</a></li> , <li class="convert-to-button"><a href="javascript:void(0);" class="converterLink no-js__unavailable" data-book-id="1768626" data-convert_to="mobi">MOBI</a></li> , <li class="convert-to-button"><a href="javascript:void(0);" class="converterLink no-js__unavailable" data-book-id="1768626" data-convert_to="txt">TXT</a></li> , <li class="convert-to-button"><a href="javascript:void(0);" class="converterLink no-js__unavailable" data-book-id="1768626" data-convert_to="rtf">RTF</a></li></ul>
+                                <li class="convert-disclaimer">Converted file can differ from the original. If possible, download the file in its original format</li>
+                                <!-- <li><span class="no-js__disclaimer">Note: convert functions may be not available when JavaScript is disabled</span></li> -->
+                                                    </ul>
+                    </div>
+
+                                        </div>
+        
+    
+<div class="book-details-button">
+    <div class="btn-group" id="sendToButtonBox">
+        <button type="button" class="btn btn-default dropdown-toggle button-send-book" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Send to            <span class="sendToButtonBox__icons">
+                <i class="zlibicon-envelope menu-row__icon" style="font-size: 11px;"></i><i class="zlibicon-google-drive menu-row__icon" style="font-size: 11px;"></i><i class="zlibicon-Pocketbook menu-row__icon" style="position: relative;top: 2px;font-size: 16px;"></i><i class="zlibicon-Amazon menu-row__icon" style="position: relative;top: 4px;font-size: 16px;"></i>            </span>
+            <span class="caret"></span>
+        </button>
+        <div class="dropdown-menu"><section class="dropdown-widget send-to-widget menu-content"><div class="menu-row send-to" data-send_to="email"><i class="zlibicon-envelope menu-row__icon" style="font-size: 11px;"></i><span>Email <span class="gray">(aaaaa1964027610@163.com)</span></span></div><div class="menu-row send-to" data-send_to="googleDrive"><i class="zlibicon-google-drive menu-row__icon" style="font-size: 11px;"></i><span>Google Drive</span></div><div class="menu-row send-to" data-send_to="telegram"><i class="zlibicon-paper-airplane menu-row__icon" style="font-size: 11px;"></i><span>Telegram</span></div><div class="menu-row send-to" data-send_to="wechat"><i class="zlibicon-we-chat menu-row__icon" style="position: relative;top: 2px;font-size: 16px;"></i><span>WeChat</span></div><div class="dropdown-menu__divider"><span>e-reader</span></div><div class="menu-row send-to menu-row_unavailable" data-send_to="kindle"><i class="zlibicon-Amazon menu-row__icon" style="position: relative;top: 4px;font-size: 16px;"></i><span>Kindle</span></div><div class="menu-row__message menu-row__message_warning"><span><a href="/how-to-donate" target="_blank">Become Premium</a> to access this feature</span></div><div class="menu-row send-to menu-row_unavailable" data-send_to="pocketbook"><i class="zlibicon-Pocketbook menu-row__icon" style="position: relative;top: 2px;font-size: 16px;"></i><span>PocketBook</span></div><div class="menu-row__message"><span>No email provided. <a href="/profileEdit" target="_blank">Set up PocketBook email</a></span><span class="menu-row__hint"><i class="zlibicon-question-circle" title="Need help? Please read our short guide <br/><a class=&quot;text--inline-link&quot; href=&quot;/info/howtopocketbook&quot;>how to send a book to PocketBook</a>" data-toggle="tooltip" data-placement="top" data-html="true" data-mouseover="true"></i></span></div></section></div>    </div>
+</div>
+<div class="details-buttons-container__divider"></div>
+    <div class="book-details-button">
+        <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle button-paperback" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Paperback <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <div class="menu-content menu-content_paperback">
+                                            <div class="menu-row">
+                            <a class="menu__link_paperback" href="https://amazon.com/s?k=Boy+Meets+Girl+-+Say+Hello+to+Courtship Harris+Joshua" target="_blank">
+                                <img class="menu__icon" src="/img/book-stores/amazon_grayscale.svg">
+                                Amazon                            </a>
+                        </div>
+                                            <div class="menu-row">
+                            <a class="menu__link_paperback" href="https://www.barnesandnoble.com/s/Boy+Meets+Girl+-+Say+Hello+to+Courtship Harris+Joshua" target="_blank">
+                                <img class="menu__icon" src="/img/book-stores/barnes_noble_grayscale.svg">
+                                Barnes &amp; Noble                            </a>
+                        </div>
+                                            <div class="menu-row">
+                            <a class="menu__link_paperback" href="https://bookshop.org/search?keywords=Boy+Meets+Girl+-+Say+Hello+to+Courtship Harris+Joshua" target="_blank">
+                                <img class="menu__icon" src="/img/book-stores/bookshoporg_grayscale.svg">
+                                Bookshop.org                            </a>
+                        </div>
+                    
+                    <div class="text--hint">
+                        Want to add your book store? Contact us at <a href="mailto:support@z-lib.se">support@z-lib.se</a>                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+                            <div class="clear"></div>
+                <z-dropdown topic="Something wrong?" arrow="" onchange="smthwrong(event)">
+                    <label value="suggest"><i class="zlibicon-suggest"></i> Suggest correction</label>
+                    <label value="report"><i class="zlibicon-warning"></i> Report problem</label>
+                </z-dropdown>
+                    </div>
+        <div class="book-actions-status">
+<div class="cBox1" id="sentToEmailInfo" style="display:none;">
+    The file will be sent to your email address. It may take up to 1-5 minutes before you receive it.</div>
+
+<div class="cBox1" id="sentToTelegramInfo" style="display:none;">
+    <p>The file will be sent to you via the Telegram messenger. It may take up to 1-5 minutes before you receive it.</p>
+    <p>Note: Make sure you have linked your account to Z-Library Telegram bot.</p>
+</div>
+
+<div class="cBox1" id="sentToEmailInfoKindle" style="display:none;">
+    <p>The file will be sent to your Kindle account. It may take up to 1–5 minutes before you receive it.</p>
+    <p><b>Please note</b>: you need to verify every book you want to send to your Kindle. Check your mailbox for the verification email from Amazon Kindle.</p>
+</div>
+
+<div class="cBox1" id="sendToGoogleDriveMessage" style="display:none; position: relative;"></div>
+
+<div class="cBox1Danger" id="errorMessage" style="display:none;">
+    </div>
+
+<div id="converterCurrentStatusesBoxContainer">
+    <div id="converterCurrentStatusesBox">
+            </div>
+</div>
+<div id="convertationStatusTemplates">
+    <div class="status-new" data-job_id=""><div class="spinner-content"></div><div class="message">Conversion to <b class="book-property__extension"></b> is in progress</div></div>    <div class="status-error"><span class="zlibicon-close-circle status-icon"></span><div class="message">Conversion to <b class="book-property__extension"></b> is failed</div><span class="zlibicon-cross icon-hovered delete-btn" data-job_id=""></span></div></div>
+<div id="shareToTooltipsContainer"></div>
+</div>
+            </div></section>
+
+</div>
+'''
+
+    json_str = search_single_book_parse(data_with_cookie)
     print(json_str)

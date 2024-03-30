@@ -97,7 +97,7 @@ bool MainWindow::show_books() {
     if (this->wgt_book_items != nullptr) {
         delete this->wgt_book_items;
     }
-    this->wgt_book_items = new QWidget(this->ui->sa_books);
+    this->wgt_book_items = new QWidget(ui->sa_books);
     int height = MainWindow::get_book_items_height();
     this->wgt_book_items->setGeometry(SingSongZepe::WGT_BOOK_ITEMS_X, SingSongZepe::WGT_BOOK_ITEMS_Y, height, SingSongZepe::SINGLE_BOOK_ITEM_WIDTH_DEFULT);
     this->wgt_book_items->setFixedHeight(height);
@@ -137,7 +137,7 @@ void MainWindow::search_singlebook(const SingleBookSearch* search) {
     SSLog::ln("search url: " + search->url);
 
     // get html data
-    QByteArray data = MainWindow::request_url(search->url);
+    QByteArray data = MainWindow::request_url_with_cookie(search->url, this->lcm->get_one_cookie().cookie);
 
     // pass data to python for processing
     PyObject* pymodule = PyImport_ImportModule("search_single_book_parse");
@@ -146,7 +146,7 @@ void MainWindow::search_singlebook(const SingleBookSearch* search) {
         return;
     }
     // qDebug() << data;
-    // SaveFile::save_file(data, "default.html");
+    SaveFile::save_file(data, "default.html");
 
     PyObject* callable = PyObject_GetAttrString(pymodule, "search_single_book_parse");
 
