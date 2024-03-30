@@ -37,6 +37,9 @@ MainWindow::MainWindow(QWidget *parent)
     this->sb_sa_singlebookview->setStyleSheet(SingSongZepe::STYLE_SCROLLBAR_SLIM_TRANSPARENT);
     ui->sa_singlebookview->setVerticalScrollBar(this->sb_sa_singlebookview);
 
+    // init cookiemanger
+
+
     MainWindow::initializa_python();
 
     // book_infos

@@ -146,7 +146,7 @@ void MainWindow::search_singlebook(const SingleBookSearch* search) {
         return;
     }
     // qDebug() << data;
-    SaveFile::save_file(data, "default.html");
+    // SaveFile::save_file(data, "default.html");
 
     PyObject* callable = PyObject_GetAttrString(pymodule, "search_single_book_parse");
 
@@ -160,11 +160,17 @@ void MainWindow::search_singlebook(const SingleBookSearch* search) {
     PyObject* py_json_str = PyObject_Str(rep);
     QString json_str = QString::fromUtf8(PyUnicode_AsUTF8(py_json_str));
 
+    if (json_str == SingSongZepe::JSON_STR_NULL) {
+        SSLog::le("parse json string there be a error, may be python file be changed");
+        return;
+    }
+
     BookFullInfo book_full_info = MainWindow::json_str2book_full_info(&json_str);
     if (this->book_full_info != nullptr) {
         delete this->book_full_info;
     }
-    this->book_full_info = new BookFullInfo(std::move(book_full_info));
+
+    this->book_full_info = new BookFullInfo(book_full_info);
     MainWindow::show_singlebook();
 }
 
@@ -176,8 +182,11 @@ bool MainWindow::show_singlebook() {
     if (this->single_book_info != nullptr) {
         delete this->single_book_info;
     }
-    this->single_book_info = new SingleBookInfo(this->sb_sa_singlebookview);
+    this->single_book_info = new SingleBookInfo(ui->sa_singlebookview, this);
+    // SingleBookInfo* single_book_info = static_cast<SingleBookInfo*>(this->single_book_info);
+    // single_book_info = new SingleBookInfo(ui->sa_singlebookview, this);
 
+    ((SingleBookInfo*) this->single_book_info)->set_book_full_info(*this->book_full_info); // to const BookFullInfo&
 
     ui->sa_singlebookview->setWidget(this->single_book_info);
     MainWindow::toggle_view(SingSongZepe::SingleBookView);

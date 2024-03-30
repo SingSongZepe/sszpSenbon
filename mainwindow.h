@@ -8,6 +8,7 @@
 // #include "worker.h"
 #include "singsongzepe.h"
 #include "sslog.h"
+#include "cookiemanger/localcookiemanger.h"
 
 #include <QMainWindow>
 #include <QMouseEvent>
@@ -62,7 +63,7 @@ public:
     bool eventFilter(QObject* obj, QEvent* event);
 
 private:
-    Ui::MainWindow *ui;
+    Ui::MainWindow *ui; // new
 
     // there store book_infos
     QList<BookInfo>* book_infos = nullptr;
@@ -81,5 +82,8 @@ private:
     QList<QWidget*> main_views;
     QList<QWidget*> navi_views;
     int current_view_idx;
+
+    // cookiemanger
+    LocalCookieManger* lcm;
 };
 #endif // MAINWINDOW_H

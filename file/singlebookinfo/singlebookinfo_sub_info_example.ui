@@ -67,7 +67,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="image.qrc">:/:/res/image/title_slim.png</pixmap>
+     <pixmap resource="../../image.qrc">:/:/res/image/title_slim.png</pixmap>
     </property>
    </widget>
    <widget class="QTextBrowser" name="tb_book_title">
@@ -148,7 +148,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="image.qrc">:/:/res/image/authors.png</pixmap>
+     <pixmap resource="../../image.qrc">:/:/res/image/authors.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -175,7 +175,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="image.qrc">:/:/res/image/rating.png</pixmap>
+     <pixmap resource="../../image.qrc">:/:/res/image/rating.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -233,7 +233,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="image.qrc">:/:/res/image/like.png</pixmap>
+     <pixmap resource="../../image.qrc">:/:/res/image/like.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -260,7 +260,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="image.qrc">:/:/res/image/bookmark.png</pixmap>
+     <pixmap resource="../../image.qrc">:/:/res/image/bookmark.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -394,7 +394,7 @@ border-top-right-radius: 5px; </string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="image.qrc">:/:/res/image/return.png</pixmap>
+     <pixmap resource="../../image.qrc">:/:/res/image/return.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -403,7 +403,7 @@ border-top-right-radius: 5px; </string>
   </widget>
  </widget>
  <resources>
-  <include location="image.qrc"/>
+  <include location="../../image.qrc"/>
  </resources>
  <connections/>
 </ui>

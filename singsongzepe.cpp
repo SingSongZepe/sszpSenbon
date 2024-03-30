@@ -108,3 +108,7 @@ const QString SingSongZepe::FUNCTION_SEARCH_SINGLE_BOOK_PARSE = "search_single_b
 
 // for store file
 const QString SingSongZepe::PATH_STORE_FILE_DEFULT = "F:/QTProjects/sszpSenbon";
+
+// json string
+const QString SingSongZepe::JSON_STR_NULL = "<NULL>";
+const QString SingSongZepe::BOOK_INFO_UNKNOWN = "unknown";

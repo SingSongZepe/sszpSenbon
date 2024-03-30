@@ -37,6 +37,7 @@ bool BookInfoItem::set_book_info(const BookInfo& book_info) {
     //     SSLog::le("error while setting picture of lb_cover");
     // }
 
+    // set pixmap
     Worker::work_now([&](){
         MainWindow::set_label_pixmap(ui->lb_book_cover, MainWindow::load_picture(book_info.cover));
     });

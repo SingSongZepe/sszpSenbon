@@ -37,8 +37,7 @@ def search_single_book_parse(data) -> str:
 
     # authors and title
     z_cover_with_authors_title = soup.select_one('z-cover')
-    authors = z_cover_with_authors_title['author'] if z_cover_with_authors_title and z_cover_with_authors_title.has_attr('author') else SECTION_VALUE_DEFAULT
-    # print(AUTHORS_, authors)
+    authors = z_cover_with_authors_title['author'] if z_cover_with_authors_title and z_cover_with_authors_title.has_attr('authors') else SECTION_VALUE_DEFAULT
 
     title = z_cover_with_authors_title['title'] if z_cover_with_authors_title and z_cover_with_authors_title.has_attr('title') else SECTION_VALUE_DEFAULT
     # print(TITLE_, title)

@@ -21,13 +21,13 @@ void MainWindow::toggle_view(SingSongZepe::ToggleViewKind tvk) {
     case SingSongZepe::Todo:
         show_view = ui->wgt_main_search;
         break;
-    default:
-        break;
     }
+
     if (show_view == this->main_views[this->current_view_idx]) {
         SSLog::ln("this view is already current view");
         return;
     }
+
     for (int idx = 0; idx != this->main_views.length(); idx++) {
         if (this->main_views[idx] == show_view) {
             this->main_views[idx]->setHidden(false);

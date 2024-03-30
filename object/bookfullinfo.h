@@ -7,7 +7,7 @@ class BookFullInfo
 {
 public:
     QString cover;
-    QString url;
+    QString url; // url for downloading, must request with cookies
     QString title;
     QString authors;
     QString rating;
@@ -47,6 +47,8 @@ public:
                  QString series = "series",
                  QString ipfs = "ipfs");
     ~BookFullInfo();
+
+    // const BookFullInfo& ref();
 };
 
 #endif // BOOKFULLINFO_H

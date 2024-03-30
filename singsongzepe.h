@@ -78,6 +78,10 @@ public:
 
     // store as file
     static const QString PATH_STORE_FILE_DEFULT;
+
+    // json string
+    static const QString JSON_STR_NULL;
+    static const QString BOOK_INFO_UNKNOWN;
 };
 
 #endif // SINGSONGZEPE_H

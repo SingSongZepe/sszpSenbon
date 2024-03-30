@@ -46,3 +46,7 @@ BookFullInfo::~BookFullInfo()
 {
 
 }
+
+// const BookFullInfo& BookFullInfo::ref() {
+//     return &this;
+// }
