@@ -136,8 +136,16 @@ void MainWindow::search_singlebook(const SingleBookSearch* search) {
     SSLog::ln("-----Single Book Search Info-----");
     SSLog::ln("search url: " + search->url);
 
+    // new a single_book_info (widget)
+    if (this->single_book_info != nullptr) {
+        delete this->single_book_info;
+    }
+    this->single_book_info = new SingleBookInfo(ui->sa_singlebookview, this);
+
     // get html data
-    QByteArray data = MainWindow::request_url_with_cookie(search->url, this->lcm->get_one_cookie().cookie);
+    Cookie cookie = this->lcm->get_one_cookie();
+    QByteArray data = MainWindow::request_url_with_cookie(search->url, cookie.cookie);
+    ((SingleBookInfo*) this->single_book_info)->set_cookie(cookie);
 
     // pass data to python for processing
     PyObject* pymodule = PyImport_ImportModule("search_single_book_parse");
@@ -146,7 +154,7 @@ void MainWindow::search_singlebook(const SingleBookSearch* search) {
         return;
     }
     // qDebug() << data;
-    SaveFile::save_file(data, "default.html");
+    // SaveFile::save_file(data, "default.html");
 
     PyObject* callable = PyObject_GetAttrString(pymodule, "search_single_book_parse");
 
@@ -179,12 +187,6 @@ bool MainWindow::show_singlebook() {
         SSLog::lw("can't call show_singlebook when book_full_info is nullptr");
         return false;
     }
-    if (this->single_book_info != nullptr) {
-        delete this->single_book_info;
-    }
-    this->single_book_info = new SingleBookInfo(ui->sa_singlebookview, this);
-    // SingleBookInfo* single_book_info = static_cast<SingleBookInfo*>(this->single_book_info);
-    // single_book_info = new SingleBookInfo(ui->sa_singlebookview, this);
 
     ((SingleBookInfo*) this->single_book_info)->set_book_full_info(*this->book_full_info); // to const BookFullInfo&
 

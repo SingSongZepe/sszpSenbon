@@ -53,7 +53,7 @@ const QString SingSongZepe::SINGSONGZEPE_ = "SingSongZepe";
 const QString SingSongZepe::SSZPSENBON_ = "sszpSenbon";
 
 // web info
-const QString SingSongZepe::zlibrary_url = "https://z-library.se/";
+const QString SingSongZepe::zlibrary_url = "https://zh.z-library.se/";
 // https://z-library.se/s/?q=book_name&e=1
 const QString SingSongZepe::subfix_general = "s/?";
 // https://z-library.se/fulltext/?q=HelloWorld&type=phrase
@@ -107,7 +107,7 @@ const QString SingSongZepe::PYTHON_SEARCH_SINGLE_BOOK_PARSE = "search_single_boo
 const QString SingSongZepe::FUNCTION_SEARCH_SINGLE_BOOK_PARSE = "search_single_book_parse";
 
 // for store file
-const QString SingSongZepe::PATH_STORE_FILE_DEFULT = "F:/QTProjects/sszpSenbon";
+const QString SingSongZepe::PATH_STORE_FILE_DEFULT = "F:/QTProjects/sszpSenbon/file/download";
 
 // json string
 const QString SingSongZepe::JSON_STR_NULL = "<NULL>";

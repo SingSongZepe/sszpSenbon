@@ -30,6 +30,7 @@ class Ui_SingleBookInfo(object):
         self.lb_book_cover = QLabel(self.wgt_book_cover)
         self.lb_book_cover.setObjectName(u"lb_book_cover")
         self.lb_book_cover.setGeometry(QRect(0, 0, 200, 280))
+        self.lb_book_cover.setCursor(QCursor(Qt.PointingHandCursor))
         self.lb_book_cover.setStyleSheet(u"")
         self.lb_book_cover.setScaledContents(True)
         self.wgt_main_info = QWidget(SingleBookInfo)

@@ -56,9 +56,12 @@ public slots:
     bool finalize_python();
     static QByteArray request_url(const QString& url);
     static QByteArray request_url_with_cookie(const QString& url, const QString& cookie);
+    static QByteArray request_url_with_cookie_no_timeout(const QString& url, const QString& cookie);
     static QPixmap load_picture(const QString& url);
     static bool set_label_pixmap(QLabel* lb, const QPixmap& pixmap);
     const BookInfo* get_bookinfo_of_pos(const QPoint& pos);
+    // download_book function will for
+    // static bool download_book(const QString& download_url, Cookie& cookie);
 
 public:
     bool eventFilter(QObject* obj, QEvent* event);

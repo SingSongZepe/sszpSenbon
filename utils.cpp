@@ -194,6 +194,28 @@ QByteArray MainWindow::request_url_with_cookie(const QString& url, const QString
     return data;
 }
 
+QByteArray MainWindow::request_url_with_cookie_no_timeout(const QString& url, const QString& cookie) {
+    QNetworkAccessManager manager;
+    QNetworkRequest request = QNetworkRequest(QUrl(url));
+
+    request.setRawHeader("Cookie", cookie.toUtf8());
+
+    QNetworkReply* reply = manager.get(request);
+
+    QEventLoop loop;
+
+    QByteArray data;
+    QObject::connect(reply, &QNetworkReply::finished, [&](){
+        if (reply->error() == QNetworkReply::NoError) {
+            data = reply->readAll();
+        }
+        reply->deleteLater();
+        loop.quit();
+    });
+
+    loop.exec();
+    return data;
+}
 
 QPixmap MainWindow::load_picture(const QString& url) {
     QByteArray data = MainWindow::request_url(url);

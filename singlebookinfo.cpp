@@ -2,6 +2,7 @@
 #include "ui_singlebookinfo.h"
 
 #include "worker.h"
+#include "function/savefile.h"
 
 const int SingleBookInfo::SUB_INFO_LABEL_WIDTH_DEFAULT = 71;
 const int SingleBookInfo::SUB_INFO_WIDTH_DEFAULT = 251;
@@ -16,6 +17,13 @@ const int SingleBookInfo::PADDING_BETWEEN_LABEL_VALUE = 10;
 const QString SingleBookInfo::SECTION_VALUE_DEFAULT = "unknown";
 const QString SingleBookInfo::DESCRIPTION_UNKNOWN = "no description";
 
+const QString SingleBookInfo::RE_EXTENSION = "\\b(\\w+)\\b";
+const QString SingleBookInfo::RE_REMOVE = "[<>:\"/\\|?*]";
+const QString SingleBookInfo::EXTENSION_UNKNOWN = "unknown";
+
+const QRegularExpression SingleBookInfo::re_extension = QRegularExpression(SingleBookInfo::RE_EXTENSION);
+const QRegularExpression SingleBookInfo::re_remove = QRegularExpression(SingleBookInfo::RE_REMOVE);
+
 SingleBookInfo::SingleBookInfo(QWidget *parent, MainWindow* context)
     : QWidget(parent)
     , ui(new Ui::SingleBookInfo)
@@ -26,6 +34,9 @@ SingleBookInfo::SingleBookInfo(QWidget *parent, MainWindow* context)
     // click event
     ui->lb_return_to_search->installEventFilter(this);
     ui->wgt_return_to_search->installEventFilter(this);
+
+    // download
+    ui->lb_book_cover->installEventFilter(this);
 
     // init sa_singlebookinfo_sub_info
     this->sb_sa_singlebookinfo_sub_info = new QScrollBar(ui->sa_singlebookinfo_sub_info);
@@ -39,8 +50,7 @@ SingleBookInfo::SingleBookInfo(QWidget *parent, MainWindow* context)
     ui->sa_singlebookinfo_sub_info->setWidget(this->wgt_sub_info_showing);
 }
 
-SingleBookInfo::~SingleBookInfo()
-{
+SingleBookInfo::~SingleBookInfo() {
     delete sb_sa_singlebookinfo_sub_info;
     delete wgt_sub_info_showing;
     delete ui;
@@ -58,9 +68,40 @@ bool SingleBookInfo::eventFilter(QObject* obj, QEvent* event) {
                     return true;
                 }
             }
+        } else if (obj == ui->lb_book_cover) {
+            // MainWindow::download_book(this->book_full_info.url, this->cookie);
+            QMouseEvent *mouseEvent = static_cast<QMouseEvent*>(event);
+            if (mouseEvent) {
+                if (mouseEvent->button() == Qt::LeftButton) {
+                    this->download_book();
+                    return true;
+                }
+            }
         }
     }
     return false;
+}
+
+// we need to monitor the process of downloading
+// so we need to append the download thread to context
+// and will display the process of downloading
+bool SingleBookInfo::download_book() {
+    SSLog::ln(this->book_full_info.title);
+    SSLog::ln(this->book_full_info.url);
+    SSLog::ln(this->cookie.cookie);
+
+    // request for book
+    QByteArray book_data = MainWindow::request_url_with_cookie_no_timeout(this->book_full_info.url, this->cookie.cookie);
+
+    // save the file
+    SaveFile::save_file(book_data, SingleBookInfo::make_book_name());
+
+    return true;
+}
+
+bool SingleBookInfo::set_cookie(const Cookie& cookie) {
+    this->cookie = cookie;
+    return true;
 }
 
 bool SingleBookInfo::set_book_full_info(const BookFullInfo& full_info) {
@@ -82,7 +123,6 @@ bool SingleBookInfo::set_book_full_info(const BookFullInfo& full_info) {
     Worker::work_now([&]() {
         MainWindow::set_label_pixmap(ui->lb_book_cover, MainWindow::load_picture(full_info.cover));
     });
-
 
     int n = 0; // how many sub info there be // categories for 2
 
@@ -259,6 +299,30 @@ bool SingleBookInfo::set_book_full_info(const BookFullInfo& full_info) {
 
 QPoint SingleBookInfo::get_position_by_index(int xidx, int yidx) const {
 
+
 }
 
+// with extension, like pdf epub
+QString SingleBookInfo::make_book_name() const {
+    QRegularExpressionMatch match = SingleBookInfo::re_extension.match(this->book_full_info.file);
 
+    if (match.hasMatch()) {
+        return SingleBookInfo::retitle(this->book_full_info.title) + "." + match.captured(1);
+    }
+
+    return this->book_full_info.title + "." + SingleBookInfo::EXTENSION_UNKNOWN;
+}
+
+// may be a better practice
+// void SingleBookInfo::retitle(QString& title) {
+//     title.remove(SingleBookInfo::re_remove);
+// }
+// when call it, if you don't want to change original string
+// then just need to copy string once
+// QString copy = this->book_full_info.title;
+// and then pass the copy to the function
+QString SingleBookInfo::retitle(const QString& title) {
+    QString copy = title;
+    copy.remove(SingleBookInfo::re_remove);
+    return copy;
+}

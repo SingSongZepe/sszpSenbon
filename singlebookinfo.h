@@ -18,9 +18,14 @@ public:
     ~SingleBookInfo();
 
     bool set_book_full_info(const BookFullInfo& full_info);
+    bool set_cookie(const Cookie& cookie);
+
+    bool download_book();
 
     // utils
     QPoint get_position_by_index(int xidx, int ydix) const;
+    QString make_book_name() const;
+    static QString retitle(const QString& title);
 
 public:
     bool eventFilter(QObject* obj, QEvent* event);
@@ -42,12 +47,21 @@ public:
     static const QString SECTION_VALUE_DEFAULT;
     static const QString DESCRIPTION_UNKNOWN;
 
+    // FOR DOWNLOADING BOOK
+    static const QString RE_EXTENSION;
+    static const QString RE_REMOVE;
+    static const QString EXTENSION_UNKNOWN;
+
+    static const QRegularExpression re_extension;
+    static const QRegularExpression re_remove;
+
 private:
     Ui::SingleBookInfo *ui; // new
     MainWindow* context;
     BookFullInfo book_full_info; // url for downloading book directly
     QScrollBar* sb_sa_singlebookinfo_sub_info; // new
     QWidget* wgt_sub_info_showing;
+    Cookie cookie;
     // there the lbs_sub_info is unneccessary, because of
     // while delete wgt_sub_info_showing, all lbs (newed) will be deleted.
     // QList<QLabel*> lbs_sub_info; // store sub info and then release them

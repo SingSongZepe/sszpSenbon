@@ -36,7 +36,7 @@ def search_single_book_parse(data) -> str:
     # https://dlz1.fcdn.sk/books-files/_collection/foreignfiction/f8f1378bd35eb1c02158bd8af978c3b4146633947cb5270ca5af0b14d962bc40/redirection?filename=Boy%20Meets%20Girl%20-%20Say%20Hello%20to%20Courtship%20%28Harris%20Joshua%29%20%28Z-Library%29.epub&md5=BJFK5H3MPwpChnzhXl-_GQ&expires=1711840674
     a_with_href = soup.select_one('a.addDownloadedBook')
     href = a_with_href['href']
-    print(uj(zlibrary_root_url, href))
+    url = uj(zlibrary_root_url, href)
 
     # cover
     img_with_cover = soup.select_one('z-cover img')
@@ -132,7 +132,7 @@ def search_single_book_parse(data) -> str:
     # init book_full_info
     book_full_info = BookFullInfo(
         cover=cover,
-        url=URL_,
+        url=url,
         title=title,
         authors=authors,
         rating=rating,
@@ -149,7 +149,7 @@ def search_single_book_parse(data) -> str:
         publisher=publisher,
         pages=pages,
         series=series,
-        ipfs=ipfs
+        ipfs=ipfs,
     )
     return book_full_info.transform_2json_str()
 

@@ -65,8 +65,7 @@ void MainWindow::print_hello(bool checked) {
     qDebug() << "Hello World";
 }
 
-MainWindow::~MainWindow()
-{
+MainWindow::~MainWindow() {
     MainWindow::finalize_python();
     delete ui;
     // release object
@@ -83,3 +82,5 @@ MainWindow::~MainWindow()
     delete lcm;
     delete sb_sa_singlebookview; // new when mainwindow init
 }
+
+
