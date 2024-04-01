@@ -31,6 +31,7 @@ int SingSongZepe::transfrom_viewkind2idx(SingSongZepe::ToggleViewKind tvk) {
 
 SingSongZepe::ToggleViewKind SingSongZepe::transfrom_idx2viewkind(int idx) {
     switch (idx) {
+    case -1:
     case 0:
         return SingSongZepe::Search;
     case 1:
@@ -103,8 +104,12 @@ const QString SingSongZepe::STYLE_SCROLLBAR_SLIM_TRANSPARENT = "QScrollBar:verti
 const int SingSongZepe::TIME_REQUEST_TIMER_OUT = 10000;
 
 // for python script
+const QString SingSongZepe::PYTHON_BOOK_RESULT_PARSE = "book_result_parse";
+const QString SingSongZepe::FUNCTION_BOOK_RESULT_PARSE = "book_result_parse";
 const QString SingSongZepe::PYTHON_SEARCH_SINGLE_BOOK_PARSE = "search_single_book_parse";
 const QString SingSongZepe::FUNCTION_SEARCH_SINGLE_BOOK_PARSE = "search_single_book_parse";
+const QString SingSongZepe::PYTHON_CHECK_COOKIE_USEFUL = "check_cookie_useful";
+const QString SingSongZepe::FUNCTION_CHECK_COOKIE_USEFUL = "check_cookie_useful";
 
 // for store file
 const QString SingSongZepe::PATH_STORE_FILE_DEFULT = "F:/QTProjects/sszpSenbon/file/download";

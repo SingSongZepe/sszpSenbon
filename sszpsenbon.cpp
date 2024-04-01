@@ -13,13 +13,13 @@ void MainWindow::toggle_view(SingSongZepe::ToggleViewKind tvk) {
         show_view = ui->wgt_main_singlebookview;
         break;
     case SingSongZepe::History:
-        show_view = ui->wgt_main_search;
+        show_view = ui->wgt_main_history;
         break;
     case SingSongZepe::Setting:
-        show_view = ui->wgt_main_search;
+        show_view = ui->wgt_main_setting;
         break;
     case SingSongZepe::Todo:
-        show_view = ui->wgt_main_search;
+        show_view = ui->wgt_main_todo;
         break;
     }
 

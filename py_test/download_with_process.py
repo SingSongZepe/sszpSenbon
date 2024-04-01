@@ -21,7 +21,7 @@ class DownloadThread(QThread):
         bytes_downloaded = 0
         start_time = time.time()
 
-        with open('df', 'wb') as file:
+        with open('./py_test/df.txt', 'wb') as file:
             for chunk in response.iter_content(chunk_size=1024):
                 if chunk:
                     file.write(chunk)

@@ -19,14 +19,18 @@ public:
 
 public:
     static const QString COOKIES_JSON_FILE;
+    static const QString RESULT_USEFUL_COOKIE;
+    static const QString RESULT_UNUSEFUL_COOKIE;
 
 public:
     void load_cookies();
     const Cookie& get_one_cookie();
+    bool check_cookie_useful(const Cookie& cookie) const;
 
 public:
     QList<Cookie>* cookie_pool;
-
+    int cookie_index;            // pointer to a cookie that useful
+    int cookie_count;
 };
 
 #endif // LOCALCOOKIEMANGER_H

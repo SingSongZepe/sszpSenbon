@@ -73,8 +73,12 @@ public:
     static const int TIME_REQUEST_TIMER_OUT;
 
     // python
+    static const QString PYTHON_BOOK_RESULT_PARSE;
+    static const QString FUNCTION_BOOK_RESULT_PARSE;
     static const QString PYTHON_SEARCH_SINGLE_BOOK_PARSE;
     static const QString FUNCTION_SEARCH_SINGLE_BOOK_PARSE;
+    static const QString PYTHON_CHECK_COOKIE_USEFUL;
+    static const QString FUNCTION_CHECK_COOKIE_USEFUL;
 
     // store as file
     static const QString PATH_STORE_FILE_DEFULT;

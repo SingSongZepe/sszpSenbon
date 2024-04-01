@@ -16,11 +16,19 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     // append views to the main_views
+        // main
     this->main_views.append(ui->wgt_main_search);
     this->main_views.append(ui->wgt_main_singlebookview);
+    this->main_views.append(ui->wgt_main_history);
+    this->main_views.append(ui->wgt_main_setting);
+    this->main_views.append(ui->wgt_main_todo);
+        // navi
     this->navi_views.append(ui->wgt_navi_search);
     this->navi_views.append(ui->wgt_navi_singlebookview);
-    this->current_view_idx = 0;
+    this->navi_views.append(ui->wgt_navi_history);
+    this->navi_views.append(ui->wgt_navi_setting);
+    this->navi_views.append(ui->wgt_navi_todo);
+    this->current_view_idx = 0; // set as Search view, but it should not equal to 0 1 2 3 4
 
     MainWindow::toggle_view(SingSongZepe::transfrom_idx2viewkind(this->current_view_idx));
 
@@ -48,7 +56,7 @@ MainWindow::MainWindow(QWidget *parent)
     // lb_bar
         // lb_bar_search click
     ui->lb_bar_search->installEventFilter(this);
-    ui->lb_bar_download->installEventFilter(this);
+    ui->lb_bar_history->installEventFilter(this);
     ui->lb_bar_setting->installEventFilter(this);
     ui->lb_bar_todo->installEventFilter(this);
 
@@ -57,6 +65,11 @@ MainWindow::MainWindow(QWidget *parent)
 
     // le_serach return
     QObject::connect(ui->le_search, &QLineEdit::returnPressed, this, &MainWindow::search_books_launch);
+
+    // test
+        // localcookiemanger
+    // qDebug() << lcm->get_one_cookie().cookie;
+    // return
 }
 
 // implement of function

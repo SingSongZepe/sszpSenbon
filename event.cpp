@@ -12,8 +12,33 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
                 return true;
             }
         }
-    } else if (obj == ui->lb_bar_download && event->type() == QEvent::MouseButtonPress) {
-
+    } else if (obj == ui->lb_bar_history && event->type() == QEvent::MouseButtonPress) {
+        QMouseEvent *mouseEvent = static_cast<QMouseEvent*>(event);
+        if (mouseEvent) {
+            if (mouseEvent->button() == Qt::LeftButton) {
+                // toggle view
+                this->toggle_view(SingSongZepe::History); // there download mean history
+                return true;
+            }
+        }
+    } else if (obj == ui->lb_bar_setting && event->type() == QEvent::MouseButtonPress) {
+        QMouseEvent *mouseEvent = static_cast<QMouseEvent*>(event);
+        if (mouseEvent) {
+            if (mouseEvent->button() == Qt::LeftButton) {
+                // toggle view
+                this->toggle_view(SingSongZepe::ToggleViewKind::Setting); // there download mean history
+                return true;
+            }
+        }
+    } else if (obj == ui->lb_bar_todo && event->type() == QEvent::MouseButtonPress) {
+        QMouseEvent *mouseEvent = static_cast<QMouseEvent*>(event);
+        if (mouseEvent) {
+            if (mouseEvent->button() == Qt::LeftButton) {
+                // toggle view
+                this->toggle_view(SingSongZepe::ToggleViewKind::Todo); // there download mean history
+                return true;
+            }
+        }
     } else if (obj == this->wgt_book_items && event->type() == QEvent::MouseButtonPress) {
         QMouseEvent* mouse_event = static_cast<QMouseEvent*>(event);
         if (mouse_event) {

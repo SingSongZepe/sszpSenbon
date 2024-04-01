@@ -123,7 +123,7 @@ bool MainWindow::finalize_python() {
 }
 
 // for wgt_book_items
-// 10(n+1)+161*n
+// 10*(n+1)+161*n
 int MainWindow::get_book_items_height() {
     if (this->book_infos != nullptr) {
         return (SingSongZepe::SINGLE_BOOK_ITEM_HEIGHT + SingSongZepe::BOOK_ITEM_MARGIN) * this->book_infos->count() + SingSongZepe::BOOK_ITEM_MARGIN;
@@ -136,7 +136,7 @@ int MainWindow::get_book_items_pos_y_by_index(int index) {
     return (SingSongZepe::SINGLE_BOOK_ITEM_HEIGHT + SingSongZepe::BOOK_ITEM_MARGIN) * index;
 }
 
-// for loading picture (for QLabel?)
+// for loading (for QLabel?)
 QByteArray MainWindow::request_url(const QString& url) {
     QNetworkAccessManager manager;
     QNetworkRequest request = QNetworkRequest(QUrl(url));
@@ -164,6 +164,7 @@ QByteArray MainWindow::request_url(const QString& url) {
     return data;
 }
 
+// for downloading with cookie
 QByteArray MainWindow::request_url_with_cookie(const QString& url, const QString& cookie) {
     QNetworkAccessManager manager;
     QNetworkRequest request = QNetworkRequest(QUrl(url));
@@ -194,6 +195,7 @@ QByteArray MainWindow::request_url_with_cookie(const QString& url, const QString
     return data;
 }
 
+// for downloading with cookie, and no timeout
 QByteArray MainWindow::request_url_with_cookie_no_timeout(const QString& url, const QString& cookie) {
     QNetworkAccessManager manager;
     QNetworkRequest request = QNetworkRequest(QUrl(url));

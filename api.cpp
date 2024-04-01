@@ -50,13 +50,13 @@ void MainWindow::search_books(const GeneralSearch* search) {
         if (reply->error() == QNetworkReply::NoError) {
             QByteArray data = reply->readAll();
 
-            PyObject* pymodule = PyImport_ImportModule("book_result_parse");
+            PyObject* pymodule = PyImport_ImportModule(SingSongZepe::PYTHON_BOOK_RESULT_PARSE.toStdString().c_str());
             if (!pymodule) {
                 SSLog::le("can't open the module file");
                 return;
             }
 
-            PyObject* callable = PyObject_GetAttrString(pymodule, "book_result_parse");
+            PyObject* callable = PyObject_GetAttrString(pymodule, SingSongZepe::FUNCTION_BOOK_RESULT_PARSE.toStdString().c_str());
 
             // arguments
             PyObject* tuple = PyTuple_New(1);

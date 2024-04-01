@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>801</width>
-    <height>501</height>
+    <height>502</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -240,7 +240,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="lb_bar_download">
+       <widget class="QLabel" name="lb_bar_history">
         <property name="minimumSize">
          <size>
           <width>44</width>
@@ -546,12 +546,117 @@
      </widget>
     </widget>
    </widget>
+   <widget class="QWidget" name="wgt_navi_history" native="true">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>0</y>
+      <width>751</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="wgt_navi_history_search" native="true">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>101</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <widget class="QLabel" name="lb_navi_history_search_icon">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>21</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lb_navi_history_search">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>0</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Search</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="wgt_main_history" native="true">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>30</y>
+      <width>751</width>
+      <height>471</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="wgt_main_setting" native="true">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>30</y>
+      <width>751</width>
+      <height>471</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="wgt_navi_setting" native="true">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>0</y>
+      <width>751</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="wgt_main_todo" native="true">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>30</y>
+      <width>751</width>
+      <height>471</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="wgt_navi_todo" native="true">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>0</y>
+      <width>751</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <zorder>wgt_main_todo</zorder>
    <zorder>wgt_main_singlebookview</zorder>
    <zorder>wgt_head</zorder>
    <zorder>wgt_navi_search</zorder>
    <zorder>wgt_bar</zorder>
    <zorder>wgt_main_search</zorder>
    <zorder>wgt_navi_singlebookview</zorder>
+   <zorder>wgt_main_history</zorder>
+   <zorder>wgt_main_setting</zorder>
+   <zorder>wgt_navi_setting</zorder>
+   <zorder>wgt_navi_todo</zorder>
+   <zorder>wgt_navi_history</zorder>
   </widget>
  </widget>
  <resources>

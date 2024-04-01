@@ -11,6 +11,7 @@ CONFIG += c++17
 
 SOURCES += \
     api.cpp \
+    cookiemanger/remotecookiemanger.cpp \
     object/cookie.cpp \
     cookiemanger/localcookiemanger.cpp \
     event.cpp \
@@ -31,6 +32,7 @@ SOURCES += \
     worker.cpp
 
 HEADERS += \
+    cookiemanger/remotecookiemanger.h \
     object/cookie.h \
     cookiemanger/localcookiemanger.h \
     function/savefile.h \
@@ -71,7 +73,8 @@ DISTFILES += \
     book_info.py \
     README.md \
     search_single_book_parse.py \
-    cookies.json
+    cookies.json \
+    check_cookie_useful.py
 
 
 
