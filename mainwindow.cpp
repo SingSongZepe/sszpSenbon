@@ -8,6 +8,7 @@
 // #include <QMouseEvent>
 #include <QDebug>
 #include <QList>
+#include <object/searchhistory.h>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -73,6 +74,15 @@ MainWindow::MainWindow(QWidget *parent)
         // localcookiemanger
     // qDebug() << lcm->get_one_cookie().cookie;
     // return
+
+        // search history
+    GeneralSearch general_search = GeneralSearch("general", "hello world");
+    SearchHistory search_hitory = SearchHistory(general_search);
+    qDebug() << (search_hitory.id);
+    this->dbm_history_search->insert_item(search_hitory);
+    SearchHistory sh = this->dbm_history_search->search_by_id<SearchHistory>("9bfcf0c1e3e8bd648b3b4e76d10ca1ba");
+    qDebug() << sh.search_type;
+    qDebug() << sh.key_word;
 }
 
 // implement of function

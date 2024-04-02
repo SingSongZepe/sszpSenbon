@@ -93,6 +93,11 @@ public:
     static const QString DB_FILE_PATH_HISTORY_SEARCH;
     static const QString DB_FILE_PATH_HISTORY_DOWNLOAD;
     static const QString DB_KIND;
+        // sql
+    static const QString INSERT_SEARCH_HISTORY_ITEM_SQL;
+    static const QString DELETE_BY_ID_SEARCH_HISTORY_ITEM_SQL;
+    static const QString UPDATE_SEARCH_HISTORY_ITEM_SQL;
+    static const QString SEARCH_SEARCH_HISTORY_ITEM_SQL;
 
 };
 

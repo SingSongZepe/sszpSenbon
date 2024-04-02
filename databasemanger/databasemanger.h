@@ -14,6 +14,15 @@ public:
     template <typename ITEM>
     bool insert_item(const ITEM& item);
 
+    bool delete_item_by_id(const QString& id);
+
+    template <typename ITEM>
+    bool update_item(const ITEM& item);
+
+    template <typename ITEM>
+    ITEM search_by_id(const QString& id);
+
+
 public:
     QSqlDatabase db;
 
