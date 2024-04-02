@@ -81,11 +81,19 @@ public:
     static const QString FUNCTION_CHECK_COOKIE_USEFUL;
 
     // store as file
-    static const QString PATH_STORE_FILE_DEFULT;
+    static const QString PATH_ROOT_PROJECT;
+    static const QString PATH_STORE_FILE_DOWNLOAD;
+    static const QString PATH_STORE_FILE_DATABASE;
 
     // json string
     static const QString JSON_STR_NULL;
     static const QString BOOK_INFO_UNKNOWN;
+
+    // database
+    static const QString DB_FILE_PATH_HISTORY_SEARCH;
+    static const QString DB_FILE_PATH_HISTORY_DOWNLOAD;
+    static const QString DB_KIND;
+
 };
 
 #endif // SINGSONGZEPE_H

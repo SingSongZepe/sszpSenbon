@@ -112,8 +112,15 @@ const QString SingSongZepe::PYTHON_CHECK_COOKIE_USEFUL = "check_cookie_useful";
 const QString SingSongZepe::FUNCTION_CHECK_COOKIE_USEFUL = "check_cookie_useful";
 
 // for store file
-const QString SingSongZepe::PATH_STORE_FILE_DEFULT = "F:/QTProjects/sszpSenbon/file/download";
+const QString SingSongZepe::PATH_ROOT_PROJECT = "F:/QTProjects/sszpSenbon"; // the value will changed because of install path
+const QString SingSongZepe::PATH_STORE_FILE_DOWNLOAD = SingSongZepe::PATH_ROOT_PROJECT + "/file/download";
+const QString SingSongZepe::PATH_STORE_FILE_DATABASE = SingSongZepe::PATH_ROOT_PROJECT + "/usr/database";
 
 // json string
 const QString SingSongZepe::JSON_STR_NULL = "<NULL>";
 const QString SingSongZepe::BOOK_INFO_UNKNOWN = "unknown";
+
+// database
+const QString SingSongZepe::DB_FILE_PATH_HISTORY_SEARCH = SingSongZepe::PATH_STORE_FILE_DATABASE + "/history_search.db";
+const QString SingSongZepe::DB_FILE_PATH_HISTORY_DOWNLOAD = SingSongZepe::PATH_STORE_FILE_DATABASE + "/history_download.db";
+const QString SingSongZepe::DB_KIND = "QSQLITE";

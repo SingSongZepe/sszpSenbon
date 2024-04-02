@@ -1,5 +1,6 @@
 QT       += core gui \
-           network
+           network \
+           sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -12,6 +13,7 @@ CONFIG += c++17
 SOURCES += \
     api.cpp \
     cookiemanger/remotecookiemanger.cpp \
+    databasemanger/databasemanger.cpp \
     object/cookie.cpp \
     cookiemanger/localcookiemanger.cpp \
     event.cpp \
@@ -20,6 +22,7 @@ SOURCES += \
     mainwindow.cpp \
     object/bookfullinfo.cpp \
     object/helloworld.cpp \
+    object/searchhistory.cpp \
     object/sfunctor.cpp \
     search.cpp \
     singlebookinfo.cpp \
@@ -33,12 +36,14 @@ SOURCES += \
 
 HEADERS += \
     cookiemanger/remotecookiemanger.h \
+    databasemanger/databasemanger.h \
     object/cookie.h \
     cookiemanger/localcookiemanger.h \
     function/savefile.h \
     mainwindow.h \
     object/bookfullinfo.h \
     object/helloworld.h \
+    object/searchhistory.h \
     object/sfunctor.h \
     search.h \
     singlebookinfo.h \

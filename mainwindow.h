@@ -9,6 +9,7 @@
 #include "singsongzepe.h"
 #include "sslog.h"
 #include "cookiemanger/localcookiemanger.h"
+#include "databasemanger/databasemanger.h"
 
 #include <QMainWindow>
 #include <QMouseEvent>
@@ -89,6 +90,9 @@ private:
 
     // cookiemanger
     LocalCookieManger* lcm;
+
+    // databasemanger
+    DatabaseManger* dbm_history_search;
 };
 #endif // MAINWINDOW_H
 

@@ -2,4 +2,5 @@
     <qresource prefix="/:">
         <file>cookies.json</file>
     </qresource>
+    <qresource prefix="/database"/>
 </RCC>

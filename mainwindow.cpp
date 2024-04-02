@@ -46,7 +46,10 @@ MainWindow::MainWindow(QWidget *parent)
     ui->sa_singlebookview->setVerticalScrollBar(this->sb_sa_singlebookview);
 
     // init cookiemanger
-    lcm = new LocalCookieManger();
+    this->lcm = new LocalCookieManger();
+
+    // init databasemanager
+    this->dbm_history_search = new DatabaseManger(SingSongZepe::DB_FILE_PATH_HISTORY_SEARCH);
 
     MainWindow::initializa_python();
 
@@ -80,20 +83,30 @@ void MainWindow::print_hello(bool checked) {
 
 MainWindow::~MainWindow() {
     MainWindow::finalize_python();
-    delete ui;
     // release object
     if (book_infos != nullptr) // when user even does't click pb_search
         delete book_infos;
+
     if (book_full_info != nullptr) // when user does't click single book(after searching)
         delete book_full_info;
+
     if (wgt_book_items != nullptr)
         delete wgt_book_items;
+
     delete sb_sa_books; // new when mainwindow init
+
     if (single_book_info != nullptr)
         delete single_book_info;
-    // cookie manger
-    delete lcm;
+
     delete sb_sa_singlebookview; // new when mainwindow init
+
+    // cookiemanger
+    delete lcm;
+
+    // databasemanger
+    delete dbm_history_search;
+
+    delete ui;
 }
 
 
