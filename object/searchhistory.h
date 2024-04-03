@@ -9,26 +9,30 @@
 class SearchHistory
 {
 public:
+    // construct from search object
     template <typename SEARCH>
     SearchHistory(const SEARCH& search);
+
+    // when load from database, we are not change its time and id to construct the object
     template <typename SEARCH>
     SearchHistory(const SEARCH& search, const QString& time, const QString& id);
     SearchHistory();
     ~SearchHistory();
 
     static const QString generate_id();
+    static const QString generate_time();
 
 public:
-    const QString search_type;
-    const QString key_word;
+    QString search_type;
+    QString key_word;
     bool exact_matching;
     int year_from;
     int year_to;
-    const QList<QString> languages;
-    const QList<QString> extensions;
+    QList<QString> languages;
+    QList<QString> extensions;
     bool match_a_phrase;
-    const QString time; // show when requests
-    const QString id;   // the indentifier 32 length
+    QString time; // show when requests
+    QString id;   // the indentifier 32 length
 };
 
 #endif // SEARCHHISTORY_H

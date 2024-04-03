@@ -7,35 +7,35 @@
 class GeneralSearch
 {
 public:
-    GeneralSearch(const QString& search_type,
-                  const QString& key_word,
+    GeneralSearch(QString search_type,
+                  QString key_word,
                   bool exact_matching=false,
                   int year_from=-1,
                   int year_to=-1,
-                  const QList<QString>& languages=QList<QString>(),
-                  const QList<QString>& extensions=QList<QString>());
+                  QList<QString> languages=QList<QString>(),
+                  QList<QString> extensions=QList<QString>());
     ~GeneralSearch();
 
 public:
-    const QString& search_type;
-    const QString& key_word;
+    QString search_type;
+    QString key_word;
     bool exact_matching;
     int year_from;
     int year_to;
-    const QList<QString>& languages;
-    const QList<QString>& extensions;
+    QList<QString> languages;
+    QList<QString> extensions;
 };
 
 class FulltextSearch : public GeneralSearch
 {
 public:
-    FulltextSearch(const QString& search_type,
-                   const QString& key_word,
+    FulltextSearch(QString search_type,
+                   QString key_word,
                    bool exact_matching=false,
                    int year_from=-1,
                    int year_to=-1,
-                   const QList<QString>& languages=QList<QString>(),
-                   const QList<QString>& extensions=QList<QString>(),
+                   QList<QString> languages=QList<QString>(),
+                   QList<QString> extensions=QList<QString>(),
                    bool match_a_phrase=true);
     ~FulltextSearch();
 public:
@@ -54,7 +54,7 @@ public:
 class SingleBookSearch
 {
 public:
-    const QString& url;
+    QString url;
 public:
     explicit SingleBookSearch(const QString& url);
     ~SingleBookSearch();

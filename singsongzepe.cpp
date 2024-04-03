@@ -1,4 +1,5 @@
 #include "singsongzepe.h"
+#include "sslog.h"
 
 #include <QCoreApplication>
 
@@ -119,16 +120,42 @@ const QString SingSongZepe::JSON_STR_NULL = "<NULL>";
 const QString SingSongZepe::BOOK_INFO_UNKNOWN = "unknown";
 
 // database
-const QString SingSongZepe::DB_FILE_PATH_HISTORY_SEARCH = SingSongZepe::PATH_STORE_FILE_DATABASE + "/history_search.db";
-const QString SingSongZepe::DB_FILE_PATH_HISTORY_DOWNLOAD = SingSongZepe::PATH_STORE_FILE_DATABASE + "/history_download.db";
+const QString SingSongZepe::DB_FILE_PATH_SEARCH_HISTORY = SingSongZepe::PATH_STORE_FILE_DATABASE + "/history_search.db";
+const QString SingSongZepe::DB_FILE_PATH_DOWNLOAD_HISTORY = SingSongZepe::PATH_STORE_FILE_DATABASE + "/history_download.db";
 const QString SingSongZepe::DB_KIND = "QSQLITE";
 
+    // not need to specialize
+const QString SingSongZepe::CHECK_TABLE_EXISTANCE_SQL = "SELECT name FROM sqlite_master WHERE type='table' AND name='%1'";
+const QString SingSongZepe::CREATE_TABLE_SQL = "CREATE TABLE %1 (%2)";
+const QString SingSongZepe::DELETE_ITEM_BY_ID_SQL = "DELETE FROM %1 WHERE id = :id";
+const QString SingSongZepe::SEARCH_ITEM_BY_ID_SQL = "SELECT * FROM %1 WHERE id = :id";
+const QString SingSongZepe::SEARCH_ALL_SQL = "SELECT * FROM %1";
+    // need to specialize
 const QString SingSongZepe::INSERT_SEARCH_HISTORY_ITEM_SQL = "INSERT INTO search_history ("
                                                              "search_type, key_word, exact_matching, year_from, year_to, languages, extensions, match_a_phrase, time, id"
                                                              ") "
                                                              "VALUES ("
                                                              ":search_type, :key_word, :exact_matching, :year_from, :year_to, :languages, :extensions, :match_a_phrase, :time, :id"
                                                              ")";
-const QString SingSongZepe::DELETE_BY_ID_SEARCH_HISTORY_ITEM_SQL = "DELETE FROM search_history WHERE id = :id";
 const QString SingSongZepe::UPDATE_SEARCH_HISTORY_ITEM_SQL = "UPDATE search_history SET search_type = :search_type, key_word = :key_word, exact_matching = :exact_matching, year_from = :year_from, year_to = :year_to, languages = :languages, extensions = :extensions, match_a_phrase = :match_a_phrase, time = :time WHERE id = :id";
-const QString SingSongZepe::SEARCH_SEARCH_HISTORY_ITEM_SQL = "SELECT * FROM search_history WHERE id = :id";
+
+    // table name
+const QString SingSongZepe::TABLE_SEARCH_HISTORY_NAME = "search_history";
+const QString SingSongZepe::TABLE_DOWNLOAD_HISTORY_NAME = "download_history";
+
+const QString SingSongZepe::TABLE_PARAMETER_SEARCH_HISTORY = "search_type TEXT, key_word TEXT, exact_matching INTEGER, year_from INTEGER, year_to INTEGER,"
+                                                             "languages TEXT, extensions TEXT, match_a_phrase INTEGER, time TEXT, id TEXT";
+const QString SingSongZepe::TABLE_PATAMETER_DOWNLOAD_HISTORY = "";
+
+const QString& SingSongZepe::get_table_parameter(const QString& table_name) {
+    if (table_name == SingSongZepe::TABLE_SEARCH_HISTORY_NAME) {
+        return SingSongZepe::TABLE_PARAMETER_SEARCH_HISTORY;
+    } else if (table_name == SingSongZepe::TABLE_DOWNLOAD_HISTORY_NAME) {
+        return SingSongZepe::TABLE_PATAMETER_DOWNLOAD_HISTORY;
+    }
+    else {
+        SSLog::lw("this table_name is not found");
+        return SingSongZepe::TABLE_PARAMETER_SEARCH_HISTORY;
+    }
+}
+

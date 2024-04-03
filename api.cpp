@@ -7,6 +7,7 @@
 #include "bookinfoitem.h"
 #include "singlebookinfo.h"
 #include "function/savefile.h"
+#include "object/searchhistory.h"
 
 // network
 #include <QNetworkAccessManager>

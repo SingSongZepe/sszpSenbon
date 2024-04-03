@@ -50,7 +50,8 @@ MainWindow::MainWindow(QWidget *parent)
     this->lcm = new LocalCookieManger();
 
     // init databasemanager
-    this->dbm_history_search = new DatabaseManger(SingSongZepe::DB_FILE_PATH_HISTORY_SEARCH);
+    this->dbm_history_search = new DatabaseManger(SingSongZepe::DB_FILE_PATH_SEARCH_HISTORY, SingSongZepe::TABLE_SEARCH_HISTORY_NAME);
+    // this->dbm_history_download = new DatabaseManger(SingSongZepe::DB_FILE_PATH_DOWNLOAD_HISTORY, SingSongZepe::TABLE_DOWNLOAD_HISTORY_NAME);
 
     MainWindow::initializa_python();
 
@@ -76,13 +77,22 @@ MainWindow::MainWindow(QWidget *parent)
     // return
 
         // search history
-    GeneralSearch general_search = GeneralSearch("general", "hello world");
-    SearchHistory search_hitory = SearchHistory(general_search);
-    qDebug() << (search_hitory.id);
-    this->dbm_history_search->insert_item(search_hitory);
-    SearchHistory sh = this->dbm_history_search->search_by_id<SearchHistory>("9bfcf0c1e3e8bd648b3b4e76d10ca1ba");
-    qDebug() << sh.search_type;
-    qDebug() << sh.key_word;
+    // GeneralSearch general_search = GeneralSearch("general", "hello world");
+    // SearchHistory search_hitory = SearchHistory(general_search);
+    // qDebug() << (search_hitory.id);
+    // this->dbm_history_search->insert_item(search_hitory);
+    // SearchHistory sh = this->dbm_history_search->search_by_id<SearchHistory>(search_hitory.id);
+    // qDebug() << sh.search_type;
+    // qDebug() << sh.key_word;
+
+    // GeneralSearch general_search1 = GeneralSearch("fulltext", "SingSongZepe");
+    // SearchHistory search_hitory1 = SearchHistory(general_search1);
+    // this->dbm_history_search->update_item(search_hitory1, sh.id);
+
+    // SearchHistory sh1 = this->dbm_history_search->search_by_id<SearchHistory>(search_hitory.id);
+    // qDebug() << sh1.search_type;
+    // qDebug() << sh1.key_word;
+    // this->dbm_history_search->delete_item_by_id(sh1.id);
 }
 
 // implement of function
@@ -114,6 +124,7 @@ MainWindow::~MainWindow() {
     delete lcm;
 
     // databasemanger
+    delete dbm_history_search;
     delete dbm_history_search;
 
     delete ui;

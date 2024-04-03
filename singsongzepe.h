@@ -90,15 +90,28 @@ public:
     static const QString BOOK_INFO_UNKNOWN;
 
     // database
-    static const QString DB_FILE_PATH_HISTORY_SEARCH;
-    static const QString DB_FILE_PATH_HISTORY_DOWNLOAD;
+    static const QString DB_FILE_PATH_SEARCH_HISTORY;
+    static const QString DB_FILE_PATH_DOWNLOAD_HISTORY;
     static const QString DB_KIND;
         // sql
+        // not need to specialize
+    static const QString CHECK_TABLE_EXISTANCE_SQL;
+    static const QString CREATE_TABLE_SQL;
+    static const QString DELETE_ITEM_BY_ID_SQL;
+    static const QString SEARCH_ITEM_BY_ID_SQL; // but this value, where use it, the function need to specialize, but it self not need to
+    static const QString SEARCH_ALL_SQL;
+        // specialize
     static const QString INSERT_SEARCH_HISTORY_ITEM_SQL;
-    static const QString DELETE_BY_ID_SEARCH_HISTORY_ITEM_SQL;
     static const QString UPDATE_SEARCH_HISTORY_ITEM_SQL;
-    static const QString SEARCH_SEARCH_HISTORY_ITEM_SQL;
+        // table name
+    static const QString TABLE_SEARCH_HISTORY_NAME;
+    static const QString TABLE_DOWNLOAD_HISTORY_NAME;
+        // table parameter (you can get it by table_name)
+    static const QString TABLE_PARAMETER_SEARCH_HISTORY;
+    static const QString TABLE_PATAMETER_DOWNLOAD_HISTORY;
 
+public:
+    static const QString& get_table_parameter(const QString& table_name);
 };
 
 #endif // SINGSONGZEPE_H

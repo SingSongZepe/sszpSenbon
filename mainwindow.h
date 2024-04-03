@@ -93,6 +93,7 @@ private:
 
     // databasemanger
     DatabaseManger* dbm_history_search;
+    DatabaseManger* dbm_history_download;
 };
 #endif // MAINWINDOW_H
 

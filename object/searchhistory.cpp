@@ -16,8 +16,8 @@ SearchHistory::SearchHistory(const GeneralSearch& search)
     , languages(search.languages)
     , extensions(search.extensions)
     , match_a_phrase(false)
-    , time(QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm"))
-    , id(generate_id())
+    , time(SearchHistory::generate_time())
+    , id(SearchHistory::generate_id())
 {
 }
 
@@ -32,8 +32,8 @@ SearchHistory::SearchHistory(const FulltextSearch& search)
     , languages(search.languages)
     , extensions(search.extensions)
     , match_a_phrase(search.match_a_phrase)
-    , time(QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm"))
-    , id(generate_id())
+    , time(SearchHistory::generate_time())
+    , id(SearchHistory::generate_id())
 {
 }
 
@@ -82,6 +82,10 @@ const QString SearchHistory::generate_id() {
     }
 
     return id;
+}
+
+const QString SearchHistory::generate_time() {
+    return QDateTime::currentDateTime().toString("yy-MM-dd hh:mm");
 }
 
 SearchHistory::SearchHistory() {

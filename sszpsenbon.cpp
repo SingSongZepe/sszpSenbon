@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include "object/searchhistory.h"
+
 #include <QUrl>
 
 void MainWindow::toggle_view(SingSongZepe::ToggleViewKind tvk) {
@@ -49,10 +51,18 @@ void MainWindow::search_books_launch() {
         GeneralSearch gs = GeneralSearch(search_type, key_word);
         // call
         MainWindow::search_books(&gs);
+        // after search book
+        // we add the search to database
+        if (this->dbm_history_search->insert_item(SearchHistory(gs))) {
+            SSLog::ln("add the search to database successfully");
+        }
     } else {
         FulltextSearch fs = FulltextSearch(search_type, key_word);
         // call
         MainWindow::search_books(&fs);
+        if (this->dbm_history_search->insert_item(SearchHistory(fs))) {
+            SSLog::ln("add the search to database successfully");
+        }
     }
 }
 
