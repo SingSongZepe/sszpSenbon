@@ -85,13 +85,31 @@ const QString SearchHistory::generate_id() {
 }
 
 const QString SearchHistory::generate_time() {
-    return QDateTime::currentDateTime().toString("yy-MM-dd hh:mm");
+    return QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm");
+}
+
+QString SearchHistory::get_str_languages() const {
+    if (this->languages.isEmpty()) {
+        return "any";
+    } return this->languages.join(", ");
+}
+QString SearchHistory::get_str_extensions() const {
+    if (this->extensions.isEmpty()) {
+        return "any";
+    } return this->extensions.join(", ");
+}
+QString SearchHistory::get_str_require_time() const {
+    return QString("from %1 to %2").arg(this->year_from).arg(year_to);
+}
+QString SearchHistory::get_str_exact_matching() const {
+    return this->exact_matching ? "True" : "False";
+}
+QString SearchHistory::get_str_match_a_phrase() const {
+    return this->match_a_phrase ? "True" : "False";
 }
 
 SearchHistory::SearchHistory() {
-
 }
 
 SearchHistory::~SearchHistory() {
-
 }

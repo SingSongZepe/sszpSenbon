@@ -10,6 +10,7 @@
 #include "sslog.h"
 #include "cookiemanger/localcookiemanger.h"
 #include "databasemanger/databasemanger.h"
+#include "wgt_manger/searchhistoryviewmanger.h"
 
 #include <QMainWindow>
 #include <QMouseEvent>
@@ -37,6 +38,7 @@ public slots:
 
     // sszpSenbon toggle view
     void toggle_view(SingSongZepe::ToggleViewKind tvk);
+    void toggle_view_history(SingSongZepe::ToggleViewHistoryKind tvhk);
 
     // sszpSenbon for searching
     void search_books_launch();
@@ -67,6 +69,15 @@ public slots:
 public:
     bool eventFilter(QObject* obj, QEvent* event);
 
+public:
+    // for getting some member var
+    QWidget* get_ptr_wgt_search_history() {
+        return this->wgt_search_history;
+    }
+    DatabaseManger* get_ptr_dbm_history_search() {
+        return this->dbm_history_search;
+    }
+
 private:
     Ui::MainWindow *ui; // new
 
@@ -88,12 +99,21 @@ private:
     QList<QWidget*> navi_views;
     int current_view_idx;
 
+    QList<QWidget*> history_views;
+    int current_history_view_idx;
+
     // cookiemanger
     LocalCookieManger* lcm;
 
     // databasemanger
     DatabaseManger* dbm_history_search;
     DatabaseManger* dbm_history_download;
+
+    // shv manger
+    SearchHistoryViewManger* shv_manger;
+    QWidget* wgt_search_history;
+    QScrollBar* sb_sa_sub_history_search;
+
 };
 #endif // MAINWINDOW_H
 

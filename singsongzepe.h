@@ -14,12 +14,18 @@ public:
         Setting,
         Todo,
     };
+    enum ToggleViewHistoryKind {
+        SearchHistory,
+        DownloadHistory,
+    };
+
 public:
     SingSongZepe();
     ~SingSongZepe();
 
     static int transfrom_viewkind2idx(SingSongZepe::ToggleViewKind tvk);
-    static SingSongZepe::ToggleViewKind transfrom_idx2viewkind(int tvk);
+    static SingSongZepe::ToggleViewKind transfrom_idx2viewkind(int idx);
+    static SingSongZepe::ToggleViewHistoryKind transfrom_idx2viewhistorykind(int idx);
 
     static const QString sslog;
     static const QString SINGSONGZEPE_;

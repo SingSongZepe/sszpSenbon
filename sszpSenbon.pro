@@ -32,6 +32,8 @@ SOURCES += \
     utils.cpp \
     bookinfoitem.cpp \
     object/book_info.cpp \
+    wgt/searchhistoryitem.cpp \
+    wgt_manger/searchhistoryviewmanger.cpp \
     worker.cpp
 
 HEADERS += \
@@ -51,13 +53,16 @@ HEADERS += \
     sslog.h \
     object/book_info.h \
     bookinfoitem.h \
+    wgt/searchhistoryitem.h \
+    wgt_manger/searchhistoryviewmanger.h \
     worker.h
 
 FORMS += \
     mainwindow.ui \
     bookinfoitem.ui \
     object/helloworld.ui \
-    singlebookinfo.ui
+    singlebookinfo.ui \
+    wgt/searchhistoryitem.ui
 
 TRANSLATIONS += \
     sszpSenbon_en_GB.ts

@@ -4,11 +4,9 @@
 #include <QCoreApplication>
 
 SingSongZepe::SingSongZepe() {
-
 }
 
 SingSongZepe::~SingSongZepe() {
-
 }
 
 int SingSongZepe::transfrom_viewkind2idx(SingSongZepe::ToggleViewKind tvk) {
@@ -43,6 +41,18 @@ SingSongZepe::ToggleViewKind SingSongZepe::transfrom_idx2viewkind(int idx) {
         return SingSongZepe::Todo;
     default:
         return SingSongZepe::Search;
+    }
+}
+
+SingSongZepe::ToggleViewHistoryKind SingSongZepe::transfrom_idx2viewhistorykind(int idx) {
+    switch (idx) {
+    case -1:
+    case 0:
+        return SingSongZepe::SearchHistory;
+    case 1:
+        return SingSongZepe::DownloadHistory;
+    default:
+        return SingSongZepe::SearchHistory;
     }
 }
 

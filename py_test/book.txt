@@ -1,0 +1,2339 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+                <script src="/components/zlibrary.js?0.676"></script>
+        <script type="text/javascript">
+            navigator.sayswho = (function(){
+                var ua= navigator.userAgent, tem,
+                M= ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+                if(/trident/i.test(M[1])){
+                    tem=  /\brv[ :]+(\d+)/g.exec(ua) || [];
+                    return 'IE '+(tem[1] || '');
+                }
+                if(M[1]=== 'Chrome'){
+                    tem= ua.match(/\b(OPR|Edge)\/(\d+)/);
+                    if(tem!= null) return tem.slice(1).join(' ').replace('OPR', 'Opera');
+                }
+                M= M[2]? [M[1], M[2]]: [navigator.appName, navigator.appVersion, '-?'];
+                if((tem= ua.match(/version\/(\d+)/i))!= null) M.splice(1, 1, tem[1]);
+                return M.join(' ');
+            })();
+
+                    </script>
+
+        <title>What do you say after you say hello?: The psychology of human destiny | Eric Berne | download on Z-Library</title>
+<base href="/">
+    <link rel="canonical" href="https://z-library.se/book/3397236/b6657d" />
+            <meta charset="utf-8">
+            <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="title" content="What do you say after you say hello?: The psychology of human destiny | Eric Berne | download on Z-Library">
+			<meta name="description" content="What do you say after you say hello?: The psychology of human destiny | Eric Berne | download on Z-Library | Download books for free. Find books">
+			<meta name="robots" content="index,all">
+			<meta name="distribution" content="global">
+			<meta http-equiv="cache-control" content="no-cache">
+			<meta http-equiv="pragma" content="no-cache">
+
+            <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=1">
+            <link rel="icon" href="favicon.svg">
+            <link rel="icon" type="image/svg+xml" href="/favicon-32x32.svg?v=2" sizes="32x32">
+            <link rel="icon" type="image/svg+xml" href="/favicon-16x16.svg?v=2" sizes="16x16">
+            <link rel="manifest" href="/manifest.json?v=1" crossorigin="use-credentials">
+            <link rel="mask-icon" href="/safari-pinned-tab.svg?v=1" color="#5bbad5">
+            <meta name="apple-mobile-web-app-title" content="Z-Library">
+            <meta name="application-name" content="Z-Library">
+            <meta name="theme-color" content="#ffffff">
+
+            <meta name="propeller" content="49c350d528ba144cace841cac74260ab">
+            <meta name="alfacoins-site-verification" content="5ef0e7b2483f15ef0e7b2484275ef0e7b24845d_ALFAcoins">
+            <meta name="format-detection" content="telephone=no">
+                        <style>z-recommended-search:not(.ready), z-dropdown:not(.ready), z-booklist:not(.ready), z-carousel:not(.ready){ opacity: 0; max-height: 250px; }</style>
+	
+<!-- CSS SET -->
+<!-- JS SET --> 
+<link REL="SHORTCUT ICON" HREF="/favicon.ico?v=1">
+
+        <link rel="search" type="application/opensearchdescription+xml" href="/search.xml" title="Search for books in the library Z-Library" />
+
+                    <link rel="stylesheet" type="text/css" href="/resources/build/global.css?0.676" />
+            <link rel="preload" href="/resources/build/global-d.css?0.676" as="style" onload="this.onload=null;this.rel='stylesheet'">
+            <noscript><link rel="stylesheet" href="/resources/build/global-d.css?0.676"></noscript>
+            <script type="text/javascript" src="/resources/build/global.js?0.676"></script>
+            <script type="text/javascript" src="/resources/build/global-d.js?0.676" defer></script>
+        <link rel="stylesheet" type="text/css" href="/resources/ext/bootstrap-tagsinput/bootstrap-tagsinput.css?0.676" />
+<link rel="stylesheet" type="text/css" href="/resources/ext/lightbox/jquery.lightbox-0.5.css?0.676" />
+<link rel="stylesheet" type="text/css" href="/resources/ext/select2/select2.min.css?0.676" />
+<link rel="stylesheet" type="text/css" href="/resources/ext/flickity/flickity.css?0.676" />
+<link rel="stylesheet" type="text/css" href="/resources/css/pages/book-details.css?0.676" />
+<script type="text/javascript" src="/resources/ext/typeahead.js?0.676"></script>
+<script type="text/javascript" src="/resources/ext/bootstrap-tagsinput/bootstrap-tagsinput.min.js?0.676"></script>
+<script type="text/javascript" src="/resources/ext/lightbox/jquery.lightbox-0.5.min.js?0.676"></script>
+<script type="text/javascript" src="/resources/ext/select2/select2.min.js?0.676"></script>
+<script type="text/javascript" src="/resources/ext/flickity/flickity.min.js?0.676"></script>
+<script type="text/javascript" src="/resources/js/zlibrary-send-to-tools.js?0.676"></script>
+<script type="text/javascript" src="/resources/js/pages/book-details.js?0.676"></script>
+        <noscript>
+            <link rel="stylesheet" type="text/css" href="/resources/css/noscript.css?0.676" />
+        </noscript>
+
+        <script>
+            window != top ? window.stop() : null;
+                        
+            const Config = {"domainHost":"z-library.se","BRegion":"highrisk","Country":"ru","accessByIp":false,"supportEmail":"support@z-lib.se","preferredDomain":"https:\/\/z-library.se","loginDomain":"https:\/\/singlelogin.se","generalFilesProxy":"https:\/\/dlr1.fcdn.sk\/general-files\/"};
+            const CurrentUser = new User(null);
+            const CurrentClientIP = "82.179.51.61";
+            const CurrentSiteMode = 'books';
+            const proxiesToCheck = []; //for google verification
+
+            // i18next initialization
+            (() => {
+                const notLikelyString = '_~_';
+                i18next
+                    .use(i18nextHttpBackend)
+                    .init({
+                        // saveMissing: true,
+                        lng: 'en',
+                        fallbackLng: 'en',
+                        backend: {
+                            // addPath: '/papi/translations/add-missing-key',
+                            loadPath: '/resources/build/translations-frontend/{{lng}}?v=0.676'
+                        },
+                        keySeparator: notLikelyString,
+                        nsSeparator: notLikelyString,
+                        pluralSeparator: notLikelyString,
+                        contextSeparator: notLikelyString,
+                    })
+            })();
+
+
+            $(document).ready(function() {
+                $('.tooltip-init').tooltip({html: true})
+
+                            })
+
+            $(document).on('focus', '.form-email-field', function() {
+                $(this).tooltip('hide')
+            })
+
+            $(document).on('change', '.form-email-field', function() {
+                const $input = $(this)
+                const email = $input.val()
+
+                $input.parents('.form-group').find('.form-error').remove()
+            })
+
+            $(document).on('focus', '.form-email-field', function() {
+                $(this).tooltip('hide')
+            });
+
+        </script>
+                        <script src="/components/zlibrary-startup-script.js"></script>
+        <link rel="stylesheet" href="/components/style.css?0.676">
+    </head>
+
+    <body style="margin:0px;padding:0px;" class="books/details" data-proxy="false">
+
+                    <div class="social-share-buttons"></div>
+        
+                
+<div class="fundraising-headline">
+    <span style="font-size: 16px; font-weight: bold; text-shadow: 2px 0px 0px #FFFFFF; letter-spacing: 0.5px;">Fundraising March 15, 2024 &ndash; April 1, 2024</span>
+    <a href="/donatex.php" style="display: inline-block; margin-left: 16px;color: #36AB9B;">About fundraising</a>
+</div>
+
+<style type="text/css">
+    .fundraising-headline {
+        padding: 14px 0 12px;
+        text-align: center;
+        line-height: 19px;
+        color: #36AB9B;
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAsoAAAAuCAMAAAAGAs/PAAAAOVBMVEUAAABm0bVu0Lhm0bZm0rVm0bVm0bVn0bVm0bVm0bVm0bVm0rVn0rdrz7dm0bVm0rZo0bZm0bZm0bXFPQcVAAAAE3RSTlMAZgQcP1VNM0ZgWyoQCWMWDCI5cO1UIQAAAkZJREFUeNrt3cuu4jAQBNAqO44fecL/f+yImVzIoLbvMo5UZ4dgWWo1cbcDeFoWJNY9IdIBN+DkWYnyElj3gMj1Eid8hEqUsRRW5RkiV5vIdccPR9PrB3NgVYDIxeaVZPp8pGkG0OwxBohcygW+bDh4mvzRVatdll4d4RxxmNpBnVZWFAeR62wr+V9ZjjRFHNyTFQki1ynf/9uevz453uNaa0JErhL5tp0bjnbJdY+kgxLpyrzybWxGOeB/i49j5ltO0atXlusknuytKGcYls2/bLNSLNfyRn8w0AaRfo08y05Rlnvy1hOIqCjL7QTrKcVU65VFeuX5zQF4aFxI7mY0T6c3mkaIdGpezem2XXsicjNDpSHOOpSWeymVqeSRhlWHINIrT8MEIKpVllsZaBjqGRfpVKEhVDai1h0ifVpocgCC+gu5kYmmDUDU3p7cyECTNw9JCkR6NdI0AXCZXyJEehUa26iDdqnlPkrjYpZNRVnuo7S2UTPPsoqydKy0BuCiirJ0xS3zvC8whVaUF54EFWW5zjINY1n5Tw4pbvgytqKMpJk46cFklNySHjgbmlGedX2W9GCjqUSHt0hTwldZXheIXGagLX/C/GjfkrxpJE564AoryqNduSMOSXNE0gPPqsHhZadpwmHWcKd04cmqsDdeOeLxY9BEnPTABVaVv1mmacaPZdXTC+nBnn/Jsvn9io9JhyPShQfrylKJ8oiTpEZZuhBZNzpkbaPKXSTWRTvKeieq9MiNrPNZdxzKbbSyXCr9xR8NdRKKCos49AAAAABJRU5ErkJggg==),  linear-gradient(269.94deg, #FDE2B9 0%, #B5F6D6 100%);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .fundraising-headline a {
+        text-decoration: underline;
+        transition: all .2s ease;
+        text-shadow: 0 0px 0px #FFFFFF;
+    }
+
+    .fundraising-headline a:hover {
+        text-shadow: 2px 0px 0px #FFFFFF;
+    }
+</style>
+        <table class="super-puper-main-container" border="0" cellpadding="0" cellspacing="0" style="">
+            <tbody>
+                <tr style="height:10px;">
+                    <td style="vertical-align: top;">
+                        <div class="container-fluid">
+                            
+
+
+<div class="row hideInDesktopApp20">
+    <div class="col-md-12">
+        
+<style>
+    div#colorBoxes
+    {
+        text-transform: capitalize;
+    }
+
+    div#colorBoxes ul li.active:nth-child(1)
+    {
+        border: 1px solid #378096;
+        box-shadow: 0 0 6px #7DBCCF;
+        border-top: 0px;
+    }
+
+    div#colorBoxes ul li.active:nth-child(2)
+    {
+        border: 1px solid #6e9b41;
+        box-shadow: 0 0 6px #a4e861;
+        border-top: 0px;
+    }
+</style>
+
+
+<div id="colorBoxes">
+    <ul>
+        <li style="background: #49afd0;" class="" data-sitemode="books">
+            <a href="/" title="Z-Library books" class="header-main-nav-link " data-destination_mode="books">
+                <span class="hidden-xs">books search</span>
+                <span class="visible-xs">books</span>
+            </a>
+        </li>
+
+                <li style="background: #8ecd51;" data-sitemode="articles">
+            <a href="https://zlib-articles.se" title="Z-Library articles" class="header-main-nav-link check-preferred-domain" data-destination_mode="articles">
+                <span class="hidden-xs">articles search</span>
+                <span class="visible-xs">articles</span>
+            </a>
+        </li>
+                <li class="visible-xs colorBoxesLink fundraising">
+            <a href="/donatex.php" style="color: #EF404E">Fundraising</a>        </li>
+    </ul>
+</div>
+        <div role="navigation" class="navbar-default navbar-right" style="background-color: transparent;">
+
+            <div class="navbar-upd">
+                
+                <a href="/donatex.php" class="navbar-upd__donate" style="color: #EF404E">Fundraising</a>
+                
+                <div class="navbar-upd__search">
+                    <label for="navbar-upd-search" class="navbar-upd__search-btn">
+                        <i class="navbar-upd__search-pic zlibicon-search-bold"></i>
+                    </label>
+                    <input class="drop-opener-input" type="checkbox" id="navbar-upd-search" autocomplete="off">
+                    <div class="field-drop search-upd">
+                        <form role="search" class="search-upd__form" method="get" action="/s/" name="quickSearch">
+                            <input class="search-upd__input" type="text" name="q" placeholder="Search for title, author, ISBN, publisher, md5..">
+                            <button type="reset" class="search-upd__reset"><i class="zlibicon-cross"></i></button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="navbar-upd__menu">
+                    <label for="navbar-upd-menu" id="profileMenu">
+                        <div class="upd-burger js-burger-toggler">
+                            <div class="upd-burger__bar"></div>
+                            <div class="upd-burger__bar"></div>
+                            <div class="upd-burger__bar"></div>
+                        </div>
+                    </label>
+                    <input class="drop-opener-input" type="checkbox" id="navbar-upd-menu" autocomplete="off">
+                    <div class="field-drop menu-upd _offset">
+                        <div class="menu-upd__user-data">
+                            <div class="user-data">
+                                                                    <div class="user-data__sign">
+                                        <a href="/login.php?redirectUrl=https%253A%252F%252Fz-library.se%252Fbook%252F3397236%252Fb6657d%252F%253FwrongHash" data-mode="singlelogin" data-action="login" class="user-data__sign-title">Sign In</a>
+                                        <div class="user-data__sign-note">to access more features</div>
+                                        <div class="user-data__sign-feature"><i class="zlibicon-arrow-right"></i>personal recommendations</div>
+                                        <div class="user-data__sign-feature"><i class="zlibicon-arrow-right"></i>Telegram Bot</div>
+                                        <div class="user-data__sign-feature"><i class="zlibicon-arrow-right"></i>download history</div>
+                                        <div class="user-data__sign-feature"><i class="zlibicon-arrow-right"></i>send to Email or Kindle</div>
+                                        <div class="user-data__sign-feature"><i class="zlibicon-arrow-right"></i>manage booklists</div>
+                                        <div class="user-data__sign-feature"><i class="zlibicon-arrow-right"></i>save to favorites</div>
+                                    </div>
+                                                                
+                            </div>
+                        </div>
+
+
+                        <div class="menu-upd__content">
+                            <div class="menu-cats">
+                                                                    <div class="menu-cats__item">
+                                        <div class="menu-cats__item-title _active js-cat-toggler" data-cat="personal">Personal<i class="menu-item__arr zlibicon-slider-arr-right"></i></div>
+                                        <div class="menu-cats__links" style="display: block;">
+                                                                                                                                        <a href="/requests" class="menu-item">
+                                                    <i class="menu-item__icon zlibicon-request"></i>
+                                                    <span class="menu-item__text">Book Requests</span>
+                                                </a>
+                                                                                    </div>
+                                    </div>
+                                                                <div class="menu-cats__item">
+                                    <div class="menu-cats__item-title js-cat-toggler" data-cat="explore">Explore<i class="menu-item__arr zlibicon-slider-arr-right"></i></div>
+                                    <div class="menu-cats__links">
+                                                                                                                            <a href="users/zrecommended" class="menu-item no-js-hide">
+                                                <i class="menu-item__icon zlibicon-recommended-feature"></i>
+                                                <span class="menu-item__text">Z-Recommend</span>
+                                            </a>
+                                            <a href="/booklists" class="menu-item">
+                                                <i class="menu-item__icon zlibicon-booklist"></i>
+                                                <span class="menu-item__text">Booklists</span>
+                                            </a>
+                                            <a href="/popular" class="menu-item">
+                                                <i class="menu-item__icon zlibicon-popular"></i>
+                                                <span class="menu-item__text"> Most Popular</span>
+                                            </a>
+                                            <a href="/categories" class="menu-item">
+                                                <i class="menu-item__icon zlibicon-categories"></i>
+                                                <span class="menu-item__text"> Categories</span>
+                                            </a>
+                                                                            </div>
+                                </div>
+                                <div class="menu-cats__item">
+                                    <div class="menu-cats__item-title js-cat-toggler" data-cat="contribution">Contribution<i class="menu-item__arr zlibicon-slider-arr-right"></i></div>
+                                    <div class="menu-cats__links">
+                                        <a href="/how-to-donate" class="menu-item"><i class="menu-item__icon zlibicon-dollar"></i><span class="menu-item__text">Donate</a>
+                                        
+                                                                                    <a href="/book-add" class="menu-item">
+                                                <i class="menu-item__icon zlibicon-upload"></i>
+                                                <span class="menu-item__text"> Uploads</span>
+                                            </a>
+                                        
+                                        
+                                    </div>
+                                </div>
+                                <div class="menu-cats__item">
+                                    <div class="menu-cats__item-title js-cat-toggler" data-cat="interlibrary"><div>LITERA Library<span style="margin-left: 14px;" class="new-label">new</span></div><i class="menu-item__arr zlibicon-slider-arr-right"></i></div>
+                                    <div class="menu-cats__links">
+                                        <a href="/litera-library" class="menu-item">
+                                            <i class="menu-item__icon zlibicon-offline-books" style="font-size: 16px;"></i>
+                                            <span class="menu-item__text"> Donate paper books</span>
+                                        </a>
+                                        <a href="/litera-library/private" class="menu-item">
+                                            <i class="menu-item__icon zlibicon-open-book"></i>
+                                            <span class="menu-item__text">Add paper books</span>
+                                        </a>
+                                        <a id="literaPointLink" href="/litera-library/public" class="menu-item">
+                                            <i class="menu-item__icon zlibicon-open-book-geolabel"></i>
+                                            <span class="menu-item__text">
+                                                Open LITERA Point                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<style type="text/css">
+    .main-menu-item img {
+        opacity: 0.7;
+    }
+    .main-menu-item img:hover {
+        opacity: 1;
+    }
+
+    </style>
+
+
+<script>
+    $("#bs-example-navbar-collapse-1").on('shown.bs.collapse', function(e){
+        $('#main-menu-dropdown').dropdown('toggle');
+        $('#main-menu-dropdown').attr('data-toggle', ''); // make it static
+
+        $('#admin-menu-dropdown').dropdown('toggle');
+        $('#admin-menu-dropdown').attr('data-toggle', ''); // make it static
+
+        $("#quickSearchMenuDD2").dropdown('toggle');
+        $('#quickSearchMenuDD2').attr('data-toggle', ''); // make it static
+
+        $("#profileMenu").dropdown('toggle');
+        $('#profileMenu').attr('data-toggle', ''); // make it static
+    });
+
+    $("#bs-example-navbar-collapse-1").on('hide.bs.dropdown', function(e){
+        if ($(window).width() > 767) return
+
+        $('#loginDDLink, #stagesLink, #admin-menu-dropdown').next('ul').hide();
+    })
+
+    $('document').ready(() => clearSearchButtonEvents('#quickSearchInput', '#quickSearchReset'));                       // быстрый поиск из шапки
+
+    $('.js-burger-toggler').on('click', function(e) {
+        if ($(window).width() < 991) {
+            $(window).scrollTop(0)
+
+            if ($(window).width() < 768) {
+                $('.adminLink').toggle();
+                $('.tabsTopMenu').toggle();
+            }
+
+            if ($('.upd-burger').hasClass('_active')) {
+                $('body').css('overflow','visible');
+            } else {
+                $('body').css('overflow','hidden')
+            }
+        }
+
+        $('.upd-burger').toggleClass('_active');
+    })
+
+    $('.js-compact-toggle').on('click', function() {
+        $(this).toggleClass('_active');
+        $('.user-data').toggleClass('_compact');
+
+        if (localStorage.getItem('isMenuCompact')) {
+            localStorage.removeItem('isMenuCompact')
+            $('[data-menu-toggle="tooltip"]').tooltip('disable')
+        } else {
+            localStorage.setItem('isMenuCompact', 'true')
+            if ($(window).width() > 991) $('[data-menu-toggle="tooltip"]').tooltip('enable')
+        }
+    })
+
+    $('.js-cat-toggler').on('click', function() {
+        if ($(window).width() < 993) {
+            const clickedCat = $(this).attr('data-cat')
+            const selectedCatList = JSON.parse(localStorage.getItem('selectedCatList')) || []
+
+            $(this).toggleClass('_active');
+            $(this).next('.menu-cats__links').slideToggle();
+
+            if (selectedCatList.indexOf(clickedCat) > -1) {
+                const index = selectedCatList.indexOf(clickedCat);
+                selectedCatList.splice(index, 1);
+                localStorage.setItem('selectedCatList', JSON.stringify(selectedCatList))
+            } else {
+                selectedCatList.push(clickedCat)
+                localStorage.setItem('selectedCatList', JSON.stringify(selectedCatList))
+            }
+        }
+    })
+
+    $('document').ready(function() {
+        var selectedCatList = JSON.parse(localStorage.getItem('selectedCatList'));
+        var isMenuCompact = localStorage.getItem('isMenuCompact')
+        if (selectedCatList) {
+            $('.menu-cats__links').removeAttr('style');
+            $('.menu-cats__item-title').removeClass('_active');
+            for (cat of selectedCatList) {
+                $('[data-cat = '+cat+']').addClass('_active');
+                $('[data-cat = '+cat+']').next().css('display', 'block');
+            }
+        } else {
+            localStorage.setItem('selectedCatList', JSON.stringify(['personal']))
+        }
+        if (isMenuCompact) {
+            $('.user-data').addClass('_compact');
+        }
+    })
+
+    $('.js-copy-link').on('click', function() {
+        const link = $(this).prev().data('link')
+        navigator.clipboard.writeText(link)
+        new ZLibraryNotify().info('Address is copied to your clipboard')
+    })
+
+    $('.navbar-upd__search-btn').on('click', function () {
+        $(this).toggleClass('_active')
+        setTimeout(() => {
+            $('.search-upd__input').focus()
+        }, 300);
+
+    })
+
+    $('#navbar-upd-search').prop('checked', false)
+    $('#navbar-upd-menu').prop('checked', false)
+
+    $(window).on('resize', function () {
+        if ($(window).width() > 991) {
+            $('.menu-cats__links').css('display', 'block')
+        } else {
+            $('[data-menu-toggle="tooltip"]').tooltip('disable')
+        }
+        if ($(window).width() < 768) {
+            if (!$('.upd-burger').hasClass('_active')) {
+                $('.adminLink').hide();
+                $('.tabsTopMenu').hide();
+            }
+        } else {
+            $('.adminLink').show();
+            $('.tabsTopMenu').show();
+        }
+
+        if ($('.upd-burger').hasClass('_active')) {
+            $('body').css('overflow','hidden');
+        }
+    })
+
+    $(window).click(function() {
+        $('#navbar-upd-search').attr('checked', false);
+        $('#navbar-upd-menu').attr('checked', false);
+        $('.navbar-upd__search-btn').removeClass('_active')
+        $('.upd-burger').removeClass('_active')
+        if ($(window).width() < 768) {
+            $('.adminLink').hide();
+            $('.tabsTopMenu').hide();
+        }
+    });
+
+    $('.navbar-upd__search, .navbar-upd__menu').click(function(event){
+        event.stopPropagation();
+    });
+
+    if (localStorage.getItem('isMenuCompact') && ($(window).width() > 991)) {
+        $('[data-menu-toggle="tooltip"]').tooltip()
+    } else if (!localStorage.getItem('isMenuCompact') && ($(window).width() > 991)) {
+        $('.navbar-upd__share-btn').tooltip()
+    } else {
+        $('[data-menu-toggle="tooltip"]').tooltip('disable')
+    }
+
+    $('.js-copy-url').on('click', function(e) {
+        let domain_to_share = "z-library.se"
+        if(!domain_to_share){
+            domain_to_share = "zlibrary-global.se"
+        }
+        let url = location.protocol+'//'+domain_to_share+location.pathname+location.search+location.hash;
+        navigator.clipboard.writeText(url);
+        $('.tooltip').find('.tooltip-inner').html('Link is copied to your clipboard');
+    })
+
+</script>                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="g-page-content">
+                        <div class="container " style="padding-bottom: 40px;">
+                            <div class="row">
+                                <div class="col-md-12 itemFullText">
+                                    
+<script type="text/javascript">
+    const availableTags = [];
+    const CurrentBook = new Book({"id":"3397236","title":"What do you say after you say hello?: The psychology of human destiny","terms_hash":"3ad5016dbff3b99b24056b1a0ed512e9"});
+</script>
+
+<style>
+    .adFixW iframe {
+        width: 100%;
+    }
+    .tooltip-inner {
+        max-width: 220px;
+    }
+    @media screen and (max-width: 800px) {
+        .tooltip-inner {
+            width: 100vw;
+        }
+    }
+</style>
+
+<div class="bcNav">
+    <a href="/" title="Ebook library z-library.se">Main</a> <i></i>
+        What do you say after you say hello?: The psychology of human destiny</div>
+
+
+<div class="cBox1">Something went wrong. Reload the page and try again</div>
+<div itemscope itemtype="http://schema.org/Book">
+    <div class="row cardBooks" data-spelling-suggest="true" data-book_id="3397236">
+        <div class="col-sm-3 details-book-cover-container">
+            <z-cover naturalRatio volume markButton id="3397236" isbn="9780394479958,0394479955" author="Eric Berne" title="What do you say after you say hello?: The psychology of human destiny">
+                <img data-src="https://s3proxy.cdn-zlib.se/covers300/collections/genesis/994cafbde5c42f8da299f4ac2cac5fdd6b22fe7a46cfb26ab78b9be16add2852.jpg">
+            </z-cover>
+        </div>
+
+        <div class="col-sm-9">
+            <h1 itemprop="name" style="color: #000; line-height: 140%;">
+                What do you say after you say hello?: The psychology of human destiny            </h1>
+
+            <i><a  itemprop="author" class="color1" title="Find all the author's book" href="/author/Eric Berne">Eric Berne</a></i>
+
+            
+    <div class="book-rating-detail">
+        <div class="book-rating ">
+            <span class="book-rating-interest-score ">
+                5.0            </span> /
+            <span class="book-rating-quality-score ">
+                5.0            </span>
+        </div>
+        <a href="#post" class="book-comments-info js-anchor">
+            0 comments        </a>
+        <div class="bookmarks" style="display: none" data-book_id="3397236">
+            
+        <i class="icon-heart btn-save-for-later" title="Mark the book you like best or plan to download later"></i>
+        <i class="icon-bookmark btn-booklists" title="Add the book to your personal themed book collection and share it with your community"></i>
+                        </div>
+    </div>
+
+<div class="book-choice-rating" data-visible="0" data-init="0">
+    <div class="overlay-post-score"><div id="bookChoiceRatingtFloatingSpinner"></div></div>
+    <div class="overlay"><div id="bookChoiceRatingSpinner"></div></div>
+    <div class="book-choice-interest-title">How much do you like this book?</div>
+    <div class="book-choice-interest-stars stars-list cursor-pointer" data-disabled="0" data-id="3397236" data-type="interest">
+        <i class="book-rating-star"></i>
+        <i class="book-rating-star"></i>
+        <i class="book-rating-star"></i>
+        <i class="book-rating-star"></i>
+        <i class="book-rating-star"></i>
+    </div>
+
+    <div class="book-choice-quality-stub">
+        <div class="book-choice-quality-title">What’s the quality of the file?</div>
+        <div class="book-choice-quality-dmsg">Download the book for quality assessment</div>
+    </div>
+
+    <div class="book-choice-quality-title">
+        <div>What’s the quality of the downloaded files?</div>
+    </div>
+    <div class="book-quality-rating-template">
+        <div class="book-format-quality-rating">
+            <div class="format-info">
+                <span class="download-date"></span>
+                <span class="extension book-property__extension"></span>
+                <span class="size"></span>
+            </div>
+            <div class="book-choice-quality-stars stars-list cursor-pointer" data-disabled="0" data-id="" data-type="quality">
+                <i class="book-rating-star _tooltip" data-toggle="tooltip" title="Text is unreadable"></i>
+                <i class="book-rating-star _tooltip" data-toggle="tooltip" title="Barely readable"></i>
+                <i class="book-rating-star _tooltip" data-toggle="tooltip" title="Readable"></i>
+                <i class="book-rating-star _tooltip" data-toggle="tooltip" title="Good"></i>
+                <i class="book-rating-star _tooltip" data-toggle="tooltip" title="Perfect"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    const CurrentBookRating = new BookRating(CurrentUser)
+
+    // book rating
+    CurrentBookRating.initTooltip($('.book-rating-detail .book-rating'))
+    CurrentBookRating.initChoiceContainerEvents();
+    CurrentBookRating.checkExistsScoreForBook(CurrentBook.id, CurrentBook.data.terms_hash, function (hasScore) {
+        if (hasScore) {
+            $('.book-rating-detail .book-rating').addClass('book-appreciated')
+        }
+    })
+
+    $(document).on('click', '.book-rating-detail .book-rating.cursor-pointer', function () {
+        if (CurrentBookRating.tooltipEl) {
+            CurrentBookRating.tooltipEl.tooltip('hide')
+        }
+        CurrentBookRating.loadUserScores(CurrentBook.id, CurrentBook.data.terms_hash)
+    })
+
+    $(document).on('click', '.book-choice-rating .stars-list', function(e) {
+        if (!$(e.target).hasClass('book-rating-star') || $(this).data('disabled')) {
+            return
+        }
+
+        const $that = $(this)
+        const $bookRatingEl = $('.book-rating-detail .book-rating')
+        const $ratingEl = $('.book-choice-rating')
+        const $ratingOverlayEl = $ratingEl.find('.overlay-post-score')
+        const $spinnerEl = $('#bookChoiceRatingtFloatingSpinner')
+
+        const data = {
+            'bookId': $that.data('id'),
+            'type': $that.data('type'),
+            'score': $that.find('.active-choice').length
+        }
+
+        if ($that.data('score') == data.score) {
+            return
+        }
+
+        $spinnerEl.css({'top': '-10px'})
+        $that.after($spinnerEl)
+
+        $ratingOverlayEl.show()
+        $that.data('disabled', 1)
+
+        $that.fadeTo(100, 0, function () {
+            CurrentBookRating.postScore(data, $spinnerEl, (result) => {
+                $ratingOverlayEl.hide()
+                $that.fadeTo(300, 1)
+                $that.data('disabled', 0)
+
+                if (!result.success) {
+                    return
+                }
+
+                $that.data('score', data.score)
+                $that.find('.active, .active-none').removeClass('active active-none')
+                $that.find('.active-choice').addClass('active')
+
+                if ($that.data('id') != CurrentBook.id) {
+                    return
+                }
+
+                if (result.avg.interest > 0) {
+                    $bookRatingEl.addClass('book-appreciated')
+                    $('.book-rating-interest-score')
+                        .removeClass('none')
+                        .text(parseFloat(result.avg.interest).toFixed(1))
+                }
+                if (result.avg.quality > 0) {
+                    $bookRatingEl.addClass('book-appreciated')
+                    $('.book-rating-quality-score')
+                        .removeClass('none')
+                        .text(parseFloat(result.avg.quality).toFixed(1))
+                }
+            })
+        })
+    })
+
+    
+    $(window).on('gratitudesFetched', function(){
+        $(".js-gratitude-icon").addClass("_disabled").attr('title', '').attr('data-original-title', 'You already expressed your gratitude for this book. Good job!')
+    })
+    $('.icon-gratitude').tooltip('enable')
+    $(document).on('gratitudesFormClosed', ()=>{
+        $('.icon-gratitude').tooltip('enable')
+    })
+    $(document).on('gratitudesFormOpened', ()=>{
+        $('.icon-gratitude').tooltip('disable')
+        $('.icon-gratitude').tooltip('hide')
+    })
+    $('.js-anchor').on('click', function(e) {
+        e.preventDefault();
+        const anchor = $(this).attr('href');
+        $(anchor)[0].scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'})
+    })
+</script>
+                            <div style="padding:10px 0; font-size:10pt" id="bookDescriptionBox"  itemprop="reviewBody">
+                    The celebrated psychotherapist reveals the way in which each individual's life is governed by a hidden script that results from parental programming                </div>
+                        <div style="zoom: 1; margin-top: 30px;">
+                
+
+<div class="bookDetailsBox">
+                <div  class="bookProperty property_categories">
+                    <div class="property_label">Categories:</div>
+            <div class="property_value "><a href="/category/601/Self-Help-Relationships--Lifestyle-Psychological-Self-Help">Self-Help, Relationships & Lifestyle - Psychological Self-Help</a></div></div>
+                <div  class="bookProperty property_year">
+                    <div class="property_label">Year:</div>
+            <div class="property_value ">1972</div></div>
+                <div  class="bookProperty property_edition">
+                    <div class="property_label">Edition:</div>
+            <div class="property_value ">1st</div></div>
+                <div  class="bookProperty property_publisher">
+                    <div class="property_label">Publisher:</div>
+            <div class="property_value ">Grove Press</div></div>
+                <div  class="bookProperty property_language">
+                    <div class="property_label">Language:</div>
+            <div class="property_value text-capitalize">english</div></div>
+                <div  class="bookProperty property_pages">
+                    <div class="property_label">Pages:</div>
+            <div class="property_value "><span title="Pages paperback">457</span></div></div>
+                <div  class="bookProperty property_isbn 10">
+                    <div class="property_label">ISBN 10:</div>
+            <div class="property_value ">0394479955</div></div>
+                <div  class="bookProperty property_isbn 13">
+                    <div class="property_label">ISBN 13:</div>
+            <div class="property_value ">9780394479958</div></div>
+                <div  class="bookProperty property__file">
+                    <div class="property_label">File:</div>
+            <div class="property_value ">PDF, 46.23 MB</div></div>
+                <div style="display: none;" class="bookProperty property_user_tags">
+                    <div class="property_label">Your tags:</div>
+            <div class="property_value "></div></div>
+                    <div class="bookProperty property_ipfs_cid">
+                        <div class="property_label">IPFS:</div>
+                        <div class="property_value"><span class="z-copy-icon tooltip-init" data-placement="bottom" title="Copy" data-copy="Qma1rxE1ivLn4M5aCRSzsaafn1Py11iRpBwSm3JbM3E2uu" data-notif="CID copied to clipboard">CID</span> , <span class="z-copy-icon tooltip-init" data-placement="bottom" title="Copy" data-copy="bafykbzacecgdoycomechsghzarcy2cgtdj2clfvyhcnha3ggbocarggychp2e" data-notif="CID copied to clipboard">CID Blake2b</span></div>
+                    </div>          
+                <div class="bookProperty property_language_year">english, 1972</div></div>            </div>
+        </div>
+    </div>
+
+    <section class="book-actions-container">
+    <div class="details-buttons-container">
+            <div class="book-actions-buttons">        
+    
+<div class="book-details-button">
+    <div class="btn-group" id="sendToButtonBox">
+        <button type="button" class="btn btn-default dropdown-toggle button-send-book" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Send to            <span class="sendToButtonBox__icons">
+                <i class="zlibicon-envelope menu-row__icon" style="font-size: 11px;"></i><i class="zlibicon-google-drive menu-row__icon" style="font-size: 11px;"></i><i class="zlibicon-Pocketbook menu-row__icon" style="position: relative;top: 2px;font-size: 16px;"></i><i class="zlibicon-Amazon menu-row__icon" style="position: relative;top: 4px;font-size: 16px;"></i>            </span>
+            <span class="caret"></span>
+        </button>
+            </div>
+</div>
+    <script>
+    // if(document.querySelector('.premium-feature-note-trigger')){
+    //     let timeout;
+    //     let trigger = document.querySelector('.premium-feature-note-trigger');
+    //     let note = document.querySelector('.premium-feature-note');
+    //     trigger.addEventListener('mouseenter', function(){
+    //         clearTimeout(timeout);
+    //         note?.classList.add('show')
+    //     })
+    //     trigger.addEventListener('mouseleave', function(){
+    //         timeout = setTimeout(()=>{
+    //             note?.classList.remove('show')
+    //         }, 2000)
+    //     })
+    // }
+    
+</script>    <div class="details-buttons-container__divider"></div>
+    <div class="book-details-button">
+        <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle button-paperback" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Paperback <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <div class="menu-content menu-content_paperback">
+                                            <div class="menu-row">
+                            <a class="menu__link_paperback" href="https://amazon.com/s?k=What+do+you+say+after+you+say+hello%3F%3A+The+psychology+of Eric+Berne" target="_blank">
+                                <img class="menu__icon" src="/img/book-stores/amazon_grayscale.svg">
+                                Amazon                            </a>
+                        </div>
+                                            <div class="menu-row">
+                            <a class="menu__link_paperback" href="https://www.barnesandnoble.com/s/What+do+you+say+after+you+say+hello%3F%3A+The+psychology+of Eric+Berne" target="_blank">
+                                <img class="menu__icon" src="/img/book-stores/barnes_noble_grayscale.svg">
+                                Barnes & Noble                            </a>
+                        </div>
+                                            <div class="menu-row">
+                            <a class="menu__link_paperback" href="https://bookshop.org/search?keywords=What+do+you+say+after+you+say+hello%3F%3A+The+psychology+of Eric+Berne" target="_blank">
+                                <img class="menu__icon" src="/img/book-stores/bookshoporg_grayscale.svg">
+                                Bookshop.org                            </a>
+                        </div>
+                    
+                    <div class="text--hint">
+                        Want to add your book store? Contact us at <a href="mailto:support@z-lib.se">support@z-lib.se</a>                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+                    </div>
+        <div class="book-actions-status">
+<div class="cBox1" id="sentToEmailInfo" style="display:none;">
+    The file will be sent to your email address. It may take up to 1-5 minutes before you receive it.</div>
+
+<div class="cBox1" id="sentToTelegramInfo" style="display:none;">
+    <p>The file will be sent to you via the Telegram messenger. It may take up to 1-5 minutes before you receive it.</p>
+    <p>Note: Make sure you have linked your account to Z-Library Telegram bot.</p>
+</div>
+
+<div class="cBox1" id="sentToEmailInfoKindle" style="display:none;">
+    <p>The file will be sent to your Kindle account. It may take up to 1–5 minutes before you receive it.</p>
+    <p><b>Please note</b>: you need to verify every book you want to send to your Kindle. Check your mailbox for the verification email from Amazon Kindle.</p>
+</div>
+
+<div class="cBox1" id="sendToGoogleDriveMessage" style="display:none; position: relative;"></div>
+
+<div class="cBox1Danger" id="errorMessage" style="display:none;">
+    </div>
+
+<div id="converterCurrentStatusesBoxContainer">
+    <div id="converterCurrentStatusesBox">
+            </div>
+</div>
+<div id="convertationStatusTemplates">
+    <div class="status-new" data-job_id=""><div class="spinner-content"></div><div class="message">Conversion to <b class="book-property__extension"></b> is in progress</div></div>    <div class="status-error"><span class="zlibicon-close-circle status-icon"></span><div class="message">Conversion to <b class="book-property__extension"></b> is failed</div><span class="zlibicon-cross icon-hovered delete-btn" data-job_id=""></span></div></div>
+<div id="shareToTooltipsContainer"></div>
+</div>
+        <div class="bookLoginBlock__wrapper">
+    <div class="bookLoginBlock__container">
+        <p class="bookLoginBlock__caption"">Begin your journey into the world of knowledge!        Check out the <a href='ireader/3397236'>Preview</a> and access other features        </p>
+        <div class="bookLoginBlock__buttons">
+            <button class="bookLoginBlock__button bookLoginBlock__button_primary authButton" data-action="login">Log In</button>
+        </div>
+    </div>
+</div>
+
+<style>
+    .bookLoginBlock__wrapper {
+        display: flex;
+    }
+    .bookLoginBlock__container {
+        display: flex;
+        margin: 40px auto 16px;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .bookLoginBlock__icon {
+        margin: 0 12px;
+        color: var(--color-blue);
+    }
+    .bookLoginBlock__caption {
+        margin: 0 16px 0 0;
+        padding: 2px 0 10px;
+    }
+    .bookLoginBlock__caption a {
+        color: #49AFD0;
+    }
+    .bookLoginBlock__caption::before{
+        content: url("/img/book-download.svg");
+        margin: 0px 12px;
+        position: relative;
+        top: 6px;
+    }
+    .bookLoginBlock__buttons {
+        display: flex;
+    }
+    .bookLoginBlock__button {
+        min-width: 150px;
+        padding: 4px 8px;
+        margin: 0px 8px;
+        background-color: var(--color-white);
+        border: solid 1px var(--color-bordergray);
+        border-radius: 2px;
+    }
+    .bookLoginBlock__button_primary {
+        color: var(--color-white);
+        background-color: var(--color-blue);
+        border-color: var(--color-blue);
+    }
+    @media (max-width: 768px) {
+        .bookLoginBlock__wrapper {
+            text-align: center;
+        }
+    }
+    @media screen and (max-width: 480px) {
+        .bookLoginBlock__button {
+            margin: 0px 4px;
+        }
+    }
+</style>
+
+<script>
+    $(".authButton").click(function(event) {
+        if (event.button) {
+            return
+        } else {
+            event.preventDefault()
+        }
+        new User().showAuthPopup(this.dataset.action, null, null, window.location.href)
+    })
+</script>    </section>
+
+</div>
+
+
+<script type="text/javascript">
+    const $tagsInput = $('#inputTags')
+    const tags = $tagsInput.length ? new TagsInput($tagsInput, CurrentUser, CurrentBook.id, availableTags) : null
+
+    // deactivate links if JS available
+    $('.no-js__link').removeAttr("href");
+
+        // function setDownloadListener(){
+    //     $(".btn-group li a.addDownloadedBook").on('click', () => {
+            
+    //     })
+    // }
+    $(function () {
+        $('#btnCheckOtherFormats').click(function() {
+            if (CurrentBook.otherFormatsLoaded) {
+                return
+            }
+            const $that = $(this)
+            const spinner = new ZLibrarySpinner('btnCheckOtherFormats').length(3).radius(2).width(2).start()
+            var isReadOnline = $that.data('check-formats') == 2
+
+            CurrentBook.checkOtherFormats(isReadOnline).then(() => {
+                spinner.stop()
+                $that.attr('data-toggle', 'dropdown').trigger('click')
+                // set an event listener after other formats loading
+                if (!showAddCategoryTooltip) return
+                addCatLink.tooltip('show')
+                
+            }).catch(() => {
+                spinner.stop()
+                $that.attr('data-toggle', 'dropdown').trigger('click')
+            })
+            CurrentBook.otherFormatsLoaded = true
+        })
+        $('a.lightbox').lightBox({
+            containerResizeSpeed: 1
+        });
+
+        // read more
+        var height = 300;
+        if ($('.termsCloud').height() > 0)
+        {
+            height = height - $('.termsCloud').height();
+        }
+
+        if (height < 225) {
+            height = 225; // min height
+        }
+
+        // prevent bad line-brake
+        height = Math.floor(height / parseFloat($('#bookDescriptionBox').css('line-height'))) * parseFloat($('#bookDescriptionBox').css('line-height')) + 10; //10 - padding-bottom of box
+
+        if ($('#bookDescriptionBox').height() > height)
+        {
+            $('#bookDescriptionBox').css('overflow', 'hidden');
+            $('#bookDescriptionBox').css('height', height);
+            $('<div style="text-align:center; cursor:pointer;font-size: 12px; height:25px;" class="moreBtn"><div style="display:inline-block;border-top: 1px dashed #333; width:75%; margin-top: 15px;"><span style="display:inline-block;position:relative;top:-13px;padding:0 30px; background: #f8fbfc;">click to read more</span></div></div>').insertAfter("#bookDescriptionBox");
+        }
+
+        $('.moreBtn, #bookDescriptionBox').click(function () {
+            $('#bookDescriptionBox').css('height', 'auto');
+            $('#bookDescriptionBox').css('overflow', 'auto');
+            $('.moreBtn').remove();
+        });
+
+    })
+
+    // Bookmarks
+    if ($('.bookmarks').length) {
+        userBookmarksInstance = new UserBookmarks(CurrentUser.id)
+        userBookmarksInstance.init({
+            page: 'book',
+            savedBookTags: [],
+        })
+    }
+
+    $(window).on("load", function () {
+        const dibaledDownloadId = "#dbx_" + 3397236;
+        $('[data-toggle="tooltip"]').tooltip({'html': true});
+        $('[data-autoopen="true"]').tooltip('show');
+
+        $('body').click(()=>{
+            $(dibaledDownloadId).tooltip('hide');
+        })
+        $(".book-details-button").on("mouseenter", ()=>{
+            $(dibaledDownloadId).tooltip('show');
+        })
+        $(".book-details-button").on("mouseleave", ()=>{
+            $(dibaledDownloadId).tooltip('hide');
+        })
+
+        $('.btn-savebook-disabled').tooltip({
+            'html': true,
+            'trigger': 'manual',
+        });
+
+        $('.btn-savebook-disabled').mouseover(function () {
+            $(this).tooltip('show')
+        });
+
+        $('.btn-savebook-disabled').click(function () {
+            $(this).tooltip('hide')
+        });
+    });
+
+    function iOSversion()
+    {
+        if (/iP(hone|od|ad)/.test(navigator.userAgent)) {
+            const v = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/)
+            return [parseInt(v[1], 10), parseInt(v[2], 10), parseInt(v[3] || 0, 10)]
+        }
+
+        return [];
+    }
+
+    
+    let superImage2 = new Image();
+    superImage2.onload = function ()
+    {
+        if(this.width !== 1){
+            return ; //cant load correct image from wiki
+        }
+
+        try {
+            if (window.localStorage !== undefined) {
+                let p = new ProxyChecker();
+                p.clearExcept(proxiesToCheck);
+                $.each(proxiesToCheck, function (index, proxy) {
+                    p.refresh(proxy);
+                });
+                p.syncCookies();
+
+                // check domains
+                let domains2check = ["z-library.se","z-library.rs","singlelogin.re","zlibrary-global.se","1lib.sk","z-library.sx","zlibrary-asia.se","zlibrary-east.se","zlibrary-ru.se"];
+                let domainsChecker = new ProxyChecker();
+                domainsChecker.scope = 'domains';
+                domainsChecker.pathToTest = '/p/index.php?v=2571';
+                domainsChecker.clearExcept(domains2check);
+                $.each(domains2check, function (index, proxy) {
+                    domainsChecker.refresh(proxy);
+                });
+                domainsChecker.syncCookies();
+            }
+        } catch (e) {
+        }
+    };
+    superImage2.src = "https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png?x1" + new Date().getTime();
+
+    const gratitudesIcons = null;
+
+    // $('.icon-gratitude').on('click', function (event) {
+    //     // $(this).tooltip('disable');
+    //     $(this).tooltip('hide');
+
+    //     $('.booklists-container, .save-for-later-container').hide();
+
+    //     event.stopPropagation();
+    // })
+
+    // $(window).click(function() {
+    //     $('.icon-gratitude').tooltip('enable')
+    // });
+
+    $('.addDownloadedBook, .converterLink, .menu-row-link a').on('click', function() {
+        const isGratitudesTooltipShown = localStorage.getItem('isGratitudesTooltipShown')
+
+        $('.js-gratitude-icon').attr('data-original-title', '<span>Say “Thank you!”&lt;br /&gt; to our contributors for the book</span>');
+        $('.js-gratitude-icon').removeClass('_disabled')
+
+        if (!isGratitudesTooltipShown) {
+            $('.icon-gratitude').tooltip({html: true, trigger: 'manual'})
+            $('.icon-gratitude').tooltip('show')
+            localStorage.setItem('isGratitudesTooltipShown', true)
+
+            const timeout = setTimeout(() => {
+                $('.icon-gratitude').tooltip('hide')
+                clearTimeout(timeout)
+            }, 6000);
+        }
+    })
+
+    if (!isBookDownloaded(+CurrentBook.id)) {
+        $('.js-gratitude-icon').attr('data-original-title', 'To say &quot;Thank you&quot; to our contributors, download the book first');
+        $('.js-gratitude-icon').addClass('_disabled')
+    }
+
+
+    $('.copytext-container').click(function(event) {
+        const $input = $('<input type="text" style="width: 1px; height: 1px; border: none; opacity: 0;">')
+        $(this).after($input)
+        $input.val($(this).html()).focus().select()
+
+        try {
+            document.execCommand('copy')
+            ZLibraryNotify({delay: 3000}).info('Address is copied to your clipboard')
+        } catch (err) {
+            ZLibraryNotify({delay: 3000}).error('Oops, unable to copy')
+        }
+        $input.remove()
+    })
+</script>
+
+<div class="books-mosaic" style="display: none">
+    <h2 class="color1" style="margin-top:20px;overflow: hidden;">
+        <span style="float:left;">You may be interested in</span>
+    </h2>
+
+    <div style="background: #49AFD0; height:2px; width: 100%; margin-bottom: 20px;">&nbsp;</div>
+
+        <div id="booksMosaicBoxContainer" class="masonry columns-7">
+                    <div class="item">
+                <a href="/book/1043294/4d9ee7/neurosis-and-human-growth-the-struggle-towards-selfrealization.html?dsource=recommend" >
+                    <z-cover volume id="1043294" isbn="0393307751" author="Karen Horney" title="Neurosis and Human Growth: The Struggle Towards Self-Realization">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/20d4dd5d1e56c7fd90f59e912bafddd7f591f1d0b6c9de6bc8844ef17996ffdc.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/11379599/c9d9b0/what-do-you-say-after-you-say-hello-the-psychology-of-human-destiny.html?dsource=recommend" >
+                    <z-cover volume id="11379599" isbn="" author="Eric Berne" title="What do you say after you say hello?: The psychology of human destiny">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/userbooks/d862c89729ac4868e7958138fa8608e7eb1e35e5ca482904d7da5b8c2b4b84c4.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/1223575/095c3a/tradecraft-the-art-and-science-of-cold-reading.html?dsource=recommend" >
+                    <z-cover volume id="1223575" isbn="" author="TRICKSHOP.COM" title="Tradecraft : The Art and Science of Cold Reading">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/ef646129933f7fb8ce29e247524de95d691a550ef753cf0dcd25d233fcd99c19.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/1383988/bae4f2/the-games-people-play.html?dsource=recommend" >
+                    <z-cover volume id="1383988" isbn="" author="Eric Berne" title="The Games People Play">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/foreignfiction/44058d17a92a985d858f9298c91e3b0a8d9d7afb9186c4967433ed2ac6aead11.png" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/15887928/cc25a0/games-people-play-the-basic-handbook-of-transactional-analysis.html?dsource=recommend" >
+                    <z-cover volume id="15887928" isbn="" author="Eric Berne" title="Games People Play - The Basic Handbook of Transactional Analysis">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/userbooks/e14dc322c844b7b1a9e2b5d1529057cefc381c70f738ab64e0d5023915f86b39.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/1628315/2c9a16/games-people-play-the-psychology-of-human-relationships.html?dsource=recommend" >
+                    <z-cover volume id="1628315" isbn="" author="Eric Berne" title="Games People Play: The Psychology of Human Relationships">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/foreignfiction/0a3aecf0a1b62fa31c02dcd193a4b470755422efb7ca99b1961a11ac8e8c9fbd.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/1660018/e824f9/what-to-say-when-you-talk-to-yourself.html?dsource=recommend" >
+                    <z-cover volume id="1660018" isbn="" author="Helmstetter Shad" title="What to Say When You Talk to Yourself">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/foreignfiction/f1aabbecbb2d2ae573f66788ba9d8daaac8095a00bfc3fb89f23ca103307faf6.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/2059072/ac4dea/games-people-play-the-psychology-of-human-relationships.html?dsource=recommend" >
+                    <z-cover volume id="2059072" isbn="" author="Eric Berne" title="Games people play : the psychology of human relationships">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/28cb7e916b48a9f207745fed825f49b44f11ffb0a735b52cb9dd73eb5b222807.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/3102316/676991/ego-states-in-the-social-realm-reflections-on-the-theories-of-pio-scilligo-and-eric-berne.html?dsource=recommend" >
+                    <z-cover volume id="3102316" isbn="" author="Cornell W.F." title="Ego States in the Social Realm: Reflections on the Theories of Pio Scilligo and Eric Berne">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/a280fff5149670a18abd4a3776ba832f73694d7869633244d89696ccfb605d2e.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/3313010/3dddc3/a-laymans-guide-to-psychiatry-and-psychoanalysis.html?dsource=recommend" >
+                    <z-cover volume id="3313010" isbn="" author="Berne, Eric" title="A Layman's Guide to Psychiatry and Psychoanalysis">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/25c350f55e3aed3003ccdfdd61b01b5c119ebb304d9cdbcea429cf1b029ec48d.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/5206690/264f7f/how-to-analyze-people-proven-techniques-to-analyze-people-on-sight-and-read-anyone-like-a-book-sim.html?dsource=recommend" >
+                    <z-cover volume id="5206690" isbn="" author="Allan Goldman" title="How to Analyze People: Proven Techniques to Analyze People on Sight and Read Anyone Like a Book; Simple Tricks to Understand the Human Mind and Master Human Psychology">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/9bb4bfa49b71ad3909e12c11a6736c59a38d857fdd38ec57c0b1d9606ea6d7af.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/5214416/8e4380/the-structure-and-dynamics-of-organizations-and-groups.html?dsource=recommend" >
+                    <z-cover volume id="5214416" isbn="" author="Eric Berne" title="The structure and dynamics of organizations and groups">
+                        <img src="" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/5632002/bde794/transactional-analysis-in-psychotherapy-a-systematic-individual-and-social-psychiatry.html?dsource=recommend" >
+                    <z-cover volume id="5632002" isbn="" author="Eric Berne" title="Transactional Analysis in Psychotherapy: A Systematic Individual and Social Psychiatry">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/8e8e977ab0cbeab6e50ff8a66208487fead4919188fc080808e8120440304531.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/874828/f140c3/new-ways-in-transactional-analysis.html?dsource=recommend" >
+                    <z-cover volume id="874828" isbn="" author="Tony White" title="New Ways in Transactional Analysis">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/fb27dc775321d21e6f831797ac695da27a84b0ae5dd0b59fcc8d6892a405fe44.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/947724/1dabd8/what-do-you-say-after-you-say-hello-the-psychology-of-human-destiny.html?dsource=recommend" >
+                    <z-cover volume id="947724" isbn="" author="Eric Berne" title="What Do You Say After You Say Hello? The Psychology of Human Destiny">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/1f2181dc5835fa67bf7ea13d152ddc78b666abb305e930f439c15231d4c6b420.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/2751359/5b1404/im-okyoure-ok.html?dsource=recommend" >
+                    <z-cover volume id="2751359" isbn="9780060724276,0060724277" author="Thomas Harris" title="I’m OK--You’re OK">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/0aebdfa681d63861086983babfa9b5de8e1748309514240f853a91e7dadaf3aa.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/2314747/69cf20/the-individual-psychology-of-alfred-adler-a-systematic-presentation-in-selections-from-his-writings.html?dsource=recommend" >
+                    <z-cover volume id="2314747" isbn="9780061311543,0061311545" author="Alfred Adler" title="The Individual Psychology of Alfred Adler: A Systematic Presentation in Selections from His Writings">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/4120ec8a9b95fee426e81f6e88ecca93615d015eb67563a05d76f45daae052a9.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/2606151/d2e8c2/how-the-world-sees-you-discover-your-highest-value-through-the-science-of-fascination.html?dsource=recommend" >
+                    <z-cover volume id="2606151" isbn="9780062230690,0062230697" author="Sally Hogshead" title="How the World Sees You: Discover Your Highest Value Through the Science of Fascination">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/ebe0829213868810009b1c43a3a86c40d2d708f32a097c525f036bb8238afd37.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/10993363/f0096c/im-ok-youre-ok-a-practical-guide-to-transactional-analysis.html?dsource=recommend" >
+                    <z-cover volume id="10993363" isbn="9780099552413,9781448108077,0099552418,1448108071" author="Thomas A Harris" title="I'm Ok, You're Ok: A practical guide to Transactional Analysis">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/18de0c7bf10842b8d96fbea5019f3ecead0afd69c71f07f754f4acc0895ac5c5.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/996146/b495f8/staying-ok.html?dsource=recommend" >
+                    <z-cover volume id="996146" isbn="9780099552512,0099552515" author="Amy Bjork Harris, Thomas A. Harris" title="Staying OK">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/31205a1b9418d2e8307041da2b952ef9d195f17c2537c75a15b6602c925aa5da.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/838168/a40c1a/sex-in-human-loving.html?dsource=recommend" >
+                    <z-cover volume id="838168" isbn="9780140036572,0140036571" author="Eric Berne" title="Sex In Human Loving">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/75a5dee0bbc169ad83e26da725ffdec0b3b25ade9ed8af6749b7e7ad3facb6b1.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/813269/782bd2/transactional-analysis-in-psychotherapy.html?dsource=recommend" >
+                    <z-cover volume id="813269" isbn="9780285647763,0285647768" author="Eric Berne" title="Transactional Analysis in Psychotherapy">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/f97a42cd148542dfb1c0815aa5169e59e762d91a5efe46472054c97a9449ab33.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/909795/cb8d77/im-ok-youre-ok.html?dsource=recommend" >
+                    <z-cover volume id="909795" isbn="9780380007721,038000772X" author="Thomas A Harris" title="I'm OK, You're OK">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/975952efbcd5dcd4da952df3076094ce5a6faf1f02386bad7709cc0310865b93.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/2659206/d0ef41/easy-ego-state-interventions-strategies-for-working-with-parts.html?dsource=recommend" >
+                    <z-cover volume id="2659206" isbn="9780393709278,0393709272" author="Robin Shapiro" title="Easy Ego State Interventions: Strategies for Working With Parts">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/5f7f4f2d53de4f72f76d55003b8b27b6762b649619112b5571b6e2fb2eba3660.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/5214419/89eb07/the-structure-and-dynamics-of-organizations-and-groups.html?dsource=recommend" >
+                    <z-cover volume id="5214419" isbn="9780394172491,0394172493" author="Berne Eric" title="The Structure and Dynamics of Organizations and Groups">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/foreignfiction/688fd073d517180982b93e50f4bcd5d04242f847a7e4af2524dd7cd215d580d5.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/953189/5c95a3/principles-of-group-treatment.html?dsource=recommend" >
+                    <z-cover volume id="953189" isbn="9780394176031,0394176030" author="Eric Berne" title="Principles of Group Treatment">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/864e32d74e68e28fba6d461b7b35edbb5922378c5998b9bae26399f6c6929df6.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/3397237/aaca8b/a-laymans-guide-to-psychiatry-and-psychoanalysis.html?dsource=recommend" >
+                    <z-cover volume id="3397237" isbn="9780394178332,0394178335" author="Eric. Berne" title="A Layman’s Guide to Psychiatry and Psychoanalysis">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/ea68dc0f517a84500aaf9d7f70b94a748f98af2b264a3c84cde37165dc935a6a.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/3559382/d3855a/eric-berne-master-gamesman-a-transactional-biography.html?dsource=recommend" >
+                    <z-cover volume id="3559382" isbn="9780394538464,0394538463" author="Elizabeth Watkins Jorgensen, Henry Irvin Jorgensen" title="Eric Berne master gamesman – a Transactional Biography">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/44362b4ff3cbe3f8cfac5ea0b6058c1275e32ef112089564ff22b9d9503afdd7.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/3417109/c9c3c2/a-way-of-being.html?dsource=recommend" >
+                    <z-cover volume id="3417109" isbn="9780395755303,0395755301" author="Carl Rogers" title="A Way of Being">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/8fe418ff3e6ffa6c3a2a70577bf9f6d8e8805bd01d135c04316a5ea44d8952bb.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/999905/493de2/transactional-analysis-psychotherapy-an-integrated-approach.html?dsource=recommend" >
+                    <z-cover volume id="999905" isbn="9780415024549,9780415086998,0415024544,041508699X" author="Petruska Clarkson" title="Transactional Analysis Psychotherapy: An Integrated Approach">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/f7fc504268cf87b67c72f458bfa617b2286573b21e3c3c6c9ba7c10d294cb121.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/2725712/270bf4/transactional-analysis-100-key-points-and-techniques.html?dsource=recommend" >
+                    <z-cover volume id="2725712" isbn="9780415473873,041547387X" author="Mark Widdowson" title="Transactional Analysis: 100 Key Points and Techniques">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/34d12968d5d4ea0f8f1b70bc01dca7b38a4baf0caccb2a744a726fd27fe358d9.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/851674/d4de7d/101-defenses-how-the-mind-shields-itself.html?dsource=recommend" >
+                    <z-cover volume id="851674" isbn="9780415946957,0415946956" author="Jerome Blackman" title="101 Defenses: How the Mind Shields Itself">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/3b4980c5697f9627dd980536120f5782a8147f2b102a38c667da19bebe960602.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/5918019/7b0668/rethinking-everything-personal-growth-through-transactional-analysis.html?dsource=recommend" >
+                    <z-cover volume id="5918019" isbn="9780495007777,9781475808780,9781475808797,9781475808803,0495007773,147580878X,1475808798,1475808801" author="Bright, Neil" title="Rethinking everything: personal growth through transactional analysis">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/b5f8569ae415a9640863b2192477703d9b4f34bfd68421f7a4dec9e506555c90.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/925012/09114d/dictionary-of-transactional-analysis-exc-business-and-economy-whurr.html?dsource=recommend" >
+                    <z-cover volume id="925012" isbn="9780585485478,9781861560223,058548547X,1861560222" author="Tony Tilney" title="Dictionary of Transactional Analysis (Exc Business And Economy (Whurr))">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/63eee305146b6013e9cf5e1b944ced350910ca6573e67141b8da4a82dab12753.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/2692753/429efc/people-skills.html?dsource=recommend" >
+                    <z-cover volume id="2692753" isbn="9780671622480,067162248X" author="Robert Bolton" title="People Skills">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/c2eaeb4f9b5c487fa18f27cd1470ebac5ebceb26d59a4cb7a4db5cf51bc7c275.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/1007014/f3a912/transactional-analysis-approaches-to-brief-therapy-what-do-you-say-between-saying-hello-and-goodbye.html?dsource=recommend" >
+                    <z-cover volume id="1007014" isbn="9780761956808,0761956808" author="Keith Tudor" title="Transactional Analysis Approaches to Brief Therapy: What do you say between saying hello and goodbye?">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/416bb8ab469236376af81ae21456b93459c0789a3ec6d588b7d787b62c62c32c.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/5408077/b3da5f/scripts-people-live-transactional-analysis-of-life-scripts.html?dsource=recommend" >
+                    <z-cover volume id="5408077" isbn="9780802196804,0802196802" author="Claude Steiner" title="Scripts People Live: Transactional Analysis of Life Scripts">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/2b911e2aeb9a03c50646b0e8a8e7c907d930925fc48bcafd81885bed0310223c.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/2528749/2218da/developing-transactional-analysis-counselling.html?dsource=recommend" >
+                    <z-cover volume id="2528749" isbn="9780803979017,0803979010" author="Ian Stewart" title="Developing Transactional Analysis Counselling">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/e54d3e4d2deb94838541ac63550af608cf2081462a1087f25c8bd13111644d9f.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/2344170/5922dd/transactional-analysis-counselling-in-action.html?dsource=recommend" >
+                    <z-cover volume id="2344170" isbn="9780857026767,9781412934947,9781412934954,0857026763,141293494X,1412934958" author="Ian Stewart" title="Transactional analysis counselling in action">
+                        <img src="" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/2925944/5055dd/an-introduction-to-transactional-analysis-helping-people-change.html?dsource=recommend" >
+                    <z-cover volume id="2925944" isbn="9780857029089,0857029088" author="Phil Lapworth, Charlotte Sills" title="An Introduction to Transactional Analysis: Helping People Change">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/8aeec83eabb7ffd52e86c6138dc2cab473c9b4108396b8707004be7331dc288c.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/1483368/1054dc/the-gentle-art-of-verbal-selfdefense.html?dsource=recommend" >
+                    <z-cover volume id="1483368" isbn="9780880290302,9781401407575,0880290307,1401407579" author="Elgin, Suzette Haden" title="The Gentle Art of Verbal Self-Defense">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/foreignfiction/c6469651323caba790c430e8fcc85033ad4bf1e5c0276ffa940b0e6d841f8bd8.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+                    <div class="item">
+                <a href="/book/3714445/77ee65/gestalt-therapy-verbatim.html?dsource=recommend" >
+                    <z-cover volume id="3714445" isbn="9780911226027,0911226028" author="Frederick S. Perls" title="Gestalt therapy verbatim.">
+                        <img src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/642c86abca93ef362a7034d9d277c864b8431d838f380b1094a5a7e6af0c6c81.jpg" loading="lazy" />
+                    </z-cover>
+                </a>
+            </div>
+            </div>
+
+    <style>
+        .masonry {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -0.5%;
+        }
+
+        .masonry .item z-cover {
+            width: 100%;
+            display: block;
+        }
+
+        .masonry .item {
+            width: 19%;
+            margin: 0 0.5% 1%;
+        }
+
+        .masonry.columns-7 .item {
+            width: 13.2%;
+            margin: 0 0.54% 1%;
+        }
+
+        @media only screen and (max-width: 991px) and (min-width: 632px) {
+            .masonry .item {
+                width: 24%;
+            }
+
+            .masonry.columns-7 .item {
+                width: 15.45%;
+                margin: 0 0.6% 1%;
+            }
+        }
+
+        @media only screen and (max-width: 631px) and (min-width: 440px) {
+            .masonry .item {
+                width: 32%;
+            }
+            .masonry.columns-7 .item {
+                width: 19%;
+                margin: 0 0.5% 1%;
+            }
+        }
+
+        @media only screen and (max-width: 439px) {
+            .masonry .item {
+                width: 31%;
+                margin: 0 1% 2.5%;
+            }
+            .masonry.columns-7 .item {
+                width: 31%;
+                margin: 0 1% 2.5%;
+            }
+        }
+    </style>
+
+    <script>
+        if (document.getElementById('booksMosaicBoxContainer').childNodes.length > 1) {
+            document.getElementById('booksMosaicBoxContainer').parentNode.style.display = 'block'
+        }
+    </script>
+</div>
+
+<h2 class="color1" style="margin-top:20px;">Most frequently terms</h2>
+<div style="background: #49AFD0; height:2px; width: 100%; margin-bottom: 20px;">&nbsp;</div>
+
+<div class="termsCloud"><div class="termWrap "><a class="color1" href="/terms/script" target="_blank">script</a></div><div class="termWrap "><a class="color1" href="/terms/patient" target="_blank">patient</a></div><div class="termWrap "><a class="color1" href="/terms/parent" target="_blank">parent</a></div><div class="termWrap "><a class="color1" href="/terms/adult" target="_blank">adult</a></div><div class="termWrap "><a class="color1" href="/terms/analysis" target="_blank">analysis</a></div><div class="termWrap "><a class="color1" href="/terms/scripts" target="_blank">scripts</a></div><div class="termWrap "><a class="color1" href="/terms/therapist" target="_blank">therapist</a></div><div class="termWrap "><a class="color1" href="/terms/behavior" target="_blank">behavior</a></div><div class="termWrap "><a class="color1" href="/terms/transactional" target="_blank">transactional</a></div><div class="termWrap "><a class="color1" href="/terms/games" target="_blank">games</a></div><div class="termWrap "><a class="color1" href="/terms/figure" target="_blank">figure</a></div><div class="termWrap "><a class="color1" href="/terms/o.k" target="_blank">o.k</a></div><div class="termWrap "><a class="color1" href="/terms/cases" target="_blank">cases</a></div><div class="termWrap "><a class="color1" href="/terms/childhood" target="_blank">childhood</a></div><div class="termWrap "><a class="color1" href="/terms/patients" target="_blank">patients</a></div><div class="termWrap "><a class="color1" href="/terms/stamps" target="_blank">stamps</a></div><div class="termWrap "><a class="color1" href="/terms/transactions" target="_blank">transactions</a></div><div class="termWrap "><a class="color1" href="/terms/payoff" target="_blank">payoff</a></div><div class="termWrap "><a class="color1" href="/terms/trading" target="_blank">trading</a></div><div class="termWrap "><a class="color1" href="/terms/loser" target="_blank">loser</a></div><div class="termWrap "><a class="color1" href="/terms/cinderella" target="_blank">cinderella</a></div><div class="termWrap "><a class="color1" href="/terms/analyst" target="_blank">analyst</a></div><div class="termWrap "><a class="color1" href="/terms/destiny" target="_blank">destiny</a></div><div class="termWrap "><a class="color1" href="/terms/prince" target="_blank">prince</a></div><div class="termWrap "><a class="color1" href="/terms/directives" target="_blank">directives</a></div><div class="termWrap "><a class="color1" href="/terms/programing" target="_blank">programing</a></div><div class="termWrap "><a class="color1" href="/terms/therapy" target="_blank">therapy</a></div><div class="termWrap "><a class="color1" href="/terms/clinical" target="_blank">clinical</a></div><div class="termWrap "><a class="color1" href="/terms/merely" target="_blank">merely</a></div><div class="termWrap "><a class="color1" href="/terms/injunction" target="_blank">injunction</a></div><div class="termWrap "><a class="color1" href="/terms/scripty" target="_blank">scripty</a></div><div class="termWrap "><a class="color1" href="/terms/voices" target="_blank">voices</a></div><div class="termWrap "><a class="color1" href="/terms/winner" target="_blank">winner</a></div><div class="termWrap "><a class="color1" href="/terms/berne" target="_blank">berne</a></div><div class="termWrap "><a class="color1" href="/terms/transaction" target="_blank">transaction</a></div><div class="termWrap "><a class="color1" href="/terms/grandmother" target="_blank">grandmother</a></div><div class="termWrap "><a class="color1" href="/terms/apparatus" target="_blank">apparatus</a></div><div class="termWrap "><a class="color1" href="/terms/psychological" target="_blank">psychological</a></div><div class="termWrap "><a class="color1" href="/terms/tales" target="_blank">tales</a></div><div class="termWrap "><a class="color1" href="/terms/freud" target="_blank">freud</a></div><div class="termWrap "><a class="color1" href="/terms/psychiatric" target="_blank">psychiatric</a></div><div class="termWrap "><a class="color1" href="/terms/references" target="_blank">references</a></div><div class="termWrap "><a class="color1" href="/terms/cit" target="_blank">cit</a></div><div class="termWrap "><a class="color1" href="/terms/hero" target="_blank">hero</a></div><div class="termWrap "><a class="color1" href="/terms/response" target="_blank">response</a></div><div class="termWrap "><a class="color1" href="/terms/therapists" target="_blank">therapists</a></div><div class="termWrap "><a class="color1" href="/terms/calls" target="_blank">calls</a></div><div class="termWrap "><a class="color1" href="/terms/check" target="_blank">check</a></div><div class="termWrap "><a class="color1" href="/terms/choice" target="_blank">choice</a></div><div class="termWrap "><a class="color1" href="/terms/effect" target="_blank">effect</a></div><div class="termWrap "><a class="color1" href="/terms/losers" target="_blank">losers</a></div><div class="termWrap "><a class="color1" href="/terms/married" target="_blank">married</a></div><div class="termWrap "><a class="color1" href="/terms/suicide" target="_blank">suicide</a></div><div class="termWrap "><a class="color1" href="/terms/decision" target="_blank">decision</a></div><div class="termWrap "><a class="color1" href="/terms/demon" target="_blank">demon</a></div><div class="termWrap "><a class="color1" href="/terms/martian" target="_blank">martian</a></div><div class="termWrap "><a class="color1" href="/terms/period" target="_blank">period</a></div><div class="termWrap "><a class="color1" href="/terms/reach" target="_blank">reach</a></div><div class="termWrap "><a class="color1" href="/terms/victim" target="_blank">victim</a></div><div class="termWrap "><a class="color1" href="/terms/drinking" target="_blank">drinking</a></div></div>
+<div class="related-booklists-lazy">
+    <div class="related-booklists-block">
+        <h2 class="color1" style="margin-top:20px;">Related Booklists</h2>
+        <div style="background: #49AFD0; height:2px; width: 100%; margin-bottom: 20px;">&nbsp;</div>
+        <div class="z-booklists-carousel" data-book_id="3397236" data-loader="loadBooklists" data-booklists_type="related">
+            <z-carousel>
+                                    <z-booklist tile  style="width: 144px;"
+                        href="/booklist/78181/4c705f/psychology.html"
+                        id="78181"
+                        topic="Psychology"
+                        quantity="157"
+                                                >
+                            
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/7b59214f20cbcba8e12b8ae2bafa7ef79f1bfb1043376ec705bc0a2bffbb0c30.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/5a5068cdfe3554467e6d81fc0374b2fe48cae9479281ff1372244909f78192fb.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/0853b7d2a95358d588ddcfa303ebbe90517b7a3c8ff43459879c34e2f56e5e96.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/eab016f63a38581b0212e3c4ff873b91a84b6d76a88b552c19ec05ebf2b6b13f.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/540cdea1fcf40c843799db7caeaf2f981abb3e73c20dc2b6f84d490a9eb4e0d0.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/fae05cc25df24147dfb71e45340e5352cad6691988b9af11ad3025e209774d39.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/cbe999ed36355f21d0f9f0b5c59850f0f8c7e39e40f8982fc2185941d038c4a1.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/d9b209577d80b27d875bd8de6d103f5d3e9e40dc65f38a3b4c634cb61a231380.jpg"></z-cover>
+                        
+                    </z-booklist>
+                                    <z-booklist tile  style="width: 144px;"
+                        href="/booklist/259177/fcadec/personal-development.html"
+                        id="259177"
+                        topic="Personal development"
+                        quantity="1000"
+                                                >
+                            
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/10060794934b196d3dead6216813ca48dd0ccca30e6037d86570aeb92ac677cb.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/8519d17be02077591c42f0f9ee2c87f436692d5b1bcb1b2bca3d327f71d0ef27.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/7ff9ef80ddeb759235fb2a9c40ac0f584980b2bcefa60e16210cb744a9bed7fa.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/acbd79749dc5ddef1c9e3c81360ad826b70485e85c6d5e4a1b16b0f03d4f3ceb.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/a8215c4ef9c078fb0d28ed8d7a17286896f632e752a1a91862ce56ffaa301c1d.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/f00ccf9c648a75be7c6f2c1ff3024b3a21ccad04e1c15b289321bc47ab858f35.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/f45dfb519eeaeb0dbdb53dafdf08668dc22f71e6ce60aff6d73c88a20e5fafb2.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/c1cf96795680f4583ed4161864fc85af2ee3b57204c59339ec3835a9525e74c2.jpg"></z-cover>
+                        
+                    </z-booklist>
+                                    <z-booklist tile  style="width: 144px;"
+                        href="/booklist/893386/e19671/selfhelp-relationships-lifestylepsychological-selfhelp.html"
+                        id="893386"
+                        topic="SELF-HELP, RELATIONSHIPS &amp; LIFESTYLE_Psychological Self-Help"
+                        quantity="500"
+                                                >
+                            
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/5da6dcad70accdc0236da0b5e74777581a9ce59ed62334dfd432617db7555286.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/d28d3e07c24017d93db1e4754293e0ac8d213cef70d0c62e4716352eddf3620d.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/540cdea1fcf40c843799db7caeaf2f981abb3e73c20dc2b6f84d490a9eb4e0d0.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/cbe999ed36355f21d0f9f0b5c59850f0f8c7e39e40f8982fc2185941d038c4a1.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/18996c358f8ea48b911ddb30cb26e99364f55aa60be16bb542ecf4f4ca65c0f1.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/37dcdca8a1d5a605226e18aafc72d7e339e71d680edb74a4cb4ffedd993c3405.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/eab016f63a38581b0212e3c4ff873b91a84b6d76a88b552c19ec05ebf2b6b13f.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/userbooks/ec1a6f276248bfeecdf7861edc6247e259d4bf442e5d17cd5c761e2dddb3f805.jpg"></z-cover>
+                        
+                    </z-booklist>
+                                    <z-booklist tile  style="width: 144px;"
+                        href="/booklist/259221/f5b260/self-help.html"
+                        id="259221"
+                        topic="Self help"
+                        quantity="966"
+                                                >
+                            
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/b4b213de3dae9b72835adc08059d3453e2b6daedfdd1c4d1e6e07c900fc7d02d.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/da9bb936317f0d0aabcb8f5058fa04b7a5988e8156618a63c79287313314a294.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/0e11f103b3f14d6c6516b39c8cbbdfaeb36667c6612b870c409a21566c382c08.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/4c1f1116cf6c58e6222632ea9a101e8ebad413478047b238c328a81afd0efe2c.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/8519d17be02077591c42f0f9ee2c87f436692d5b1bcb1b2bca3d327f71d0ef27.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/7ff9ef80ddeb759235fb2a9c40ac0f584980b2bcefa60e16210cb744a9bed7fa.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/acbd79749dc5ddef1c9e3c81360ad826b70485e85c6d5e4a1b16b0f03d4f3ceb.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/a8215c4ef9c078fb0d28ed8d7a17286896f632e752a1a91862ce56ffaa301c1d.jpg"></z-cover>
+                        
+                    </z-booklist>
+                                    <z-booklist tile  style="width: 144px;"
+                        href="/booklist/601367/b0cc2b/vis%E8%A6%96%E9%87%8E.html"
+                        id="601367"
+                        topic="Vis視野"
+                        quantity="757"
+                                                >
+                            
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/0d6979d881f17ef2ee7cfa33fec1deebec2ca4798fd00d40d8a8477bd75b0769.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/90eb3f2f82b7adb18c5bc638d7001a574e256f387376d720e054266f7348950b.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/79fb5491e5a45bf95596cd63f7ee52cdbef1d5305b69fa481f414dc242510c68.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/2ab0265575062b5813be7a01aaa29adc3e617dfd62cb9c20b70634e69a0f5837.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/4b6babc274e1965534bf9e11f788bd77e0d8b50f120351e329a8a716d81a49a3.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/9ad0d08a553d5950158852a06867002dd02b2a0df87b3a1bc53aeec7b6b1bf02.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/c7004f79a3fdb9d9df678863d50f917f10e21ed94dbcef435f96c4a8201bf9d9.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/userbooks/e1ca8bed8a585912f91dafdb6d7b0126bb3430350e0d438951e01cdeacac59ac.jpg"></z-cover>
+                        
+                    </z-booklist>
+                                    <z-booklist tile  style="width: 144px;"
+                        href="/booklist/301288/0de77c/psychology-general.html"
+                        id="301288"
+                        topic="Psychology- general"
+                        quantity="347"
+                                                >
+                            
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/8d4764fb50e82be6aed23734ee5ee501129bb8aee80e47865fee6dd83a143c1a.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/2f1a2ed14ab46d460db214af38e05261493b7da709684ba91ef250dd5ee798cc.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/4650328e1f151322cc10f8f2e0f8aadd3807e3f7e5432c3e29c23d2cf814b717.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/d057664d819435c16546cc144bf08240530dc31ed052dbb0dfeaf3d998846ff1.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/6654318ea27cd69870ce5e370ed099fca84c570f237eafaf85ff453d6fa015ce.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/8db1cd7d1ffb42cf5e962506036e095967fde09731b1f3696f1e91db02f4c2b6.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/b068e35c2b7e3440c067cdbc9b4ce77fee6e9591828b6390343cb76f2bf21707.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/974c4e65e84d0fd6908f9dbea1f868b33f4d755318aeb397268304dcbdc5a277.jpg"></z-cover>
+                        
+                    </z-booklist>
+                                    <z-booklist tile  style="width: 144px;"
+                        href="/booklist/257175/be86d0/relationshipswork-gatherings.html"
+                        id="257175"
+                        topic="Relationships,work gatherings"
+                        quantity="506"
+                                                >
+                            
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/f6179dc90332944c7ceded7ea917b2c7eadf3b6d3901b4ef0406e10e5b5cf810.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/2a87624f4bbcad24abe2a5c67d39b9b0cb6671c231e87b63be93028cd8c68caa.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/68a17656360d019813126e740a64d499dcc4775903802bd91c2919fcf7e98e18.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/ab47101771303a7842cf21b68ac1cd4c1573b9bd2b42788d8e4e5e96a82862ee.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/43527780f8ba2f4dddd737b949dcc4febc53aafff374f9f96e295adf7955c245.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/cdc857837ecdd3822ff796791287a02df4c12e3e2f0bf671ccf225e95c5457ff.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/userbooks/8c8faa253622fe20b7a19ad6dc2eb4a2bfca778e3240d6a9675dae7c26733c27.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/0b0b3c80e0099a8987c7c2fc45600ba0c6afe235d64ca9e96b6c04652ecffac9.jpg"></z-cover>
+                        
+                    </z-booklist>
+                                    <z-booklist tile  style="width: 144px;"
+                        href="/booklist/236687/26b9b8/psych.html"
+                        id="236687"
+                        topic="Psych"
+                        quantity="360"
+                                                >
+                            
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/d3d1d594eed10b6209c1f27caa3c3b69fc19e18839eda7b1a232653a07a0d628.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/7f43c236c835403d1bf4ab256bd36b83e88787f07269248ca0d00844741872df.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/7d3f0d208fd8d30306a3d82bb8a5bf0bf5ee25c7d5e485b83320c4fd8ab64452.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/1aaaa7366018b50d83f2c6243297e2fbb729fedde96acabba016af6ffc11d183.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/c529ea02523d6ee6118233e327db5717571b22cd415246ae4330b0b15b3fb478.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/bf09a06822cf22a5eb7b88aceace873fdb291507ff88bbbec091c2edf5960acf.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/9b28cb0f0ff1d9f86f30c6ca7a71489dfc2e307464f8ea796f406d32b15827d0.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/e9048d65b8e8af44d354e6e89a93162df4a02fdf7e8e5a3d692e7598bf4be101.jpg"></z-cover>
+                        
+                    </z-booklist>
+                                    <z-booklist tile  style="width: 144px;"
+                        href="/booklist/360728/a446a0/philosophy-of-free-will.html"
+                        id="360728"
+                        topic="Philosophy of Free Will"
+                        quantity="42"
+                                                >
+                            
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/c34a276ec82f64c9da461de4b9160b12cf2c523c0802e469e9b88bb7029d16de.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/c88d40337ed679ffffe5e0ad26425096c2be430888fed09653dde9a3be609ead.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/ef01ea64a43347fe20d3f39deb45f3c97d70a41cc8c4dd207efe61305b88fff9.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/0d265badb4980bf7ab3408d13d6a5335c4279267b4d739f9b2cfa9e669a958d4.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/8d72c9734bade849de6f4f3deda3fb04922bdabe957cbd76acf4380957f1316a.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/1caf1c206a6d6ba10ebbb62a6137de951ac7fb6a4d48dc058b942947b0f75898.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/cf1c05a80c99676b0ab94a6164b09b60155c34cbfe977e2782428b674dbc4cd7.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/8b0f07c27f038892cb2424b23e82212ff42b039b4392f5c9b7faa426dced1511.jpg"></z-cover>
+                        
+                    </z-booklist>
+                                    <z-booklist tile  style="width: 144px;"
+                        href="/booklist/1259883/b2d955/self.html"
+                        id="1259883"
+                        topic="Self"
+                        quantity="802"
+                                                >
+                            
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/215dd194d399262369570759cce134d90a4eed51ffc6eebfd818c36dd869f867.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/640848bed2de65ea770de4331ffbd79398c095105d273136aba1c854de9f676d.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/2e63b2180b8ce751148601eabebff7dbd3c4d93e67d546f310e9d784f5709b4a.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/d67f781182a56db34d57f5d398d12cf854aa997d339f5b4aa82ffb8eba94b85f.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/334bb34e19d16d1ca36d29a2b09ec6e892e8ef38d4968f39caf4d9fafbd799a2.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/20071fd9d4ab37decda449d36c5e396337dcf9787dfcff54b2ba65ba7ddea2d6.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/b8a5425073f234454e5d1fc28c072ea2db3ef7cb740cf68cc89c9b868451c458.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/fb63c5c5274b966da9a399ec50c019cc1c15aec26c640dbdb397b930b494ff28.jpg"></z-cover>
+                        
+                    </z-booklist>
+                                    <z-booklist tile  style="width: 144px;"
+                        href="/booklist/697913/cb07f1/curious-exploration.html"
+                        id="697913"
+                        topic="curious exploration"
+                        quantity="289"
+                                                >
+                            
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/1e40021c17ec7415cc9176afaf2f2b203da4df6600dfa4997413adc45cc42644.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/f514f6f8ed6264f6ce362c5e19a6853bb011cdabb0af9b76227042fcecee6047.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/90c2e99aae5f485c92cdbad5ee21f2a25e9fff9444c81fc3e0da9f0813dc488b.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/userbooks/b318b4095b8ee1db95f7912769b1b065bfeb74da0b48fd4153dca9902430f9bd.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/292f09bc2715e76f82e49d465e3c2bc49c6ec3c553443f82d0b0c06ae23b513c.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/3e125c63c8758edd50c1510f65ecf02149357d804b8613c9595a6ef5f0a1f37b.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/ffce70461f66ba254c6ebdf4d3e53edfb8c0f6abb5d054d2e7758e46e16c774a.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/c59794b45e07719f317f46aecf58f4abfb9eaf85b6a0414b4b8d9a906371afbc.jpg"></z-cover>
+                        
+                    </z-booklist>
+                                    <z-booklist tile  style="width: 144px;"
+                        href="/booklist/1259810/2030fa/softskills.html"
+                        id="1259810"
+                        topic="Softskills"
+                        quantity="932"
+                                                >
+                            
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/955cf66a808478e1835e0e96132a32bd50cf8604bec02ccfaf62fd20557a6686.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/aea73fb7b65ee07d3ee549cc044e9dc8af1988069afdd3ead4b4343449232887.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/935c63c71a094aa100d103e11336e52817e2bd3d1b5bbda89a2b916886c4e679.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/ac0d0239b337dee063a2429ef0d0334a305581407dde9358ae5182b64613a2ae.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/1921fbdc981d22daeb56ce9358deae7976d8c820cb70f0e2fc9c67ce2992029b.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/e4f477185492112c1e55f5a12c42a7319adb73c13a564bec11c81c1fe910d0ff.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/2e16d1b04b07dd0a33d995d1e92a48f3deccbe587015f7622ec69c0c12a2d8be.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/f9ebec15ac75c4ca352a39050ea2a4bb68de8462caef9c0cbbebb7cc5f6bf70f.jpg"></z-cover>
+                        
+                    </z-booklist>
+                                    <z-booklist tile  style="width: 144px;"
+                        href="/booklist/257176/5cf963/parentingrelationships.html"
+                        id="257176"
+                        topic="Parenting,relationships ."
+                        quantity="462"
+                                                >
+                            
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/userbooks/99f89d63c1371877e9c16a1f6eefbeb9bd8ea2814ec9eb2bd23f2f3edc948df8.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/68acb30787e85204ac3285a52c824cae816acc3a0d1e7aa47cc74208ed203937.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/da9bb936317f0d0aabcb8f5058fa04b7a5988e8156618a63c79287313314a294.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/4c1f1116cf6c58e6222632ea9a101e8ebad413478047b238c328a81afd0efe2c.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/f45dfb519eeaeb0dbdb53dafdf08668dc22f71e6ce60aff6d73c88a20e5fafb2.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/1cda6957846a1f1a9022c10dcfc3418f024ba17ed3e02bf51ebf7389ee0be948.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/e4a40238ceace4b7e256d5a97a06f37b4feebfb43b4358db053180245af17c70.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/dbd36a5e8455a5343f243bd819d452935657df54af928370aa845fc6646da1d1.jpg"></z-cover>
+                        
+                    </z-booklist>
+                                    <z-booklist tile  style="width: 144px;"
+                        href="/booklist/1280267/6e13f8/skill.html"
+                        id="1280267"
+                        topic="Skill"
+                        quantity="677"
+                                                >
+                            
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/c565aa22a5861270208bb6929e76b569fd7cb63ae53c71b4bf3258030a6c7ca4.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/b195e61f53d6f81c2e64742efad71c11bcdfeee1d852b6e90a35a24e990ef3b7.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/d9e7006692d67aba3f812a934a0c2c01ac2395c451725bfa7d719232e1613a72.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/1b5ae6c4700b15d7a94b494a0d65cac26bf09f91321200534c8890048fa8e4bf.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/903290b8f2a80de0f26ef91f1612f4e0c339c6680bb6da3213dc5273e2858633.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/userbooks/4977378f13608c3a62c3199efbf12ecc0bbf8a907395a013ed8911ccb35cd89c.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/userbooks/fd41bf06ecf3ce5012bc7c58a40b4c57b3f3d60ce4f599e12f8e9363653d32ea.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/73c814348eac362e816165aa19cc7c48fea9fd886123027d8c1ca9ffe20008e0.jpg"></z-cover>
+                        
+                    </z-booklist>
+                                    <z-booklist tile  style="width: 144px;"
+                        href="/booklist/580394/5b9ef5/history.html"
+                        id="580394"
+                        topic="History"
+                        quantity="351"
+                                                >
+                            
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/9d85816ea3cc2fab36a3852e343bb6a9715f5b0b0175d21cf225103f2a731978.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/23840dea4039a8a467e8c15ffc9c1747588c9d33f59247b803d4d979b8967098.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/8724110271fe8888adf115fac8c46947facb1094e9046c433c8b8f0c78498490.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/1830579d7a9c6104dd85c209aac4ab25b35594e94dc44df6683e5349391e74e4.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/b6fe3d544e2db106883504a864b9e29c441365a0cdab4e21a251a6fa01906c66.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/cfaaa02178a10841e4317ab9c6d3cfbd62f9c9f24fa7a81940a53d4e0055d36b.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/bd1793e35ed443d8379093d3df8728a261b6fcb13921f229a695785ca7646f10.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/421911a499b99801f620ed7def0fc5a023c1ef576b7d496da9db7956f072587d.jpg"></z-cover>
+                        
+                    </z-booklist>
+                                    <z-booklist tile  style="width: 144px;"
+                        href="/booklist/1238498/6c8c82/shit.html"
+                        id="1238498"
+                        topic="shit"
+                        quantity="781"
+                                                >
+                            
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/a3ad8a2bc313c8d5ff7c3395ad300a563569ff24d106863d907f3966585636f3.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/de30435b0e4748f8e33ca9525317a5204db2920b5089dbbcb1b5d8405ec9e0fe.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/dbef8476741838d3e26f8c324ed48e23c12165837a9ad0235fc5a012bb439f37.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/f1dbe3dae19538dc4be4896c6dcebfd4c1f5d4ea9acdc25039bac9cb0de58811.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/ada9f96f6eeae0c28257e6286f98029f8b144040c0d36a895ea82dc74084b693.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/userbooks/6d5a961299bda4c171642f3a91cb6c4df69ce8f6dbdbfdd49fd8aef27cefb3dd.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/fb3375d0994a44e36297573a9537eadca2b8a30ffa69a62983f33fb5ee7b77fb.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/88affff1e08deae1b4c6435f8f8d7f97b8dc4ccb7099aca95044424afc3b82b4.jpg"></z-cover>
+                        
+                    </z-booklist>
+                                    <z-booklist tile  style="width: 144px;"
+                        href="/booklist/30113/01fbeb/psychology.html"
+                        id="30113"
+                        topic="Psychology"
+                        quantity="42"
+                                                >
+                            
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/ab9541e16df9319ab8ebb8dbe7cdb6a6e7390fad69e288c94def00fcf9b7c0b5.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/8ca9eac3e3c6ff5594c7638aa11b62fdd4a4ae609836389ad28e835230d36c4c.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/5a5068cdfe3554467e6d81fc0374b2fe48cae9479281ff1372244909f78192fb.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/adc8dd85bc48f237d05a2e7ffb7b622aa6272b78aa7d3af9ecf94c6d43756d38.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/4fe8e6124b655a5ff655cc8672d3c22d503d987e75f50a6331abf5a3d13a6e5c.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/a0295c0509a0be3b8f1c957645a8536beb8e3c740441bdd0e30c7591635e0f85.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/0303ca6b28a8087ffd54a12ecd5c8dc6f1895d3361d0bf33061b9a949294d25e.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/7585000b730a16c9f9f7c15208691e57ede02650f93f7763a4b87549008baafb.jpg"></z-cover>
+                        
+                    </z-booklist>
+                                    <z-booklist tile  style="width: 144px;"
+                        href="/booklist/575230/8102f7/mental-health.html"
+                        id="575230"
+                        topic="Mental Health"
+                        quantity="376"
+                                                >
+                            
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/5c3199c37d4007924c21c8aac7d3aee53803a5735aa0a5ded0ec2a229d097852.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/77a83fa14a189dce653f3407251e1f1ac18c157d9624f754843b84f23407cf92.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/7e3e2919774d6b01bde954d41b46aa7dc1a4e6f8a348ee28b5973c5fd0f21d86.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/a910c7dd44be2d6c1523ad9ec200382252479d56b63c08a077faeee032ead58e.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/ee99bdd93abb26f7d43fcd242062877c62441207429f1ea93cf452142eafe3e5.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/02867f7e531e87efce92ec77b55f3c10e442c4e3b8c2d9964ebdf56a366e5aa9.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/3fa560f87b5267d4854e42008ace72dfae908a59a45a15834f43fa1b7ccd9fe4.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/40992bbae32993c039241d09f4b3c5e401329e596895bc39f567c7bd5c42a2f5.jpg"></z-cover>
+                        
+                    </z-booklist>
+                                    <z-booklist tile  style="width: 144px;"
+                        href="/booklist/711777/4cf45f/psychology.html"
+                        id="711777"
+                        topic="Psychology"
+                        quantity="155"
+                                                >
+                            
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/5a5068cdfe3554467e6d81fc0374b2fe48cae9479281ff1372244909f78192fb.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/2926d6a9bb6838b2f7c2a0dede122fabb2bcc0a6094dfcc83c650e449b9677ca.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/cbe999ed36355f21d0f9f0b5c59850f0f8c7e39e40f8982fc2185941d038c4a1.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/4fe8e6124b655a5ff655cc8672d3c22d503d987e75f50a6331abf5a3d13a6e5c.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/e3e448051d5196c8d8ee5f52dbc432b6d51c5c4010e1dc0bef2bf59d0850a748.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/562c468ad0a0e4fadcbe92e6dfffc77b248b430b383ad1e1d49e017cdd648bdd.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/767b3e135325b4b9add1835fab0f7d4b6b02b91986c6e8a2557cf168c90fe15c.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/5435ec71a90e2021735dc7ee20451f58f9db8338d02bf686229f2b44cf4fb7df.jpg"></z-cover>
+                        
+                    </z-booklist>
+                                    <z-booklist tile  style="width: 144px;"
+                        href="/booklist/212374/776e27/negotiation.html"
+                        id="212374"
+                        topic="Negotiation"
+                        quantity="134"
+                                                >
+                            
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/99019de48d11bae467dd9535695d3d871fd17e88957d70b9ed5369d95fe6f510.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/7b559f30841c7a7d1986b78ec28f0a05d9b5196d011ca6108a11b0da1b999ea2.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/bfb69469c5651ee29094202ff7f4b04c40670527089f1897350231a5806a2423.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/cbe999ed36355f21d0f9f0b5c59850f0f8c7e39e40f8982fc2185941d038c4a1.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/5a5068cdfe3554467e6d81fc0374b2fe48cae9479281ff1372244909f78192fb.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/463ef80883dcd790df1e16990aa01ef86113dabfb8c66feff13ebe7bd710f35f.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/dc2f6e27e1eaf7df252e6c001828288830288f3bd0ab9e86705402b7a6ef14cc.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/54a7fd19070db8c486ba1f74f9f7539a3dffccc92c587945267586d369c40722.jpg"></z-cover>
+                        
+                    </z-booklist>
+                                    <z-booklist tile  style="width: 144px;"
+                        href="/booklist/565611/a54de5/nonfiction-reads.html"
+                        id="565611"
+                        topic="Non-fiction reads"
+                        quantity="269"
+                                                >
+                            
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/de9d78e9782385760232c3821180bc6590ffcb877dd4bbd75d529faf161b95a4.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/5a5068cdfe3554467e6d81fc0374b2fe48cae9479281ff1372244909f78192fb.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/a365e45d5a6290a9d92af82d2d6ea0d7af86d399c581cdb6925484287ba9c45e.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/userbooks/60238a589debe3a34d9f50a848819fde54747c59a521a8c24a6c13f0efb6d965.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/64c09724daba3a0b31310c8e04fc063c580dc0d57c0589c0b5d859f0992745f1.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/a7ffa3d5331e15b859d704c82615b58cc801595388632cdd84e1813c48dce206.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/c4240bae660e14ce047a2a5f3a2785430dab04eb028aa46a0f306d3254bdc313.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/5bfbb3ae219495840cd0c712ce0c888d245a0f364732fbec857f5cb0fa3acdae.jpg"></z-cover>
+                        
+                    </z-booklist>
+                                    <z-booklist tile  style="width: 144px;"
+                        href="/booklist/1091127/b53acf/psycho.html"
+                        id="1091127"
+                        topic="PSYCHO"
+                        quantity="348"
+                                                >
+                            
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/8a462fd275c80971a705e4454767bd03b78a000c721c6f35e3adb15d977bfc71.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/foreignfiction/81815decccfa202112e359ab0b046a70624fc19abe2e30c6732fc4038f149919.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/0869aeda452ba0a0555d96bb9f35c90028627a6b6549fcddc8b78b48fa925783.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/5bd176f0821e239292943f560bf385a4a74f961c6cae1535121a48abce12258f.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/0f7ac27052f49600ab426092cc5c54f06a196781e77a255d838f48e0d2985cf4.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/467ca9bea7aec8c0239ca4a6d2849c35e39a59478a4003b7e8603e4ae82f5fcd.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/8a462fd275c80971a705e4454767bd03b78a000c721c6f35e3adb15d977bfc71.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/ad2b96e8394ab7c73aebadcaf08eea87b6d1a2aea4c4bb2e31feaa1e681c48cc.jpg"></z-cover>
+                        
+                    </z-booklist>
+                                    <z-booklist tile  style="width: 144px;"
+                        href="/booklist/928949/0be9c7/2022-sept.html"
+                        id="928949"
+                        topic="2022 SEPT"
+                        quantity="234"
+                                                >
+                            
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/userbooks/965eb8eb174d2938d8af9b649d381a57a9511a76eca282d568f47db58dfe67aa.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/userbooks/1c8b8326a7131b99c59a8d747fc0a1b84d77bacd7ba34b43455a1c07be8095ec.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/fba7029087078c5edd0438a2bd78a7566fcae285ac8f456712a058c215ae1e65.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/003aeb5f8bfa9530cc369f27e4a7f867393ac8ee6c8b75a7c8236adbfa2c5fb7.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/c77f40544367e0b9ffcdf9f2cac4f8b7da66e353f2f598d3494c53f455395344.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/7247127e051b55197065e7c45c2c1b6b3f809295c4e5e5637388e228a30d57d0.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/userbooks/22e966efa38bcbacfa826daf083747b434b2cdfb443bccfde9f522a3ccc54e3f.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/33b6c80e1b920c2ca4ee7ad4da730bd2706996791698a7bb22b05e2bd092b3df.jpg"></z-cover>
+                        
+                    </z-booklist>
+                                    <z-booklist tile  style="width: 144px;"
+                        href="/booklist/653064/a3795d/self-help.html"
+                        id="653064"
+                        topic="Self help"
+                        quantity="94"
+                                                >
+                            
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/6c943c509ade7c55291d62f58cb10602baa71f3b76e74b72b17e306661007159.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/1cda75f7abc765f68de287eaf6d2adb7b8dad27847cc3f6299ba880c77b1408c.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/256c934a1147f148c3536652eb35475b3c079ce4d2ccf5b5a58427c42b3e562f.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/4826b601ab37eebf9f053651a44e529c6e9e6c3b463d17ec05713b34dbdbba11.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/6e56b59115bde4d85358f46f47602a00e82dfb8e5504dd6c2dc131a4c44a25b0.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/546498c3d840359432cb11c7fa1571b52d4456b26ad794c7193b41ce96528a1d.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/userbooks/c80761833fd47340b664e36874fa28721e19d0b17e600730cc1e1708cd88630f.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/21312c760c5cd86c77768a333e1cd81b95dd26f8c1382f5895ea6ffb6aa4ca79.jpg"></z-cover>
+                        
+                    </z-booklist>
+                                    <z-booklist tile  style="width: 144px;"
+                        href="/booklist/178061/5329ab/psi.html"
+                        id="178061"
+                        topic="PSI"
+                        quantity="92"
+                                                >
+                            
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/633a37de6b908b54e7b8931ea7c75726112b26c1d51e1445b94cb8be3dbe9ad0.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/7503c93a7a8cac474828cdf8585b18b12bb8028588a42b74bfefcfe88457f3bd.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/aabaff8300111a7bf6bf290f2a65a5c07e6e404d2ce1844079c650c84e59ca0a.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/59978aa63b30fb1f6e181e82c04a67af042fd52467c0d9480fd15df041735c97.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/userbooks/6ba7b112324770d0e20b0af5ac5505476b46733cdecbd4af0d8b712a2eaa9e50.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/b24087e715fc82a1928797bbde51c7ad5f7f8d72ecc2fd49d4ab3b1f2d7a6add.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/652882d7d7f3fcf20f5a78a622575a1a1f7bf2934df1f3bdd81c5f4a38be5fe2.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/e50f1ef59be042cb7352746c11ed4d49b728e8763127fc5c82a166c8926f2305.jpg"></z-cover>
+                        
+                    </z-booklist>
+                                    <z-booklist tile  style="width: 144px;"
+                        href="/booklist/125138/3c5c2e/psican%C3%A1lise.html"
+                        id="125138"
+                        topic="Psicanálise"
+                        quantity="17"
+                                                >
+                            
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/879202bfd0a1dccd673eca5c838cc049b8827d34728f0970bb6c38b09e55c953.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/aabaff8300111a7bf6bf290f2a65a5c07e6e404d2ce1844079c650c84e59ca0a.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/b24087e715fc82a1928797bbde51c7ad5f7f8d72ecc2fd49d4ab3b1f2d7a6add.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/8ee0a174dd26cab90987a96ee28cc6b15bf1442dd201d3147c9d456a9899e5b5.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/userbooks/6c02c760e382da6199c45aa8ca5cd9c4ca79f16277a0024a827645c8c088b685.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/61902ccfc1232a5a55c7eb5316cf14f60072b382b6b2132c5783fd20b647a9f5.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/userbooks/be6100e8d669a3831df8a0617d7dd8fe91b5b6f528ba568bc7688b428ac3981e.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/userbooks/652cd2e069e271b736650e0d9c9cac26825f5c03ba99a4d697a95f3e891c2787.jpg"></z-cover>
+                        
+                    </z-booklist>
+                                    <z-booklist tile  style="width: 144px;"
+                        href="/booklist/1114823/cba853/psicolog%C3%8Da.html"
+                        id="1114823"
+                        topic="PSICOLOGÍA"
+                        quantity="39"
+                                                >
+                            
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/userbooks/ab35903f360cdf07a88bc30f6a60c9a74467683dcee102674284a41dc54ca46d.png"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/c26e05a176c24c16c1b607659f952de5ec5704f094ad595de6128c4f0025483e.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/699bb80f2daf9b2448a1704cfd231b29a2d8a32dcc3ce23880b328ba46751ba7.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/userbooks/0cd9431c341dad653eef3ceed322b9f43f24e6880c6cc14fba153368f7710573.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/2b91b3307d661379d7f06cc444b979c7ad5cf814f3d9de0da40333daa5b5f83a.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/ffcd5826caf9cd228314fdb1408bcde52ce3890beb95d20d3d6ef8c04ee922ce.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/userbooks/75e10be7d8f455f0da0660581e74045ba16f90b27cad63689d388b758a223231.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/foreignfiction/71c2507f62775c1e27dd8e86cf70aecdea4dda70be1c0257955caa0450e7774b.jpg"></z-cover>
+                        
+                    </z-booklist>
+                                    <z-booklist tile  style="width: 144px;"
+                        href="/booklist/1431776/b0e129/adone2.html"
+                        id="1431776"
+                        topic="adone2"
+                        quantity="1000"
+                                                >
+                            
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/693a6a4afcbcf933a59ea60bacb2dff225c48c5a202b578e7f35c5fafda205ac.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/978b0d269fbcfcf12e492a05c73f4e99a6badb418496d587473ea587ec43242b.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/f9d0df0973739b03a2be5a96091be3ff2172b043543e6b1b6dbb10911d6bce54.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/c7346295d7cb2c9ebc1a145f58bca2c1145be0b4e76405727e066d7391021b05.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/0089769dc5dec8ae4bb0530241af1315f339fd501b32c10abf278bd042d2e41b.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/2ce7f7b7f6c94dffe55f9fb9b30f9275514cf65ddd7ea0a19369d084fee30321.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/userbooks/fdb6f91f3b6cdb66c6cd8eccb6854bb0191d961921fa5838d89ef4f987aa1672.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/userbooks/ca0aac699b939d264257eb8446a7a78ded6493c8586b223e01f332289ebf99d0.jpg"></z-cover>
+                        
+                    </z-booklist>
+                                    <z-booklist tile  style="width: 144px;"
+                        href="/booklist/137844/ae4d78/psychiatry.html"
+                        id="137844"
+                        topic="Psychiatry"
+                        quantity="22"
+                                                >
+                            
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/3dcd090af07959b2f7d9efd483c2ccfe253f49823f5f7f0d6d571a229f8fcc21.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/21dc9ca006040551d2888a020c32e995875135bc8cd71c227e591f762810b53a.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/a7ffa3d5331e15b859d704c82615b58cc801595388632cdd84e1813c48dce206.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/209a8a1e6f7d5426cbc5af1b46600093260ba5e356f38602757cf6c4b5ac1a74.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/ee87cec6cece06af2ab9d688a2bbb12d0e1866742f97e0ecaf925ed94f594f63.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/570323ff5c3c0b7fa62ec87a63187da59519ed29604bd26dbf4e03cc89ba0920.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/7491e98a4de52661c0092233edb4111987d6f22e2b15f1d832250498f35f348d.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/8701122a1a0ab5985fef91be94975db54d3db301e53772b8b834771dfe182fb2.jpg"></z-cover>
+                        
+                    </z-booklist>
+                                    <z-booklist tile  style="width: 144px;"
+                        href="/booklist/1236956/5aef6e/%E4%BA%BA%E9%99%85-%E6%B2%9F%E9%80%9A-%E6%88%90%E5%8A%9F%E5%AD%A6.html"
+                        id="1236956"
+                        topic="人际 沟通 成功学"
+                        quantity="4"
+                                                >
+                            
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/genesis/994cafbde5c42f8da299f4ac2cac5fdd6b22fe7a46cfb26ab78b9be16add2852.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/userbooks/b45853fc865549ef65530667d5a2c50508b2207b34beb867797f7829b129f819.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/userbooks/6c57b5941020e91813b47f66d9ad167a1270faa8cbed7467d0a502683105ce27.jpg"></z-cover>
+                                                    <z-cover title=""><img stack-mode data-src="https://s3proxy.cdn-zlib.se/covers200/collections/userbooks/4f9c689de970a262cf415ca61b23c76c2d3b2393083b7fba526a0329fec53247.jpg"></z-cover>
+                        
+                    </z-booklist>
+                            </z-carousel>
+        </div>
+    </div>
+</div>
+
+<hr class="delimiter">
+
+<z-comments type="book" auto
+        id="3397236"
+    username="">
+</z-comments>
+<div id="post"></div>
+                                                                    </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="hideInDesktopApp20">
+                    <td>
+                        
+<!-- footer begin -->
+<div id="footer">
+    <div class="footer__links">
+        <div class="za-quote">
+            <figure class="quote">
+                <blockquote class="quote__body">
+                    <p>To build up a library is to create a life. It’s never just a random collection of books.</p>
+                </blockquote>
+                <figcaption class="quote__credits">— <cite>Carlos María Domínguez</cite></figcaption>
+            </figure>
+        </div>
+        <div class="footer__socials">
+            <ul>
+                <li><a class="tgo" data-toggle="tooltip" title="Z-Library on Telegram"  href="https://t.me/zlibrary_official" target="_blank"><span class="zlibicon-telegram-fill"></span> Official channel</a></li>
+                <li class="break"></li>
+                <li><a class="tw"  data-toggle="tooltip" title="Z-Library on Twitter" href="https://twitter.com/Z_Lib_official" target="_blank"><span class="zlibicon-twitter"></span></a></li>
+                <li><a class="ms"  data-toggle="tooltip" title="Z-Library on Mastadon" href="https://mastodon.social/@Z_Lib_official" target="_blank"><span class="zlibicon-mastodon"></span></a></li>
+                <li><a class="tgc" data-toggle="tooltip" title="Chinese channel on Telegram" href="https://t.me/zlib_china_official" target="_blank"><span class="zlibicon-tgchn"></span></a></li>
+                <li><a class="wc"  data-toggle="tooltip" title="Z-Library on WeChat" href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzkxNzYzNTUwNA==&scene=124#wechat_redirect" target="_blank"><span class="zlibicon-wechat"></span></a></li>
+                <li><a class="bb"  data-toggle="tooltip" title="Z-Library on BiliBili" href="https://space.bilibili.com/3494351363640156" target="_blank"><span class="zlibicon-bilibili"></span></a></li>
+                <li><a class="zh"  data-toggle="tooltip" title="Z-Library on Zhihu" href="https://www.zhihu.com/people/zlibrary_official" target="_blank"><span class="zlibicon-zhihu"></span></a></li>
+            </ul>
+        </div>
+                <div class="footer__apps">
+            <a href="/z-access#desktop_app_tab" target="_blank"><img src="/img/footer/app.png" srcset="/img/footer/app.png 1x, /img/footer/app@2x.png 2x" alt="Z-Library Desktop Launcher"></a>
+                            <a href="/z-access#useful_link_tab" target="_blank"><img src="/img/footer/tor.png" srcset="/img/footer/tor.png 1x, /img/footer/tor@2x.png 2x" alt="Tor version"></a>
+                    </div>
+            </div>
+    <div class="footer__navigation ">
+        <div class="footer__navigation-col">
+            <div class="footer__navigation-top"><span onclick="toggleSpoiler(event)">Z-Library</span></div>
+            <ul>
+                <li><a href="/blog">Blog</a></li>
+                                    <li><a href="https://go-to-zlibrary.se" target="_blank">Z-Access</a></li>
+                                <li><a href="/mission" title="Z-Library mission">Our Mission</a></li>
+                                    <li><a href="/testimonials">Share your story</a></li>
+                            </ul>
+        </div>
+                    <div class="footer__navigation-col">
+                <div class="footer__navigation-top"><span onclick="toggleSpoiler(event)">Help</span></div>
+                <ul>
+                    <li><a href="/dmca">DMCA</a></li>
+                    <li><a href="/tos">Terms</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                </ul>
+            </div>
+            </div>
+    <div class="footer__copyright">
+        <div class="footer__copyright-info">
+            <span class="copyright">
+                <img src="/img/footer/Y.png" srcset="/img/footer/Y.png 1x, /img/footer/Y@2x.png 2x" alt="Z-Library">
+            </span>
+            <span><a href="https://singlelogin.re" title="Z-Library project main page" target="blank" style="text-decoration:none;">Z-Library</a> Since 2009</span>
+            <span><a href="mailto: support@z-lib.se">support@z-lib.se</a></span>
+        </div>
+        <z-dropdown icon="zlibicon-language" onchange="setLang(event)" arrow>
+            <label value='z-library.se/book/3397236/b6657d/?wrongHash=&switchLanguage=en' checked>English</label><label value='ru.z-library.se/book/3397236/b6657d/?wrongHash=&switchLanguage=ru'>Русский</label><label value='es.z-library.se/book/3397236/b6657d/?wrongHash=&switchLanguage=es'>Español</label><label value='it.z-library.se/book/3397236/b6657d/?wrongHash=&switchLanguage=it'>Italiano</label><label value='el.z-library.se/book/3397236/b6657d/?wrongHash=&switchLanguage=el'>ελληνικά</label><label value='ar.z-library.se/book/3397236/b6657d/?wrongHash=&switchLanguage=ar'>اللغة العربية</label><label value='id.z-library.se/book/3397236/b6657d/?wrongHash=&switchLanguage=id'>Bahasa Indonesia</label><label value='ms.z-library.se/book/3397236/b6657d/?wrongHash=&switchLanguage=ms'>Bahasa Malaysia</label><label value='hi.z-library.se/book/3397236/b6657d/?wrongHash=&switchLanguage=hi'>हिन्दी</label><label value='de.z-library.se/book/3397236/b6657d/?wrongHash=&switchLanguage=de'>Deutsch</label><label value='fr.z-library.se/book/3397236/b6657d/?wrongHash=&switchLanguage=fr'>Français</label><label value='pt.z-library.se/book/3397236/b6657d/?wrongHash=&switchLanguage=pt'>Português</label><label value='uk.z-library.se/book/3397236/b6657d/?wrongHash=&switchLanguage=uk'>Українська</label><label value='pl.z-library.se/book/3397236/b6657d/?wrongHash=&switchLanguage=pl'>Polski</label><label value='zh.z-library.se/book/3397236/b6657d/?wrongHash=&switchLanguage=zh'>中文</label><label value='tw.z-library.se/book/3397236/b6657d/?wrongHash=&switchLanguage=tw'>繁體中文</label><label value='ja.z-library.se/book/3397236/b6657d/?wrongHash=&switchLanguage=ja'>日本語</label><label value='vi.z-library.se/book/3397236/b6657d/?wrongHash=&switchLanguage=vi'>Tiếng Việt</label><label value='az.z-library.se/book/3397236/b6657d/?wrongHash=&switchLanguage=az'>Azərbaycan Dili</label><label value='hy.z-library.se/book/3397236/b6657d/?wrongHash=&switchLanguage=hy'>Հայոց լեզու</label><label value='th.z-library.se/book/3397236/b6657d/?wrongHash=&switchLanguage=th'>ภาษาไทย</label><label value='tr.z-library.se/book/3397236/b6657d/?wrongHash=&switchLanguage=tr'>Türk Dili</label><label value='ka.z-library.se/book/3397236/b6657d/?wrongHash=&switchLanguage=ka'>ქართველი</label><label value='bn.z-library.se/book/3397236/b6657d/?wrongHash=&switchLanguage=bn'>বাংলা</label><label value='ps.z-library.se/book/3397236/b6657d/?wrongHash=&switchLanguage=ps'>پښتو</label><label value='te.z-library.se/book/3397236/b6657d/?wrongHash=&switchLanguage=te'>తెలుగు</label><label value='ur.z-library.se/book/3397236/b6657d/?wrongHash=&switchLanguage=ur'>اردو</label><label value='ko.z-library.se/book/3397236/b6657d/?wrongHash=&switchLanguage=ko'>한국어</label><label value='sr.z-library.se/book/3397236/b6657d/?wrongHash=&switchLanguage=sr'>Srpski</label><label value='bg.z-library.se/book/3397236/b6657d/?wrongHash=&switchLanguage=bg'>Български</label>            <style>
+                .head{color: #8C8C8C}
+                .arrow{border-top-color: #8C8C8C}
+                .badge{display: none;}
+            </style>
+        </z-dropdown>
+    </div>
+</div>
+<script>
+    function setLang(newUrl){
+        window.location.href = '//' + newUrl.detail.value;
+    }
+    function toggleSpoiler(e){
+        const spoiler = e.target.parentNode.nextElementSibling;
+        if(spoiler){
+            if (spoiler.style.maxHeight){
+                spoiler.style.maxHeight = null;
+                e.target.parentNode.classList.remove('up')
+            } else {
+                spoiler.style.maxHeight = spoiler.scrollHeight + "px";
+                e.target.parentNode.classList.add('up')
+            } 
+        }
+    }
+
+</script>
+
+
+
+
+<!-- Telegram modal helper -->
+<div style="display: none" id="tg-connect-modal">
+    <div class="tg-connect-modal-content">
+    <div>
+        <div class="tg-connect-step">
+            <div class="tg-connect-line">
+                <span class="tg-connect-number"><span>1</span></span>
+                <span class="tg-connect-line__text">
+                        Follow <a target="_blank" href="https://t.me/BotFather">this link</a> or find "@BotFather" bot on Telegram                    </span>
+            </div>
+        </div>
+
+        <div class="tg-connect-step">
+            <div class="tg-connect-line">
+                <span class="tg-connect-number"><span>2</span></span>
+                <span class="tg-connect-line__text">
+                        Send /newbot command                    </span>
+            </div>
+            <div class="tg-connect-img">
+                <img src="/img/tg/pb1.png" alt=""/>
+            </div>
+        </div>
+
+        <div class="tg-connect-step">
+            <div class="tg-connect-line">
+                <span class="tg-connect-number"><span>3</span></span>
+                <span class="tg-connect-line__text">
+                        Specify a name for your chatbot                    </span>
+            </div>
+            <div class="tg-connect-img">
+                <img src="/img/tg/pb2.png" alt=""/>
+            </div>
+        </div>
+
+        <div class="tg-connect-step">
+            <div class="tg-connect-line">
+                <span class="tg-connect-number"><span>4</span></span>
+                <span class="tg-connect-line__text">
+                        Choose a username for the bot                    </span>
+            </div>
+            <div class="tg-connect-img">
+                <img src="/img/tg/pb3.png" alt=""/>
+            </div>
+        </div>
+
+        <div class="tg-connect-step">
+            <div class="tg-connect-line">
+                <span class="tg-connect-number"><span>5</span></span>
+                <span class="tg-connect-line__text">
+                        Copy an entire last message from BotFather and paste it here                    </span>
+            </div>
+            <div class="tg-connect-content">
+                <textarea class="tg-connect-textarea js-tg-textarea" style="width: 100%" rows="5"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="tg-connect-footer">
+            <button class="tg-personal-btn _disabled js-tg-connect-btn" onclick="telegramPBBindAction(this)">Connect!</button>
+            <button onclick="$(this).closest('.modal').modal('hide')">Close</button>
+        </div>
+    </div>
+</div></div>
+
+    <script>
+        $(() => {
+            const $singleloginLinks = $('[data-mode="singlelogin"]')
+
+            $singleloginLinks.click((event) => {
+                if (event.which !== 1) event.stopImmediatePropagation()
+
+                event.preventDefault()
+            })
+
+            // Handles all actions except logout.
+            const $singleloginAuthLinks = $singleloginLinks.filter(':not([data-action="logout"])')
+            $singleloginAuthLinks.click((event) => {
+                const authAction = event.currentTarget.dataset.action
+                CurrentUser.showAuthPopup(authAction)
+            })
+
+            // Handles logout action.
+            const $singleloginLogoutLinks = $singleloginLinks.filter('[data-action="logout"]')
+            $singleloginLogoutLinks.click(async (event) => {
+                const spinner = new ZLibrarySpinner($(event.currentTarget)).color('#666')
+                spinner.start()
+                CurrentUser.logout()
+                    .then(() => location.href = '/')
+                    .catch(() => new ZLibraryNotify().error(i18next.t('Something went wrong')))
+                    .then(() => spinner.stop())
+            })
+
+        })
+    </script>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- icons preload hack -->
+        <i class="zlibicon-check" style="font-size: 1px; visibility: hidden; position: absolute; top: 0; left: 0;"></i>
+
+        <div class="modal fade" id="zlibrary-modal" role="dialog" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header hidden">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title"></h4>
+                    </div>
+                    <div class="modal-body" style="position: relative; min-height: 80px;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="zlibrary-modal-styled" role="dialog" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header hidden">
+                        <h4 class="modal-title"></h4>
+                    </div>
+                    <div class="modal-body"></div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="zlibrary-modal-auth" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ggAdditionalHtml -->
+        <!--LiveInternet counter--><script type="text/javascript">
+new Image().src = "//counter.yadro.ru/hit;bookzz?r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random();</script><!--/LiveInternet-->
+<iframe name="uploader" id="uploader" style="border:0px solid #ddd; width:90%; display:none;"></iframe><script></script>        <!-- /ggAdditionalHtml -->
+        
+                
+        <script>
+            if (typeof pagerOptions !== "undefined" && pagerOptions) {
+                $('div.paginator').paginator(pagerOptions);
+                let page = parseInt((new URL(document.location)).searchParams.get("page"));
+
+                if (page > pagerOptions.pagesTotal) {
+                    document.location.href = document.location.href.replace(/page=\d+/gi, "page="+pagerOptions.pagesTotal);
+                }
+            }
+        </script>
+        <link rel="stylesheet" href="./resources/ext/ensemble/ensemble-social-share.min.css" />
+        <link rel="stylesheet" href="./resources/ext/ensemble/iconset.tmp.css" />
+        <script src="./resources/ext/ensemble/ensemble-social-share.min.js"></script>
+        <script>
+            let domain_to_share = "z-library.se"
+            if(!domain_to_share){
+                domain_to_share = "zlibrary-global.se"
+            }
+            // const global_link_to_share = location.protocol + '//' + domain_to_share +location.pathname+location.search+location.hash;
+            const social_share_element = document.querySelector('.social-share-buttons');
+            if(social_share_element){
+                new ensemble.SocialShare(social_share_element,{
+                    // namespace
+                    ns: 'share',
+                    domain: domain_to_share,
+                    fx: true,
+                    // root element
+                    root: 'body',
+                    // default classname
+                    className: 'social-share',
+                    // page title to share
+                    // defaults to window.title
+                    title: '',
+                    // description to share
+                    description: '',
+                    // actions to display
+                    displays: null,
+                    // action intents
+                    intents: {
+                    'facebook': 0,
+                    'twitter': 0,
+                    'whatsapp': 1,
+                    'telegram': 1,
+                    'linkedin': 0,
+                    'send-email': 2
+                    },
+                    locale: {
+                        text: 'Hey! This is what you were looking for: %s',
+                    },
+                    // URI strings
+                    uriform: {
+                    'facebook': 'https://facebook.com/sharer.php?u=%url%',
+                    'twitter': 'https://twitter.com/share?url=%url%&text=%title%',
+                    'whatsapp': 'https://api.whatsapp.com/send?text=%text%',
+                    'telegram': 'https://telegram.me/share/url?url=%url%&text=%text%',
+                    'linkedin': 'https://www.linkedin.com/sharing/share-offsite?mini=true&url=%url%&title=%title%&ro=false&summary=%summary%',
+                    'send-email': 'mailto:?subject=%subject%&body=%text%'
+                    },
+                    // selector to find link
+                    selectorLink: {
+                    element: 'link[rel="canonical"]',
+                    attribute: 'href'
+                    },
+                    // selector to find title
+                    selectorTitle: null,
+                    // selector to find description
+                    selectorDescription: {
+                    element: 'meta[name="description"]',
+                    attribute: 'content'
+                    },
+                    // Custom parameters for label
+                    label: {},
+                });
+            }
+        </script>
+
+            </body>
+</html>
+

@@ -22,6 +22,12 @@ public:
     static const QString generate_id();
     static const QString generate_time();
 
+    QString get_str_languages() const;
+    QString get_str_extensions() const;
+    QString get_str_require_time() const;
+    QString get_str_exact_matching() const;
+    QString get_str_match_a_phrase() const;
+
 public:
     QString search_type;
     QString key_word;

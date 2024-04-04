@@ -15,5 +15,7 @@
         <file>res/image/like.png</file>
         <file>res/image/bookmark.png</file>
         <file>res/image/return.png</file>
+        <file>res/image/download_gray.png</file>
+        <file>res/image/delete_item.png</file>
     </qresource>
 </RCC>

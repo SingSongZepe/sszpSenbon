@@ -25,10 +25,11 @@ void MainWindow::toggle_view(SingSongZepe::ToggleViewKind tvk) {
         break;
     }
 
-    if (show_view == this->main_views[this->current_view_idx]) {
-        SSLog::ln("this view is already current view");
-        return;
-    }
+    // check whether current view
+    // if (show_view == this->main_views[this->current_view_idx]) {
+    //     SSLog::ln("this view is already current view");
+    //     return;
+    // }
 
     for (int idx = 0; idx != this->main_views.length(); idx++) {
         if (this->main_views[idx] == show_view) {
@@ -39,6 +40,30 @@ void MainWindow::toggle_view(SingSongZepe::ToggleViewKind tvk) {
         } else {
             this->main_views[idx]->setHidden(true);
             this->navi_views[idx]->setHidden(true);
+        }
+    }
+}
+
+void MainWindow::toggle_view_history(SingSongZepe::ToggleViewHistoryKind tvhk) {
+    QWidget* show_view;
+    switch(tvhk) {
+    case SingSongZepe::SearchHistory:
+        show_view = ui->wgt_sub_history_search;
+        break;
+    case SingSongZepe::DownloadHistory:
+        show_view = ui->wgt_sub_history_download;
+        break;
+    default:
+        show_view = ui->wgt_sub_history_search;
+        break;
+    }
+
+    for (int idx = 0; idx != this->history_views.length(); idx++) {
+        if (this->history_views[idx] == show_view) {
+            this->history_views[idx]->setHidden(false);
+            this->current_history_view_idx = idx;
+        } else {
+            this->history_views[idx]->setHidden(true);
         }
     }
 }
