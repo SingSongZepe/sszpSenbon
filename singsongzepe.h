@@ -116,8 +116,19 @@ public:
     static const QString TABLE_PARAMETER_SEARCH_HISTORY;
     static const QString TABLE_PATAMETER_DOWNLOAD_HISTORY;
 
+
+    // ////// VALUE
+    // history
+        // search
+    static const int WIDTH_SEARCH_HISTORY_ITEM_DEFAULT;
+    static const int HEIGHT_SEARCH_HISTORY_ITEM; // always
+
+
 public:
     static const QString& get_table_parameter(const QString& table_name);
+    static QString getHEIGHT_SEARCH_HISTORY_ITEM();
+private:
+    Q_PROPERTY(QString HEIGHT_SEARCH_HISTORY_ITEM READ getHEIGHT_SEARCH_HISTORY_ITEM CONSTANT FINAL)
 };
 
 #endif // SINGSONGZEPE_H

@@ -108,8 +108,33 @@ QString SearchHistory::get_str_match_a_phrase() const {
     return this->match_a_phrase ? "True" : "False";
 }
 
+// specifization for GeneralSearch
+template <>
+GeneralSearch SearchHistory::cvt_search_history() {
+    return GeneralSearch(this->search_type,
+                         this->key_word,
+                         this->exact_matching,
+                         this->year_from,
+                         this->year_to,
+                         this->languages,
+                         this->extensions);
+}
+
+template <>
+FulltextSearch SearchHistory::cvt_search_history() {
+    return FulltextSearch(this->search_type,
+                          this->key_word,
+                          this->exact_matching,
+                          this->year_from,
+                          this->year_to,
+                          this->languages,
+                          this->extensions,
+                          this->match_a_phrase);
+}
+
 SearchHistory::SearchHistory() {
 }
 
 SearchHistory::~SearchHistory() {
+    qDebug() << "sh release";
 }

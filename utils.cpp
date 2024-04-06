@@ -21,12 +21,17 @@
 #include "Python.h"
 #define slots Q_SLOTS
 
-
 // utils
 QString MainWindow::make_url(const GeneralSearch* search) {
-    QString url = SingSongZepe::zlibrary_url + SingSongZepe::subfix_general;
-    url += "q=" + search->key_word + "&e=" + (search->exact_matching ? "1" : "0");
-    return url;
+    if (search->search_type == SearchConstants::GENERAL_SEARCH) {
+        QString url = SingSongZepe::zlibrary_url + SingSongZepe::subfix_general;
+        url += "q=" + search->key_word + "&e=" + (search->exact_matching ? "1" : "0");
+        return url;
+    } else {
+        QString url = SingSongZepe::zlibrary_url + SingSongZepe::subfix_fulltext;
+        url += "q=" + search->key_word + "&e=" + (search->exact_matching ? "1" : "0");
+        return url;
+    }
 }
 
 QList<BookInfo> MainWindow::json_str2book_infos(const QString* json_str) {

@@ -51,6 +51,8 @@ public slots:
     void search_singlebook(const SingleBookSearch* search);
     bool show_singlebook();
 
+    void load_search_history();
+
     // utils
     QString make_url(const GeneralSearch* search);
     QList<BookInfo> json_str2book_infos(const QString* json_str);
@@ -107,13 +109,15 @@ private:
 
     // databasemanger
     DatabaseManger* dbm_history_search;
-    DatabaseManger* dbm_history_download;
+    // DatabaseManger* dbm_history_download;
 
     // shv manger
     SearchHistoryViewManger* shv_manger;
     QWidget* wgt_search_history;
     QScrollBar* sb_sa_sub_history_search;
 
+signals:
+    // void sgn_search(GeneralSearch*);
 };
 #endif // MAINWINDOW_H
 

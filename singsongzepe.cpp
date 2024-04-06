@@ -169,3 +169,9 @@ const QString& SingSongZepe::get_table_parameter(const QString& table_name) {
     }
 }
 
+
+// ////// VALUE
+// size of search_history_item
+const int SingSongZepe::WIDTH_SEARCH_HISTORY_ITEM_DEFAULT = 741;
+const int SingSongZepe::HEIGHT_SEARCH_HISTORY_ITEM = 111;
+

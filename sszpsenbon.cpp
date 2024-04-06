@@ -78,16 +78,23 @@ void MainWindow::search_books_launch() {
         MainWindow::search_books(&gs);
         // after search book
         // we add the search to database
-        if (this->dbm_history_search->insert_item(SearchHistory(gs))) {
+        SearchHistory sh = SearchHistory(gs);
+        if (this->dbm_history_search->insert_item(sh)) {
             SSLog::ln("add the search to database successfully");
         }
+        this->shv_manger->append_item(sh);
+
     } else {
         FulltextSearch fs = FulltextSearch(search_type, key_word);
         // call
         MainWindow::search_books(&fs);
-        if (this->dbm_history_search->insert_item(SearchHistory(fs))) {
+        // after search book
+        // we add the search to database
+        SearchHistory sh = SearchHistory(fs);
+        if (this->dbm_history_search->insert_item(sh)) {
             SSLog::ln("add the search to database successfully");
         }
+        this->shv_manger->append_item(sh);
     }
 }
 

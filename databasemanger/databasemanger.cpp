@@ -198,7 +198,6 @@ QList<SearchHistory> DatabaseManger::search_all()
                             );
         }
     }
-
     return searches;
 }
 

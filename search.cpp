@@ -1,5 +1,7 @@
 #include "search.h"
 
+#include <QDebug>
+
 // strings
 const QString SearchConstants::GENERAL_SEARCH = "General";
 const QString SearchConstants::FULLTEXT_SEARCH = "Fulltext";
@@ -42,6 +44,7 @@ FulltextSearch::FulltextSearch(QString search_type,
 
 FulltextSearch::~FulltextSearch() {
     // data will be released in disconstructing function of Class GS
+    qDebug() << "1";
 }
 
 SingleBookSearch::SingleBookSearch(const QString& url)

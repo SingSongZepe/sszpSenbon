@@ -28,6 +28,9 @@ public:
     QString get_str_exact_matching() const;
     QString get_str_match_a_phrase() const;
 
+    template <typename SEARCH>
+    SEARCH cvt_search_history();
+
 public:
     QString search_type;
     QString key_word;

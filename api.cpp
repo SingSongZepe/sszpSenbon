@@ -197,3 +197,12 @@ bool MainWindow::show_singlebook() {
 
     return true;
 }
+
+void MainWindow::load_search_history() {
+    if (this->dbm_history_search == nullptr) {
+        SSLog::ln("dbm_history_search is nullptr, please init it at first");
+        return;
+    }
+    QList<SearchHistory> shs = this->dbm_history_search->search_all<SearchHistory>();
+    this->shv_manger->append_items(shs);
+}

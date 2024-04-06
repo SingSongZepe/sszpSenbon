@@ -88,6 +88,13 @@ MainWindow::MainWindow(QWidget *parent)
     // le_serach return
     QObject::connect(ui->le_search, &QLineEdit::returnPressed, this, &MainWindow::search_books_launch);
 
+    // search
+    // QObject::connect(this, &MainWindow::sgn_search, this, &MainWindow::search_books);
+
+    // load history
+        // search
+    this->load_search_history();
+
     // test
         // localcookiemanger
     // qDebug() << lcm->get_one_cookie().cookie;
