@@ -14,6 +14,7 @@ SOURCES += \
     api.cpp \
     cookiemanger/remotecookiemanger.cpp \
     databasemanger/databasemanger.cpp \
+    download_manger/downloadmanger.cpp \
     object/cookie.cpp \
     cookiemanger/localcookiemanger.cpp \
     event.cpp \
@@ -21,6 +22,8 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     object/bookfullinfo.cpp \
+    object/download.cpp \
+    object/downloadhistory.cpp \
     object/helloworld.cpp \
     object/searchhistory.cpp \
     object/sfunctor.cpp \
@@ -32,18 +35,23 @@ SOURCES += \
     utils.cpp \
     bookinfoitem.cpp \
     object/book_info.cpp \
+    wgt/downloadhistoryitem.cpp \
     wgt/searchhistoryitem.cpp \
+    wgt_manger/downloadhistoryviewmanger.cpp \
     wgt_manger/searchhistoryviewmanger.cpp \
     worker.cpp
 
 HEADERS += \
     cookiemanger/remotecookiemanger.h \
     databasemanger/databasemanger.h \
+    download_manger/downloadmanger.h \
     object/cookie.h \
     cookiemanger/localcookiemanger.h \
     function/savefile.h \
     mainwindow.h \
     object/bookfullinfo.h \
+    object/download.h \
+    object/downloadhistory.h \
     object/helloworld.h \
     object/searchhistory.h \
     object/sfunctor.h \
@@ -53,7 +61,9 @@ HEADERS += \
     sslog.h \
     object/book_info.h \
     bookinfoitem.h \
+    wgt/downloadhistoryitem.h \
     wgt/searchhistoryitem.h \
+    wgt_manger/downloadhistoryviewmanger.h \
     wgt_manger/searchhistoryviewmanger.h \
     worker.h
 
@@ -62,6 +72,7 @@ FORMS += \
     bookinfoitem.ui \
     object/helloworld.ui \
     singlebookinfo.ui \
+    wgt/downloadhistoryitem.ui \
     wgt/searchhistoryitem.ui
 
 TRANSLATIONS += \

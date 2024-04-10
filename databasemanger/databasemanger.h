@@ -8,7 +8,7 @@ class DatabaseManger : public QObject
 {
     Q_OBJECT
 public:
-    explicit DatabaseManger(const QString& db_file_path, const QString& table_name, QObject *parent = nullptr);
+    explicit DatabaseManger(const QString& db_file_path, const QString& table_name, const QString& connect_name, QObject *parent = nullptr);
     ~DatabaseManger();
 
     template <typename ITEM>

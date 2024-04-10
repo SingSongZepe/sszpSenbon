@@ -141,13 +141,29 @@ const QString SingSongZepe::DELETE_ITEM_BY_ID_SQL = "DELETE FROM %1 WHERE id = :
 const QString SingSongZepe::SEARCH_ITEM_BY_ID_SQL = "SELECT * FROM %1 WHERE id = :id";
 const QString SingSongZepe::SEARCH_ALL_SQL = "SELECT * FROM %1";
     // need to specialize
+        // for search history
 const QString SingSongZepe::INSERT_SEARCH_HISTORY_ITEM_SQL = "INSERT INTO search_history ("
                                                              "search_type, key_word, exact_matching, year_from, year_to, languages, extensions, match_a_phrase, time, id"
                                                              ") "
                                                              "VALUES ("
                                                              ":search_type, :key_word, :exact_matching, :year_from, :year_to, :languages, :extensions, :match_a_phrase, :time, :id"
                                                              ")";
-const QString SingSongZepe::UPDATE_SEARCH_HISTORY_ITEM_SQL = "UPDATE search_history SET search_type = :search_type, key_word = :key_word, exact_matching = :exact_matching, year_from = :year_from, year_to = :year_to, languages = :languages, extensions = :extensions, match_a_phrase = :match_a_phrase, time = :time WHERE id = :id";
+const QString SingSongZepe::UPDATE_SEARCH_HISTORY_ITEM_SQL = "UPDATE search_history SET "
+                                                             "search_type = :search_type, key_word = :key_word, exact_matching = :exact_matching, year_from = :year_from, year_to = :year_to, languages = :languages, extensions = :extensions, match_a_phrase = :match_a_phrase, time = :time "
+                                                             "WHERE id = :id";
+        // for download history
+const QString SingSongZepe::INSERT_DOWNLOAD_HISTORY_ITEM_SQL = "INSERT INTO download_history ("
+                                                               "cover, url, title, authors, rating, description, categories, edition, language, isbn, isbn10, isbn13, file, volume, year, publisher, pages, series, ipfs, time, id"
+                                                               ")"
+                                                               "VALUES ("
+                                                               ":cover, :url, :title, :authors, :rating, :description, :categories, :edition, :language, :isbn, :isbn10, :isbn13, :file, :volume, :year, :publisher, :pages, :series, :ipfs, :time, :id"
+                                                               ")";
+// there I maked a mistake(now fixed), after time (column), I missed a space(" "), that maked time and WHERE to a word, likes timeWHERE
+// occurred a error "Parameter count mismatch"
+const QString SingSongZepe::UPDATE_DOWNLOAD_HISTORY_ITEM_SQL = "UPDATE download_history SET "
+                                                               "cover = :cover, url = :url, title = :title, authors = :authors, rating = :rating, description = :description, categories = :categories, edition = :edition, language = :language, isbn = :isbn, "
+                                                               "isbn10 = :isbn10, isbn13 = :isbn13, file = :file, volume = :volume, year = :year, publisher = :publisher, pages = :pages, series = :series, ipfs = :ipfs, time = :time "
+                                                               "WHERE id = :id";
 
     // table name
 const QString SingSongZepe::TABLE_SEARCH_HISTORY_NAME = "search_history";
@@ -155,7 +171,10 @@ const QString SingSongZepe::TABLE_DOWNLOAD_HISTORY_NAME = "download_history";
 
 const QString SingSongZepe::TABLE_PARAMETER_SEARCH_HISTORY = "search_type TEXT, key_word TEXT, exact_matching INTEGER, year_from INTEGER, year_to INTEGER,"
                                                              "languages TEXT, extensions TEXT, match_a_phrase INTEGER, time TEXT, id TEXT";
-const QString SingSongZepe::TABLE_PATAMETER_DOWNLOAD_HISTORY = "";
+const QString SingSongZepe::TABLE_PATAMETER_DOWNLOAD_HISTORY = "cover TEXT, url TEXT, title TEXT, authors TEXT, rating TEXT, description TEXT, categories TEXT, edition TEXT, language TEXT, isbn TEXT, isbn10 TEXT, isbn13 TEXT,"
+                                                                "file TEXT, volume TEXT, year TEXT, publisher TEXT, pages TEXT, series TEXT, ipfs TEXT, time TEXT, id TEXT";
+
+
 
 const QString& SingSongZepe::get_table_parameter(const QString& table_name) {
     if (table_name == SingSongZepe::TABLE_SEARCH_HISTORY_NAME) {

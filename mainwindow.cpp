@@ -53,8 +53,8 @@ MainWindow::MainWindow(QWidget *parent)
     this->lcm = new LocalCookieManger();
 
     // init databasemanager
-    this->dbm_history_search = new DatabaseManger(SingSongZepe::DB_FILE_PATH_SEARCH_HISTORY, SingSongZepe::TABLE_SEARCH_HISTORY_NAME);
-    // this->dbm_history_download = new DatabaseManger(SingSongZepe::DB_FILE_PATH_DOWNLOAD_HISTORY, SingSongZepe::TABLE_DOWNLOAD_HISTORY_NAME);
+    this->dbm_history_search = new DatabaseManger(SingSongZepe::DB_FILE_PATH_SEARCH_HISTORY, SingSongZepe::TABLE_SEARCH_HISTORY_NAME, SingSongZepe::TABLE_SEARCH_HISTORY_NAME);
+    this->dbm_history_download = new DatabaseManger(SingSongZepe::DB_FILE_PATH_DOWNLOAD_HISTORY, SingSongZepe::TABLE_DOWNLOAD_HISTORY_NAME, SingSongZepe::TABLE_DOWNLOAD_HISTORY_NAME);
 
     // init shv manger
     this->wgt_search_history = new QWidget(ui->sa_sub_history_search);
@@ -64,6 +64,18 @@ MainWindow::MainWindow(QWidget *parent)
     this->sb_sa_sub_history_search = new QScrollBar();
     this->sb_sa_sub_history_search->setStyleSheet(SingSongZepe::STYLE_SCROLLBAR_SLIM_TRANSPARENT);
     ui->sa_sub_history_search->setHorizontalScrollBar(this->sb_sa_sub_history_search);
+
+    // init dhv manger
+    this->wgt_download_history = new QWidget(ui->sa_sub_history_download);
+    ui->sa_sub_history_download->setWidget(this->wgt_download_history);
+    this->dhv_manger = new DownloadHistoryViewManger(this);
+
+    this->sb_sa_sub_history_download = new QScrollBar();
+    this->sb_sa_sub_history_download->setStyleSheet(SingSongZepe::STYLE_SCROLLBAR_SLIM_TRANSPARENT);
+    ui->sa_sub_history_download->setHorizontalScrollBar(this->sb_sa_sub_history_download);
+
+    // init download manger
+    this->d_manger = new DownloadManger(this);
 
     MainWindow::initializa_python();
 
@@ -90,6 +102,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     // search
     // QObject::connect(this, &MainWindow::sgn_search, this, &MainWindow::search_books);
+    QObject::connect(this, &MainWindow::sgn_insert_download_history, this, &MainWindow::slot_insert_download_history);
 
     // load history
         // search
@@ -117,6 +130,22 @@ MainWindow::MainWindow(QWidget *parent)
     // qDebug() << sh1.search_type;
     // qDebug() << sh1.key_word;
     // this->dbm_history_search->delete_item_by_id(sh1.id);
+        // download history
+    // DownloadHistory dh = DownloadHistory(Download());
+        // two insert method
+    // this->dbm_history_download->insert_item(dh);
+    // emit sgn_insert_download_history(dh);
+
+    // DownloadHistory dh1 = this->dbm_history_download->search_by_id<DownloadHistory>(dh.id);
+    // qDebug() << dh1.title;
+
+    // dh1.title = "hello world";
+    // this->dbm_history_download->update_item(dh1, dh.id);
+
+    // DownloadHistory dh2 = this->dbm_history_download->search_by_id<DownloadHistory>(dh1.id);
+    // qDebug() << dh2.title;
+
+    // this->dbm_history_download->delete_item_by_id(dh1.id);
 
     // test circular dependency
 }
@@ -151,14 +180,24 @@ MainWindow::~MainWindow() {
 
     // databasemanger
     delete dbm_history_search;
-    // delete dbm_history_download;
+    delete dbm_history_download;
 
     // shv manger
     delete shv_manger;
     delete wgt_search_history;
     delete sb_sa_sub_history_search;
 
+    // dhv manger
+    delete dhv_manger;
+    delete wgt_download_history;
+    delete sb_sa_sub_history_download;
+
+    // download manger
+    delete d_manger;
+
     delete ui;
 }
+
+
 
 

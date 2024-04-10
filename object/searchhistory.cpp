@@ -99,6 +99,13 @@ QString SearchHistory::get_str_extensions() const {
     } return this->extensions.join(", ");
 }
 QString SearchHistory::get_str_require_time() const {
+    if (this->year_from == -1 && this->year_to == -1) {
+        return QString("any");
+    } else if (this->year_from == -1) {
+        return QString("to %1").arg(this->year_to);
+    } else if (this->year_to == -1) {
+        return QString("from %1").arg(this->year_from);
+    }
     return QString("from %1 to %2").arg(this->year_from).arg(year_to);
 }
 QString SearchHistory::get_str_exact_matching() const {
@@ -136,5 +143,5 @@ SearchHistory::SearchHistory() {
 }
 
 SearchHistory::~SearchHistory() {
-    qDebug() << "sh release";
+    // qDebug() << "sh release";
 }

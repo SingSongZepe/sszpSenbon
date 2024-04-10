@@ -107,10 +107,16 @@ public:
     static const QString SEARCH_ITEM_BY_ID_SQL; // but this value, where use it, the function need to specialize, but it self not need to
     static const QString SEARCH_ALL_SQL;
         // specialize
+            // for search history
     static const QString INSERT_SEARCH_HISTORY_ITEM_SQL;
     static const QString UPDATE_SEARCH_HISTORY_ITEM_SQL;
+            // for download history
+    static const QString INSERT_DOWNLOAD_HISTORY_ITEM_SQL;
+    static const QString UPDATE_DOWNLOAD_HISTORY_ITEM_SQL;
         // table name
+            // for search history
     static const QString TABLE_SEARCH_HISTORY_NAME;
+            // for download history
     static const QString TABLE_DOWNLOAD_HISTORY_NAME;
         // table parameter (you can get it by table_name)
     static const QString TABLE_PARAMETER_SEARCH_HISTORY;

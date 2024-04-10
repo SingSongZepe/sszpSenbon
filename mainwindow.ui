@@ -260,7 +260,7 @@
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap resource="image.qrc">:/:/res/image/download.png</pixmap>
+         <pixmap resource="image.qrc">:/:/res/image/history.png</pixmap>
         </property>
         <property name="scaledContents">
          <bool>true</bool>

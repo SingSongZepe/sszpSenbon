@@ -10,7 +10,12 @@
 #include "sslog.h"
 #include "cookiemanger/localcookiemanger.h"
 #include "databasemanger/databasemanger.h"
+#include "object/searchhistory.h"
+#include "object/downloadhistory.h"
 #include "wgt_manger/searchhistoryviewmanger.h"
+#include "wgt_manger/downloadhistoryviewmanger.h"
+#include "download_manger/downloadmanger.h"
+
 
 #include <QMainWindow>
 #include <QMouseEvent>
@@ -79,6 +84,9 @@ public:
     DatabaseManger* get_ptr_dbm_history_search() {
         return this->dbm_history_search;
     }
+    DatabaseManger* get_ptr_dbm_history_download() {
+        return this->dbm_history_download;
+    }
 
 private:
     Ui::MainWindow *ui; // new
@@ -109,16 +117,36 @@ private:
 
     // databasemanger
     DatabaseManger* dbm_history_search;
-    // DatabaseManger* dbm_history_download;
+    DatabaseManger* dbm_history_download;
 
     // shv manger
     SearchHistoryViewManger* shv_manger;
     QWidget* wgt_search_history;
     QScrollBar* sb_sa_sub_history_search;
 
+    // dhv manger
+    DownloadHistoryViewManger* dhv_manger;
+    QWidget* wgt_download_history;
+    QScrollBar* sb_sa_sub_history_download;
+
+    // download manger
+    DownloadManger* d_manger;
+
 signals:
+    // but when search, the GeneralSearch object will be deleted
+    // I don't want to copy, because it will cost unnecessary memory
     // void sgn_search(GeneralSearch*);
+    void sgn_insert_search_history(SearchHistory&);
+    void sgn_insert_download_history(DownloadHistory&);
+public slots:
+    void slot_insert_download_history(DownloadHistory& download_history) {
+        this->dbm_history_download->insert_item(download_history);
+    }
+    void slot_insert_search_history(SearchHistory& search_history) {
+        this->dbm_history_search->insert_item(search_history);
+    }
 };
+
 #endif // MAINWINDOW_H
 
 
