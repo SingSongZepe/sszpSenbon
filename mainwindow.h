@@ -57,6 +57,7 @@ public slots:
     bool show_singlebook();
 
     void load_search_history();
+    void load_download_history();
 
     // utils
     QString make_url(const GeneralSearch* search);
@@ -80,6 +81,9 @@ public:
     // for getting some member var
     QWidget* get_ptr_wgt_search_history() {
         return this->wgt_search_history;
+    }
+    QWidget* get_ptr_wgt_download_history() {
+        return this->wgt_download_history;
     }
     DatabaseManger* get_ptr_dbm_history_search() {
         return this->dbm_history_search;
@@ -138,12 +142,19 @@ signals:
     // void sgn_search(GeneralSearch*);
     void sgn_insert_search_history(SearchHistory&);
     void sgn_insert_download_history(DownloadHistory&);
+
+    // copy, otherwise will be deleted
+    void sgn_append_download_history_item(DownloadHistory);
+
 public slots:
+    void slot_insert_search_history(SearchHistory& search_history) {
+        this->dbm_history_search->insert_item(search_history);
+    }
     void slot_insert_download_history(DownloadHistory& download_history) {
         this->dbm_history_download->insert_item(download_history);
     }
-    void slot_insert_search_history(SearchHistory& search_history) {
-        this->dbm_history_search->insert_item(search_history);
+    void slot_append_download_history_item(DownloadHistory download_history) {
+        this->dhv_manger->append_item(download_history);
     }
 };
 

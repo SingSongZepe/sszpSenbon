@@ -206,3 +206,12 @@ void MainWindow::load_search_history() {
     QList<SearchHistory> shs = this->dbm_history_search->search_all<SearchHistory>();
     this->shv_manger->append_items(shs);
 }
+
+void MainWindow::load_download_history() {
+    if (this->dbm_history_download == nullptr) {
+        SSLog::ln("dbm_history_download is nullptr, please init it at first");
+        return;
+    }
+    QList<DownloadHistory> dhs = this->dbm_history_download->search_all<DownloadHistory>();
+    this->dhv_manger->append_items(dhs);
+}

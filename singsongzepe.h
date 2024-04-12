@@ -128,7 +128,9 @@ public:
         // search
     static const int WIDTH_SEARCH_HISTORY_ITEM_DEFAULT;
     static const int HEIGHT_SEARCH_HISTORY_ITEM; // always
-
+        // download
+    static const int WIDTH_DOWNLOAD_HISTORY_ITEM_DEFAULT;
+    static const int HEIGHT_DOWNLOAD_HISTORY_ITEM;
 
 public:
     static const QString& get_table_parameter(const QString& table_name);

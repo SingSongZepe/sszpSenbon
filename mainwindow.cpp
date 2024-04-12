@@ -63,7 +63,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     this->sb_sa_sub_history_search = new QScrollBar();
     this->sb_sa_sub_history_search->setStyleSheet(SingSongZepe::STYLE_SCROLLBAR_SLIM_TRANSPARENT);
-    ui->sa_sub_history_search->setHorizontalScrollBar(this->sb_sa_sub_history_search);
+    ui->sa_sub_history_search->setVerticalScrollBar(this->sb_sa_sub_history_search);
 
     // init dhv manger
     this->wgt_download_history = new QWidget(ui->sa_sub_history_download);
@@ -72,7 +72,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     this->sb_sa_sub_history_download = new QScrollBar();
     this->sb_sa_sub_history_download->setStyleSheet(SingSongZepe::STYLE_SCROLLBAR_SLIM_TRANSPARENT);
-    ui->sa_sub_history_download->setHorizontalScrollBar(this->sb_sa_sub_history_download);
+    ui->sa_sub_history_download->setVerticalScrollBar(this->sb_sa_sub_history_download);
 
     // init download manger
     this->d_manger = new DownloadManger(this);
@@ -103,10 +103,13 @@ MainWindow::MainWindow(QWidget *parent)
     // search
     // QObject::connect(this, &MainWindow::sgn_search, this, &MainWindow::search_books);
     QObject::connect(this, &MainWindow::sgn_insert_download_history, this, &MainWindow::slot_insert_download_history);
+    QObject::connect(this, &MainWindow::sgn_insert_search_history, this, &MainWindow::slot_insert_search_history);
+    QObject::connect(this, &MainWindow::sgn_append_download_history_item, this, &MainWindow::slot_append_download_history_item);
 
     // load history
         // search
     this->load_search_history();
+    this->load_download_history();
 
     // test
         // localcookiemanger

@@ -54,15 +54,16 @@ bool SearchHistoryItem::eventFilter(QObject *obj, QEvent *event) {
     return false;
 }
 
-// re search doesn't need to append the
+// re search doesn't need to insert into database and also render search history list
 void SearchHistoryItem::research() {
-    // if (this->search_history.search_type == SearchConstants::GENERAL_SEARCH) {
-    //     GeneralSearch gs = this->search_history.cvt_search_history<GeneralSearch>();
-    //     this->shv_manger->context->search_books(&gs);
-    // } else {
-    //     FulltextSearch fs = this->search_history.cvt_search_history<FulltextSearch>();
-    //     this->shv_manger->context->search_books(&fs);
-    // }
+    if (this->search_history.search_type == SearchConstants::GENERAL_SEARCH) {
+        GeneralSearch gs = this->search_history.cvt_search_history<GeneralSearch>();
+        this->shv_manger->context->search_books(&gs);
+    } else {
+        FulltextSearch fs = this->search_history.cvt_search_history<FulltextSearch>();
+        this->shv_manger->context->search_books(&fs);
+    }
+    this->shv_manger->context->toggle_view(SingSongZepe::Search);
 }
 
 // 'this' will be released by context->wgt_search_history

@@ -143,6 +143,10 @@ int MainWindow::get_book_items_pos_y_by_index(int index) {
 
 // for loading (for QLabel?)
 QByteArray MainWindow::request_url(const QString& url) {
+    if (url.isEmpty()) {
+        SSLog::lw("the url string is empty");
+        return QByteArray();
+    }
     QNetworkAccessManager manager;
     QNetworkRequest request = QNetworkRequest(QUrl(url));
     QNetworkReply* reply = manager.get(request);

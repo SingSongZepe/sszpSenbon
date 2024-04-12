@@ -96,10 +96,13 @@ bool SingleBookInfo::download_book() {
     // save the file
     SaveFile::save_file(book_data, SingleBookInfo::make_book_name());
 
-    // insert download
+    // insert into download history database
     DownloadHistory download_history = DownloadHistory(Download(this->book_full_info));
     emit this->context->sgn_insert_download_history(download_history);
     // this->context->get_ptr_dbm_history_download()->insert_item(download_history);
+
+    // render download history list
+    emit this->context->sgn_append_download_history_item(download_history);
 
     return true;
 }

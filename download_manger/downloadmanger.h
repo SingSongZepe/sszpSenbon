@@ -1,8 +1,11 @@
 #ifndef DOWNLOADMANGER_H
 #define DOWNLOADMANGER_H
 
+#include "object/downloadhistory.h"
+
 #include <QObject>
 #include <QList>
+
 
 class MainWindow;
 
@@ -14,9 +17,11 @@ public:
     ~DownloadManger();
 
     // append download thread
+    void append_download_event(DownloadHistory dh);
 
 public:
     MainWindow* context;
+    // QList<DownloadProcess*> ??
 
 signals:
 

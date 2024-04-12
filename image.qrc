@@ -19,5 +19,6 @@
         <file>res/image/delete_item.png</file>
         <file>res/image/history.png</file>
         <file>res/image/history_gray.png</file>
+        <file>res/image/year.png</file>
     </qresource>
 </RCC>

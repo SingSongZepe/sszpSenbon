@@ -2,6 +2,7 @@
 #define DOWNLOADHISTORYVIEWMANGER_H
 
 #include <QObject>
+
 #include "singsongzepe.h"
 #include "object/downloadhistory.h"
 #include "wgt/downloadhistoryitem.h"
@@ -15,9 +16,9 @@ public:
     explicit DownloadHistoryViewManger(MainWindow* context, QObject *parent = nullptr);
     ~DownloadHistoryViewManger();
 
-    void append_item(Download& search_history);
-    void append_items(QList<SearchHistory>& shs);
-    void update_wgt_search_history_size();
+    void append_item(const DownloadHistory& download_history);
+    void append_items(const QList<DownloadHistory>& shs);
+    void update_wgt_download_history_size();
 
     // delete item in database and delete it in view
     void delete_item(int idx);

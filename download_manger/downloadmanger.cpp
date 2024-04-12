@@ -10,3 +10,7 @@ DownloadManger::DownloadManger(MainWindow* context, QObject *parent)
 DownloadManger::~DownloadManger() {
 
 }
+
+void DownloadManger::append_download_event(DownloadHistory dh) {
+
+}
