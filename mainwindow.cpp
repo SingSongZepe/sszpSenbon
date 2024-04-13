@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 
 #include "singsongzepe.h"
+#include "object/downloadprocess.h"
 
 #include <QPushButton>
 #include <QDebug>
@@ -150,7 +151,9 @@ MainWindow::MainWindow(QWidget *parent)
 
     // this->dbm_history_download->delete_item_by_id(dh1.id);
 
-    // test circular dependency
+    // test download process
+    DownloadProcess dp = DownloadProcess(Download());
+    dp.start();
 }
 
 // implement of function

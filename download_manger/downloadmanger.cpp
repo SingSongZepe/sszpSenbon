@@ -11,6 +11,6 @@ DownloadManger::~DownloadManger() {
 
 }
 
-void DownloadManger::append_download_event(DownloadHistory dh) {
-
+void DownloadManger::append_download_event(Download d) {
+    DownloadProcess* dp = new DownloadProcess(d);
 }

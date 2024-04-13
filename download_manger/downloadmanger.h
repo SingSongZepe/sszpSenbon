@@ -2,6 +2,7 @@
 #define DOWNLOADMANGER_H
 
 #include "object/downloadhistory.h"
+#include "object/downloadprocess.h"
 
 #include <QObject>
 #include <QList>
@@ -17,11 +18,11 @@ public:
     ~DownloadManger();
 
     // append download thread
-    void append_download_event(DownloadHistory dh);
+    void append_download_event(Download d);
 
 public:
     MainWindow* context;
-    // QList<DownloadProcess*> ??
+    QList<DownloadProcess*> dp_pool;
 
 signals:
 

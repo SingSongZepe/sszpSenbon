@@ -24,6 +24,7 @@ SOURCES += \
     object/bookfullinfo.cpp \
     object/download.cpp \
     object/downloadhistory.cpp \
+    object/downloadprocess.cpp \
     object/helloworld.cpp \
     object/searchhistory.cpp \
     object/sfunctor.cpp \
@@ -36,6 +37,7 @@ SOURCES += \
     bookinfoitem.cpp \
     object/book_info.cpp \
     wgt/downloadhistoryitem.cpp \
+    wgt/downloadingitem.cpp \
     wgt/searchhistoryitem.cpp \
     wgt_manger/downloadhistoryviewmanger.cpp \
     wgt_manger/searchhistoryviewmanger.cpp \
@@ -52,6 +54,7 @@ HEADERS += \
     object/bookfullinfo.h \
     object/download.h \
     object/downloadhistory.h \
+    object/downloadprocess.h \
     object/helloworld.h \
     object/searchhistory.h \
     object/sfunctor.h \
@@ -62,6 +65,7 @@ HEADERS += \
     object/book_info.h \
     bookinfoitem.h \
     wgt/downloadhistoryitem.h \
+    wgt/downloadingitem.h \
     wgt/searchhistoryitem.h \
     wgt_manger/downloadhistoryviewmanger.h \
     wgt_manger/searchhistoryviewmanger.h \
@@ -73,6 +77,7 @@ FORMS += \
     object/helloworld.ui \
     singlebookinfo.ui \
     wgt/downloadhistoryitem.ui \
+    wgt/downloadingitem.ui \
     wgt/searchhistoryitem.ui
 
 TRANSLATIONS += \
